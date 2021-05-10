@@ -45,41 +45,59 @@
             && !empty($_POST["passwd_con"]) ) {
           
             // echo "not empty and successfully submitted.";
-            $fname = $_POST["firstname"]; $lname = $_POST["lastname"];
-            $email = $_POST["email"]; $depart = $_POST["department"];
-            $year = $_POST["current_year"];
-            $passwd = $_POST["passwd"]; $passwd_con = $_POST["passwd_con"];
+            $fname = strtolower($_POST["firstname"]);
+            $lname = strtolower($_POST["lastname"]);
+            $email = strtolower($_POST["email"]); $depart = $_POST["department"];
+            $year = $_POST["current_year"]; $passwd = $_POST["passwd"]; 
+            $passwd_con = $_POST["passwd_con"];
+
+            // read all the emails from the db.
+            $email_q = "select school_email from student where school_email='$email'";
+            $email_re = mysqli_query( $connObj, $email_q );
+            // print_r( $email_re );
 
 
-            // check if the passwd and confirmed passwd are the same.
-            if( $passwd == $passwd_con ) {
-              echo "passwd are the same";
+            if( mysqli_num_rows( $email_re ) > 0 ) {
+              // email was found in db. make session variable to send back
+              // to signup page, informing user about duplicates emails.
+              echo "Email found in db";
+              // $_SESSION["email_msg"] = "This email already has an account";
+            }
 
-              echo $fname . " " . $lname . " " . $email . " " . $depart . " " . $year . "<br/><br/>";
+            // new email and no one has use it yet.
+            else {
+              // echo "Email not in db";
+              // check if the passwd and confirmed passwd are the same.
+              if( $passwd == $passwd_con ) {
+                // echo "passwd are the same";
+                // echo $fname . " " . $lname . " " . $email . " " . $depart . " " . $year . "<br/><br/>";
 
-              $query = "insert into student(firstname, lastname, school_email, current_year, department, password) values('$fname', '$lname', '$email', '$year', '$depart', '$passwd' )";
+                $query = "insert into student(firstname, lastname, school_email, current_year, department, password) values('$fname', '$lname', '$email', '$year', '$depart', '$passwd' )";
 
-              if( mysqli_query( $connObj, $query ) ) {
-                // session to send back successful message.
-                echo "User successfully registered.";
-                // $_SESSION["reg_msg"] = "User successfully registered.";
+                if( mysqli_query( $connObj, $query ) ) {
+                  // session to send back successful message.
+                  echo "User successfully registered.";
+                  // $_SESSION["reg_msg"] = "User successfully registered.";
+                }
+                else {
+                  // use sessions to send back error message.
+                  "Error: " . $query . "<br/>" . mysqli_error( $connObj );
+                  // $_SESSION["reg_msg"] = "Error: " . $query . "<br/>" . mysqli_error( $connObj );
+                }
               }
-              else {
-                // use sessions to send back error message.
-                "Error: " . $query . "<br/>" . mysqli_error( $connObj );
-                // $_SESSION["reg_msg"] = "Error: " . $query . "<br/>" . mysqli_error( $connObj );
+
+              else { // passwd and confirm passwd are not the same
+                echo "NOT THE SAME PASSWORD....";
+                // make a session variable to send back passwd message.
+                // $_SESSION["pw_msg"] = "Please enter matching password";
               }
             }
 
-            else { // passwd and confirm passwd are not the same
-              echo "NOT THE SAME PASSWORD....";
-              // make a session variable to send back passwd message.
-              // $_SESSION["pw_msg"] = "Please enter matching password";
-            }
           }
           
           else {
             // use sessions to send back errors messages.
+            // about empty fields.
           }
         }
       }
