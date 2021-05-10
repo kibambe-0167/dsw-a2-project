@@ -37,5 +37,6 @@
     ";
     
     die( "Error: " . mysqli_connect_error());
+    // make session variables to send back error messages.
   }
 ?> 

@@ -24,8 +24,8 @@
       // check if required field are not empty.
       if( !empty($_POST["name"]) && !empty($_POST["type"]) && !empty($_POST["desc"]) ) {
         // echo "required fields not empty....";
-        $name = $_POST["name"]; $type = $_POST["type"]; 
-        $desc = $_POST["desc"]; $link = $_POST["ext_link"];
+        $name = strtolower($_POST["name"]); strtolower($type = $_POST["type"]); 
+        $desc = strtolower($_POST["desc"]); $link = $_POST["ext_link"];
 
         // echo $name . "<br/>" . $type . "<br/>" . $desc . "<br/>" . $link;
 

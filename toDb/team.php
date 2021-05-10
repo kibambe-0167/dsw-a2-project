@@ -11,9 +11,9 @@
       // check if required field are not empty.
       if( !empty($_POST["fname"]) && !empty($_POST["lname"]) && !empty($_POST["email"]) ) {
         echo "Field are NOT empty";
-        $fname = $_POST["fname"];
-        $lname = $_POST["lname"];
-        $email = $_POST["email"];
+        $fname = strtolower($_POST["fname"]);
+        $lname = strtolower($_POST["lname"]);
+        $email = strtolower($_POST["email"]);
         // echo $fname . " " . $lname . " " . $email;
 
         // needs to get the project id number

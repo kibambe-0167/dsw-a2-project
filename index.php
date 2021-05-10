@@ -20,10 +20,10 @@
   </head>
   <body>
 
-    <div >
-      <h2 >Sign up</h2>
+    <!-- <div > -->
+      <!-- <h2 >Sign up</h2> -->
       <!-- STUDENT OR PROF REGISTRATION FORM. -->
-      <form action="./toDb/reg_student.php" method="POST">
+      <!-- <form action="./toDb/reg_student.php" method="POST">
         <div >
           <input type="text" name="firstname" placeholder="Enter first name" value="Bakali" required>
         </div>
@@ -74,7 +74,7 @@
           <input type="submit" name="submit" id="submit">
         </div>
       </form>
-    </div>
+    </div> -->
     
 
 
@@ -87,23 +87,41 @@
 
   
     <!-- SAVVY REGISTRATION FORM -->
-    <!-- <form action="./toDb/reg_savvy.php" method="post" >
-      <div >
-        <input type="text" name="fname" placeholder="Enter firstname" value="micheal" >
-      </div>
+    <div >
+      <h2 >Tech Savvy Sign up</h2>
+      <form action="./toDb/reg_savvy.php" method="post" >
+        <div >
+          <input type="text" name="fname" placeholder="Enter firstname" value="micheal" >
+        </div>
 
-      <div >
-        <input type="text" name="lname" placeholder="Enter lastname" value="Banda" >
-      </div>
+        <div >
+          <input type="text" name="lname" placeholder="Enter lastname" value="Banda" >
+        </div>
 
-      <div >
-        <input type="email" name="email" placeholder="Enter email" value="micheal@gmail.com" >
-      </div>
+        <div >
+          <input type="email" name="email" placeholder="Enter email" value="micheal@gmail.com" >
+        </div>
 
-      <div >
-        <input type="submit" name="signup" value="sign up" >
-      </div>
-    </form> -->
+        <div >
+          <input type="submit" name="signup" value="sign up" >
+        </div>
+      </form>
+    </div>
+
+
+
+    <div >
+      <h2 >Tech Savvy log in</h2>
+      <form action="./app/login_savvy.php" method="post">
+        <div >
+          <input type="email" name="email" placeholder="Enter your email" id="">
+        </div>
+        
+        <div >
+          <input type="submit" name="submit" value="login" id="">
+        </div>
+      </form>
+    </div>
 
 
 
