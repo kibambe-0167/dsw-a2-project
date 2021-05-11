@@ -19,11 +19,11 @@
     </style>
   </head>
   <body>
-
-    <!-- <div > -->
-      <!-- <h2 >Sign up</h2> -->
-      <!-- STUDENT OR PROF REGISTRATION FORM. -->
-      <!-- <form action="./toDb/reg_student.php" method="POST">
+    
+    <!-- STUDENT OR PROF REGISTRATION FORM. -->
+    <div >
+      <h2 >Sign up</h2>
+      <form action="./toDb/reg_student.php" method="POST">
         <div >
           <input type="text" name="firstname" placeholder="Enter first name" value="Bakali" required>
         </div>
@@ -74,7 +74,7 @@
           <input type="submit" name="submit" id="submit">
         </div>
       </form>
-    </div> -->
+    </div>
     
 
 
@@ -87,7 +87,7 @@
 
   
     <!-- SAVVY REGISTRATION FORM -->
-    <div >
+    <!-- <div >
       <h2 >Tech Savvy Sign up</h2>
       <form action="./toDb/reg_savvy.php" method="post" >
         <div >
@@ -108,8 +108,6 @@
       </form>
     </div>
 
-
-
     <div >
       <h2 >Tech Savvy log in</h2>
       <form action="./app/login_savvy.php" method="post">
@@ -121,7 +119,7 @@
           <input type="submit" name="submit" value="login" id="">
         </div>
       </form>
-    </div>
+    </div> -->
 
 
 
@@ -129,36 +127,10 @@
 
 
 
-    <!-- store a project details in the DB. -->
-    <!-- <form action="./toDb/upload_pro.php" method="post" >
-      <div >
-        <input type="text" value="Smart Alert" name="name" placeholder="Enter project name">
-      </div>
-
-      <div >
-        <input type="text" value="mobile App" name="type" placeholder="Enter project type">
-      </div>
-
-      <div >
-        <textarea name="desc" placeholder="Enter project description" style="padding: 10px;" cols="30">This is an app that helps blah blah blah and blah, its was made with react native, html, js, css, backend with mysql and blah blah. Its helps users do this and that and this is the problem we ar solving....
-        </textarea>
-      </div>
-
-      <div >
-        <input type="text" name="ext_link" placeholder="Enter project external link">
-      </div>
-
-      <div >
-        <input type="submit" value="Upload" name="upload">
-      </div>
-    </form> -->
 
 
 
 
-
-
-    
 
     <!-- this is a form for the comment  -->
     <!-- <form action="./toDb/comment.php" method="post" >
@@ -178,6 +150,9 @@
 
 
 
+
+
+    
     <!-- this is uploading a team members details to db. -->
     <!-- <form action="./toDb/team.php" method="post">
       <div >

@@ -35,10 +35,19 @@
         if( mysqli_num_rows( $students ) == 1 ) {
           // echo "found something";
           // print_r( $students );
-          while( $student = mysqli_fetch_assoc( $students )) {
-            echo $student["student_id"] . " | " . $student["firstname"] . " | " . $student["lastname"] . " | " . $student["school_email"] . "<br />";
-            // set up session variables to hold the data of the current user.
-          }
+          // while( $student = mysqli_fetch_assoc( $students )) {}
+          $student = mysqli_fetch_assoc( $students );
+          // echo $student["student_id"] . " | " . $student["firstname"] . " | " . $student["lastname"] . " | " . $student["school_email"] . "<br />";
+          // set up session variables to hold the data of the current user.
+          $_SESSION["student_id"] = $student["student_id"];
+          $_SESSION["firstname"] = $student["firstname"];
+          $_SESSION["lastname"] = $student["lastname"];
+          $_SESSION["school_email"] = $student["school_email"];
+          $_SESSION["current_year"] = $student["current_year"];
+          $_SESSION["department"] = $student["department"];
+          
+          // redirect to the main page.
+          header("location:main.php" );
         }
         else {
           echo "result NOT found";
