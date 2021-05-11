@@ -1,5 +1,10 @@
 
 
+<?php
+  // start a session to send data and informations.
+  session_start();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -57,6 +62,35 @@
         </div>
       </form>
     </div>
+
+    <!-- after account is successfully deleted from db -->
+    <span >
+      <?php
+        // message about the deleted account.
+        echo $_SESSION["acc_del"];
+
+        // set the session variable value to null;
+        $_SESSION["acc_del"] = null;
+
+        // destroy all sessions
+        // session_destroy();
+      ?>
+    </span>
+
+    <span >
+      <!-- put a timer to make this message disappear. -->
+      <?php
+
+        // feedback onm registration process.
+        echo $_SESSION["reg_msg"];
+
+        // set session variable to null
+        $_SESSION["reg_msg"] = null;
+
+        // maybe destroy the message.
+        // session_destroy( $_SESSION["reg_msg"] );
+      ?>
+    </span>
 
 
     <div >

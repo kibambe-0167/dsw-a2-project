@@ -77,7 +77,9 @@
                 if( mysqli_query( $connObj, $query ) ) {
                   // session to send back successful message.
                   echo "User successfully registered.";
-                  // $_SESSION["reg_msg"] = "User successfully registered.";
+                  $_SESSION["reg_msg"] = "User successfully registered.";
+                  // go back to index page, so that user canm sign in
+                  header("location:../index.php");
                 }
                 else {
                   // use sessions to send back error message.
