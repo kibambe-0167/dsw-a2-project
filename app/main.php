@@ -35,7 +35,7 @@
       <div >
         <ul >
           <li>
-            <a href="./upload_pro.php">Upload</a>
+            <a href="./pro_form.php">Upload</a>
           </li>
 
           <li>

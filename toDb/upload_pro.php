@@ -26,20 +26,27 @@
         // echo "required fields not empty....";
         $name = strtolower($_POST["name"]); strtolower($type = $_POST["type"]); 
         $desc = strtolower($_POST["desc"]); $link = $_POST["ext_link"];
+        $student_id = $_SESSION["student_id"];
 
-        // echo $name . "<br/>" . $type . "<br/>" . $desc . "<br/>" . $link;
+        // echo $name . "<br/>" . $type . "<br/>" . $desc . "<br/>" . $link . "<br/>" . $student_id;
 
-        $query = "insert into Project(pro_name, type, pro_desc, pro_ext_link) values('$names', '$type', '$desc', '$link' )";
+        $query = "insert into Project( student_id, pro_name, type, pro_desc, pro_ext_link) values( '$student_id', '$name', '$type', '$desc', '$link' )";
 
         // run the query to register the project with the db.
         // also set uploading message via sessions.
         if( mysqli_query( $connObj, $query ) ) {
           echo "Project " . $name . " Successfully saved";
-          // $_SESSION["upload_msg"] = "Project " . $name . " Successfully saved";
+          $_SESSION["upload_pro_msg"] = "Project " . $name . " Successfully saved";
+
+          // redirect user back to the project upload form.
+          header( "location:../app/pro_form.php" );
         }
         else {// if there was an error saving the message
           echo "Error saving project to db";
-          $_SESSION["upload_msg"] = "Error saving project ".$name." to db";
+          $_SESSION["upload_pro_msg"] = "Error saving project ".$name." to db";
+
+          // redirect user back to the project upload form.
+          header( "location:../app/pro_form.php" );
         }
       }
       else {// some required field are empty

@@ -34,7 +34,11 @@
         </li>
 
         <li>
-          <a href="del_user_acc?student_id=<?php echo $_SESSION['student_id']; ?>" >Edit Profile</a>
+          <a href="?student_id=<?php echo $_SESSION['student_id']; ?>" >Edit Profile</a>
+        </li>
+
+        <li>
+          <a href="./log-out_student.php?student_id=<?php echo $_SESSION['student_id']; ?>" >Sign-out</a>
         </li>
         </ul>
       </div>

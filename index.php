@@ -73,14 +73,13 @@
         $_SESSION["acc_del"] = null;
 
         // destroy all sessions
-        // session_destroy();
+        session_destroy();
       ?>
     </span>
 
     <span >
       <!-- put a timer to make this message disappear. -->
       <?php
-
         // feedback onm registration process.
         echo $_SESSION["reg_msg"];
 
@@ -88,7 +87,7 @@
         $_SESSION["reg_msg"] = null;
 
         // maybe destroy the message.
-        // session_destroy( $_SESSION["reg_msg"] );
+        // session_destroy();
       ?>
     </span>
 
