@@ -22,7 +22,7 @@
       if( mysqli_num_rows( $result ) > 0 ) {
         // echo "Found something";
         while( $project = mysqli_fetch_assoc( $result ) ) {
-          echo "<div class='pro'><a href='edit_pro.php?project_id=" . $project["id"] . "'>" . $project["id"] . " | " . $project["pro_name"] . " | " . $project["type"] . " | " . $project["pro_desc"] . "</a></div >";
+          echo "<div class='pro'><a href='edit_pro.php?project_id=" . $project["id"] . "'>" . $project["id"] . " | " . $project["pro_name"] . " | " . $project["type"] . " | " . $project["pro_desc"] . "</a></div ><div ><a href='../del/delete_pro.php?project_id=". $project["id"] . "' >Delete Project</a></div>";
         }
       }
       // if user contains no projects

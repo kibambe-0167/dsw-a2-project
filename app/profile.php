@@ -27,7 +27,7 @@
         margin: 3em .5em;
       }
       .pro {
-        margin: 2em 0em;
+        margin: 4em 0em .4em;
       }
     </style>
   </head>

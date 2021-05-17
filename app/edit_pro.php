@@ -2,6 +2,8 @@
 <?php
   // this code edit a project from db.
   include("./get_1_pro.php"); // code that pull specific project from db.
+
+  include("../config/connection.php"); // connection object to db.
   
 ?>
 
@@ -19,7 +21,7 @@
   <body>
 
 
-    <form action="./edit_pro.php" method="post" >
+    <form action="./edit_pro.php?project_id=<?php echo $project["id"]; ?>" method="post" >
       <div >
         <input type="text" value="<?php echo $project["pro_name"]; ?>" name="name" placeholder="Enter project name">
       </div>
@@ -47,7 +49,30 @@
       if( isset( $_POST["save"]) ) {
         // echo "Save edit btn clicked";
 
-        
+        if( !empty($_POST["name"]) && !empty($_POST["type"]) && !empty($_POST["desc"]) ) {
+          // echo "values are not empty";// echo $_GET["project_id"];// echo $project["id"];
+
+          $name = $_POST["name"];
+          $type = $_POST["type"];
+          $desc = $_POST["desc"];
+          $id = $_GET["project_id"];
+          $link = $_POST["ext_link"];
+
+          // make query to update this values.
+          $query = "update Project set pro_name='$name', type='$type', pro_desc='$desc', pro_ext_link='$link' where id = '$id'";
+
+          // $result = mysqli_query( $connObj, $query );
+
+          if( mysqli_query( $connObj, $query ) ) {
+            echo "Project " . $name . " update successfully";
+          }
+          // error updating project details
+          else { echo "Error updating project $name :<br/>" . mysqli_error( $connObj ); }
+        }
+
+        // required fields are empty.
+        else { echo "Required fields are empty"; }
+
       }
     ?>
 
