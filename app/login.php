@@ -2,11 +2,13 @@
 
 <?php
   // here we manage the login functionality.
-  session_start(); // start a session to transfer message.
   
   // include the connectoion file to get objects.
-  include( "../db/connection.php" );
+  include( "../config/connection.php" );
 
+
+
+  
   // check if connection to db ws successful
   if( $connObj ) { // connnection was successful.
     // echo "connected to db";
@@ -30,13 +32,16 @@
         // $query = "select * from student";
 
         $students =  mysqli_query( $connObj, $query );
+        print_r( $student );
 
         // if the results returned have values;
         if( mysqli_num_rows( $students ) == 1 ) {
-          // echo "found something";
-          // print_r( $students );
-          // while( $student = mysqli_fetch_assoc( $students )) {}
+          // echo "found something"; // print_r( $students );
           $student = mysqli_fetch_assoc( $students );
+
+          // start a session for the current user.
+          session_start();
+
           // echo $student["student_id"] . " | " . $student["firstname"] . " | " . $student["lastname"] . " | " . $student["school_email"] . "<br />";
           // set up session variables to hold the data of the current user.
           $_SESSION["student_id"] = $student["student_id"];
@@ -45,22 +50,32 @@
           $_SESSION["school_email"] = $student["school_email"];
           $_SESSION["current_year"] = $student["current_year"];
           $_SESSION["department"] = $student["department"];
+          $_SESSION["projects"];
+          // $_SESSION["project_query_result"];
           
-          // redirect to the main page.
-          header("location:main.php" );
-        }
-        else {
-          echo "result NOT found";
-          // make a session variable to send back message about no user found
-          // $_SESSION["found_msg"] = "Invalid user | Cant find user in db";
+          header( "location:main.php" ); // redirect to the main page.
+          exit();
         }
 
+        else {
+          // session_start();
+          // echo "result NOT found";
+          // make a session variable to send back message about no user found
+          $_SESSION["login_msg"] = "Invalid user | Cant find user in db";
+
+          header( "location:../index.php" );
+          // exit();
+        }
 
       }
       else { // when some fields are empty.
-        echo "Field are empty";
+        // session_start();
+        // echo "Field are empty";
         // make session variable to send message about empty fields.
-        // $_SESSION["empty_msg"] = "Please fill in all fields.";
+        $_SESSION["empty_msg"] = "Please fill in all fields.";
+
+        // header( "location:../index.php" );
+        // exit();
       }
     }
 

@@ -4,6 +4,7 @@
   // this code manages the user profile. they can delete and edit their account here
   // start a session to send data and information.
   session_start();
+  // echo "<br/>Session ID:" . session_id() . "<br/><br/>";
 ?>
 
 <!doctype html>
@@ -21,6 +22,12 @@
         list-style: none;
         display: inline;
         margin: .2em 1em;
+      }
+      #usr_pro {
+        margin: 3em .5em;
+      }
+      .pro {
+        margin: 2em 0em;
       }
     </style>
   </head>
@@ -44,6 +51,7 @@
       </div>
     </header>
 
+
     <div >
       <?php
         echo $_SESSION["student_id"] . " | ";
@@ -52,6 +60,13 @@
         echo $_SESSION["school_email"] . " | ";
         echo $_SESSION["current_year"] . " | ";
         echo $_SESSION["department"] . " | ";
+      ?>
+    </div>
+
+    <!-- this contains the project of the user. -->
+    <div id="usr_pro">
+      <?php
+        include("./get_usr_pro.php"); 
       ?>
     </div>
       

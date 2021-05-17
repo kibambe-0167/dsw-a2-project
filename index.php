@@ -1,8 +1,15 @@
 
 
 <?php
-  // start a session to send data and informations.
-  session_start();
+
+  // if there is a alreay a set, start that session here. 
+  // to exchange information and messages.
+  if ( session_status() === PHP_SESSION_ACTIVE ) {
+    session_start();
+    $_SESSION["session_id"] = session_id();
+    echo "Session started<br/>";
+    echo "<br/>Session ID:" . $_SESSION["session_id"] . "<br/><br/>";
+  }
 ?>
 
 <!doctype html>
@@ -25,7 +32,7 @@
   </head>
   <body>
     
-    <!-- STUDENT OR PROF REGISTRATION FORM. -->
+    STUDENT OR PROF REGISTRATION FORM.
     <div >
       <h2 >Sign up</h2>
       <form action="./toDb/reg_student.php" method="POST">
@@ -70,10 +77,11 @@
         echo $_SESSION["acc_del"];
 
         // set the session variable value to null;
-        $_SESSION["acc_del"] = null;
+        // $_SESSION["acc_del"] = null;
+        unset( $_SESSION["acc_del"] );
 
         // destroy all sessions
-        session_destroy();
+        // session_destroy();
       ?>
     </span>
 
@@ -84,7 +92,8 @@
         echo $_SESSION["reg_msg"];
 
         // set session variable to null
-        $_SESSION["reg_msg"] = null;
+        // $_SESSION["reg_msg"] = null;
+        unset( $_SESSION["reg_msg"] );
 
         // maybe destroy the message.
         // session_destroy();
@@ -100,15 +109,20 @@
         </div>
 
         <div >
-          <input type="password" name="passwd" id="pw" placeholder="Enter password" >
+          <input value="Bakali" type="password" name="passwd" id="pw" placeholder="Enter password" >
         </div>
 
         <div >
           <input type="submit" name="submit" id="submit">
         </div>
       </form>
+
     </div>
     
+
+    <?php
+      echo $_SESSION["login_msg"];
+    ?>
 
 
 
