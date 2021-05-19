@@ -10,17 +10,20 @@
   include("../app/get_pro.php"); // to make sure that the code runs.
 
 
-  if( isset( $_POST["search_btn"] ) ) {
-    // echo "search btn clicked.....";
+  if( isset( $_POST["search_btn"] ) ) { // echo "search btn clicked.....";
     $_SESSION["show"] = "";
+    $pro_array = array();
     while( $projects = mysqli_fetch_assoc( $_SESSION["pro_query"] ) ) {
-      // echo "<div><a href='#'>" . $projects["id"] . " | " . $projects["pro_name"] . " | " . $projects["type"] . " | " . $projects["pro_desc"] . "</a></div >";
 
       $_SESSION["show"] .= "<div><a href='#'>" . $projects["id"] . " | " . $projects["pro_name"] . " | " . $projects["type"] . " | " . $projects["pro_desc"] . "</a></div >"; $i++;
 
-      // break;
+      // push all the array project to an array variable, for searching.
+      array_push( $pro_array, $projects );
     }
-    header("location:../app/main.php");
+    // header("location:..app/main.php");
+    search( $pro_array, "mobile app from blah blah blah blah blah" );
+
+    echo "<br/><br/>" . preg_match_all("br", "brbrbr") . "<br/><br/>";
   }
 
   else {
@@ -35,6 +38,90 @@
   }
 
 
-  // this a search function that receive an array full of 
+  // this a search function that receive an array of arrays, 
+  // searches for the key word, in project_name, project_type
+  // and project_description. those that have the words are returned.
+  // ALSO CONSIDER THE DATE OF THE PROJECT FOR RANKING.
+  function search( $arr, $word ) { // echo "Function called";
+    $patt = "/" . $word ."/"; // echo $patt;
+
+    $aa = ["a", "b", "c", "d"];
+    // print_r( array_slice( $aa, 3, 5  )); echo "<br />";
+    // print_r( implode( " ", array( $aa[0], $aa[1]  )) ); echo "<br />";
+
+    $new_arr_return = array(); // this is the new array to return.
+
+    foreach ( $arr as $a ) { // print_r( $a ); echo "<br /><br/>";
+      $score = 0;
+
+      // check in name
+      // echo strtolower( $a["pro_name"] );
+      // echo preg_match_all( $patt, strtolower($a["pro_name"]) ) . "<br/>";
+      $score += preg_match_all( $patt, strtolower($a["pro_name"]) );
+
+      // // check in  type.
+      // echo strtolower( $a["type"] );
+      // echo preg_match_all( strtolower($patt), strtolower($a["type"])) . "<br/>";
+      $score += preg_match_all( strtolower($patt), strtolower($a["type"]));
+
+      // // check in project description
+      // echo strtolower( $a["pro_desc"] );
+      // echo preg_match_all( strtolower($patt), strtolower($a["pro_desc"])) . "<br/><br/>";
+      $score += preg_match_all( strtolower($patt), strtolower($a["pro_desc"]));
+
+
+      // // when the search key word has more than 4 words.
+      // // use array_slice to get 3 words in a for loop.
+      // // implodes those 3 words and search for pattern in project description.
+      if( count( explode( " ", $word ) ) >= 4 ) { // echo "More than 3<br />";
+        $words_seq = explode( " ", $word ); $start = 0; $num = 3;
+        $len_arr = count( $words_seq );
+
+        for( $i = 0; $i < $len_arr; $i++ ) {
+          if( $start < $len_arr ) {
+            // slice array into 3 parts, implodes those words into one sentence and 
+            // make a pattern with those words in. search for number of appearance of those
+            // words, move to the next 3 elements of the array.
+            // make pattern empty for starting a new pattern.
+            $pat = "/".implode(" ", array_slice($words_seq, $start, $num))."/i";
+            // echo preg_match_all( $pat, strtolower($a["pro_desc"])) . "<br/>";
+            $score += preg_match_all( $pat, strtolower($a["pro_desc"]));
+            $start += 3;
+            $pat = "";
+          }
+        }
+      }  
+      
+      // // here we check the availability of each individual word in the description.
+      if( count( explode( " ", $word ) ) > 1  ) { // echo "Entered if > 1";
+        $words_seq = array_unique( explode( " ",  $word ) );
+        // print_r( $words_seq ); echo "<br/><br />";
+        foreach( $words_seq as $w ) { // echo $w;
+          $pat_w = "/". $w ."/i";
+          // echo preg_match_all( $pat_w, strtolower($a["pro_desc"])) . "<br/>";
+          $score += preg_match_all( $pat_w, strtolower($a["pro_desc"]));
+          $pat_w = "";
+
+        }
+      }
+
+      // echo $a["pro_name"] . " | " . $score . "<br/>";
+      $a["score"] = $score;
+      // print_r( $a ); echo "<br/><br/>";
+
+      array_push( $new_arr_return, $a );
+      // make the
+      
+    }
+
+    
+    $score_v = array_column( $new_arr_return, "score" );
+    array_multisort( $score_v, SORT_DESC, $new_arr_return );
+
+    foreach( $new_arr_return as $new ) {
+      print_r( $new ); echo "<br /><br />";
+    }
+
+  } 
 
 ?>
