@@ -2,8 +2,13 @@
 
 <?php
   // start a php session to send data and information.
-  session_start();
-  // include("../views/show_pro.php");
+
+  // only start a session when a session exist.
+  if( session_status() === PHP_SESSION_ACTIVE ) {
+    session_start();
+  }
+  // include this file here.
+  include("../views/show_pro.php");
 ?>
 
 <!doctype html>

@@ -10,14 +10,9 @@
   include("../app/get_pro.php"); // to make sure that the code runs.
 
 
-
-
-
-
   if( isset( $_POST["search_btn"] ) ) {
     // echo "search btn clicked.....";
     $_SESSION["show"] = "";
-    $i = 0;
     while( $projects = mysqli_fetch_assoc( $_SESSION["pro_query"] ) ) {
       // echo "<div><a href='#'>" . $projects["id"] . " | " . $projects["pro_name"] . " | " . $projects["type"] . " | " . $projects["pro_desc"] . "</a></div >";
 
@@ -38,5 +33,8 @@
       $_SESSION["show"] .= "<div><a href='#'>" . $projects["id"] . " | " . $projects["pro_name"] . " | " . $projects["type"] . " | " . $projects["pro_desc"] . "</a></div >";
     }
   }
+
+
+  // this a search function that receive an array full of 
 
 ?>

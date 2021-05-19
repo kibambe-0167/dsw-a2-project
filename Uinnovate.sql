@@ -1,10 +1,9 @@
-
 -- phpMyAdmin SQL Dump
 -- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 11, 2021 at 02:17 PM
+-- Generation Time: May 19, 2021 at 10:03 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -70,8 +69,7 @@ CREATE TABLE `Project` (
 INSERT INTO `Project` (`id`, `student_id`, `pro_name`, `type`, `pro_desc`, `pro_ext_link`, `pro_reg_date`) VALUES
 (4, 10, 'smart check in', 'mobile App', 'this is an app that helps blah blah blah and blah, its was made with blah, html, js, blah, backend with mysql, php and blah. its helps users do this and that and this is the problem we are solving....\r\n        ', '', '2021-05-11'),
 (6, 10, 'smart alert', 'mobile App', 'this is an app that helps blah blah blah and blah, its was made with blah, html, js, blah, backend with mysql, php and blah. its helps users do this and that and this is the problem we are solving....\r\n        ', '', '2021-05-11'),
-(7, 10, 'drive in', 'mobile App', 'this is an app that helps blah blah blah and blah, its was made with blah, html, js, blah, backend with mysql, php and blah. its helps users do this and that and this is the problem we are solving....\r\n        ', '', '2021-05-11'),
-(8, 10, 'smart map', 'mobile App', 'this is an app that helps blah blah blah and blah, its was made with blah, html, js, blah, backend with mysql, php and blah. its helps users do this and that and this is the problem we are solving....\r\n        ', '', '2021-05-11');
+(9, 11, 'report', 'Mobile app', 'this is an app that helps blah blah blah and blah, its was made with blah, html, js, blah, backend with mysql, php and blah. its helps users do this and that and this is the problem we are solving....\r\n        ', '', '2021-05-11');
 
 -- --------------------------------------------------------
 
@@ -122,7 +120,8 @@ INSERT INTO `student` (`student_id`, `firstname`, `lastname`, `school_email`, `c
 (3, 'Bakali', 'Phiri', '9999999@student.uj.ac.za', 3, 'AIS', 'Bakali', '2021-05-09'),
 (4, 'micheal', 'phiri', 'micheal@student.uj.ac.za', 3, 'AIS', 'Bakali', '2021-05-09'),
 (7, 'mary', 'siya', 'siya@student.uj.ac.za', 1, 'AIS', 'Bakali', '2021-05-11'),
-(10, 'jane', 'james', 'jane@student.uj.ac.za', 1, 'AIS', 'Bakali', '2021-05-11');
+(10, 'jane', 'james', 'jane@student.uj.ac.za', 1, 'AIS', 'Bakali', '2021-05-11'),
+(11, 'surprise', 'ngoveni', 'ngoveni@student.uj.ac.za', 2, 'AIS', 'Bakali', '2021-05-11');
 
 -- --------------------------------------------------------
 
@@ -196,7 +195,7 @@ ALTER TABLE `Comments`
 -- AUTO_INCREMENT for table `Project`
 --
 ALTER TABLE `Project`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `Savvy`
@@ -208,7 +207,7 @@ ALTER TABLE `Savvy`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `student_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `student_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `Team_member`
