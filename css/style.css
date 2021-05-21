@@ -1,0 +1,148 @@
+* {
+    padding: 0em;
+    margin: 0em;
+    box-sizing: border-box;
+}
+
+#err_conn {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* remove every default styling applied by the browser. */
+
+* {
+    box-sizing: border-box;
+    padding: 0em;
+    margin: 0em;
+}
+
+.container-fluid {
+    margin: 0em;
+    padding: 0em;
+}
+
+header {
+    padding: 0em;
+    margin: 0em;
+}
+
+#header div {
+    display: inline;
+    padding: 0em;
+    margin: 0em
+}
+
+a {
+    text-decoration: none;
+}
+
+#nav-drop-down {
+    display: none;
+}
+
+#mobile_drop_menu li {
+    /* display: block; */
+    padding: auto;
+}
+
+#menu_btn {
+    /* background-color: ; */
+    padding: .1em;
+    margin: 0em .5em;
+    font-size: 1.7em;
+}
+
+.bar #menu_btn {
+    display: none;
+}
+
+
+/* //////////////////////////////////////////////// */
+
+div {
+    margin: .5em .1em;
+}
+
+#reg_form {
+    margin: 3em;
+    display: none;
+}
+
+
+/* the navigation for mobile html code */
+
+#nav_mobile {
+    padding: auto;
+    text-align: right;
+    margin: .1em .4em;
+    width: 50%;
+    /* float: right; */
+    position: absolute;
+    right: 0em;
+    /* border-radius: .6em; */
+}
+
+.wrap {
+    height: 100vh;
+    width: 100%;
+    /* background: red; */
+    position: fixed;
+    z-index: -1000000000000;
+}
+
+
+/* the divs that are in the mobile version of the menu */
+
+#nav_mobile div {
+    margin: 0em;
+}
+
+
+/* this works for social media id. or the div that have social medias */
+
+#social_med {
+    padding: auto;
+    text-align: center;
+    font-size: 2em;
+}
+
+
+/* this applies to spans in the social media div */
+
+#social_med span {
+    margin: .6em;
+}
+
+
+/* this rules applies to the footer details. */
+
+#footer_details {
+    padding: auto;
+    text-align: center;
+}
+
+
+/* this applies to spans in the footer details */
+
+#footer_details span {
+    justify-content: space-between;
+}
+
+
+/* Media query, applies when the screen is less than 576 */
+
+@media ( max-width: 30em) {
+    #nav-link-bs {
+        /* display: none; */
+        font-size: 1em;
+    }
+    .bar {
+        display: flex !important;
+        justify-content: space-between;
+    }
+    .bar #menu_btn {
+        display: block;
+    }
+}
