@@ -1,0 +1,43 @@
+/* applies to the header of this html. */
+
+header {
+    margin: 0em 0em;
+    padding: 3em 0em;
+}
+
+button {
+    cursor: pointer;
+}
+
+.panel,
+.panel1 {
+    background-color: white;
+    display: none;
+}
+
+.panel,
+.panel {
+    background-color: white;
+    transition: max-height 0.5s ease-out;
+}
+
+
+/* Div block containing students forms */
+
+#student_block {
+    margin: 0em auto;
+}
+
+
+/* this rules applies to the savvy block */
+
+#savvy_block {
+    padding: auto;
+}
+
+
+/* this code applies to the login content page */
+
+#login_content {
+    margin: 0em auto;
+}

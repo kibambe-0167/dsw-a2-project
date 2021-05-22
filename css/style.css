@@ -59,6 +59,23 @@ a {
 }
 
 
+/* this make all submit button to have a color set of the same */
+
+input[type="submit"] {
+    color: white;
+    background-color: rgb(27, 4, 43);
+}
+
+
+/* when someone hover over the btn */
+
+input[type="submit"]:hover {
+    color: rgb(27, 4, 43);
+    background-color: white;
+    /* font-weight: bold; */
+}
+
+
 /* //////////////////////////////////////////////// */
 
 div {
@@ -128,6 +145,26 @@ div {
 
 #footer_details span {
     justify-content: space-between;
+}
+
+
+/* contact us page */
+
+#contactus {
+    border: 2px solid black;
+    text-align: left;
+    padding-left: 10px;
+    width: 80%;
+}
+
+
+/* about us page */
+
+#aboutus {
+    border: 2px solid black;
+    text-align: left;
+    width: 80%;
+    padding-left: 10px;
 }
 
 

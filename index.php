@@ -22,103 +22,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <!-- <link rel="stylesheet" href="./css/login.css"> -->
 
-    <style >
-      div {
-        margin: .5em;
-      }
     </style>
   </head>
   <body>
-    
-    STUDENT OR PROF REGISTRATION FORM.
-    <div >
-      <h2 >Sign up</h2>
-      <form action="./toDb/reg_student.php" method="POST">
-        <div >
-          <input type="text" name="firstname" placeholder="Enter first name" value="Bakali" required>
-        </div>
 
-        <div >
-          <input type="text" name="lastname" placeholder="Enter last name" value="Phiri" required >
-        </div>
 
-        <div >
-          <input type="email" name="email" placeholder="Enter school email" value="9999999@student.uj.ac.za" required >
-        </div>
+    <!-- header of the page -->
+    <header >
+			<div >
+				logo
+			</div>
 
-        <div >
-          <input type="text" name="department" placeholder="Enter department" value="AIS" required >
-        </div>
+			<div >
+				About | Contact
+			</div>
+		</header>
 
-        <div >
-          <input type="number" name="current_year" placeholder="Enter current year" value="3" required >
-        </div>
 
-        <div >
-          <input type="password" name="passwd" placeholder="Enter password" required value="Bakali" >
-        </div>
 
-        <div >
-          <input type="password" name="passwd_con" placeholder="Confirm password"  required value="Bakali" >
-        </div>
 
-        <div >
-          <input type="submit" id="signup" name="signup" value="SignUp" >
+    <div id="login_content" class="container row bg-dark">
+      
+      <!-- student block -->
+      <div class="col-sm-6 bg-info" id="student_block">
+        <!-- First form -->
+        <form action="./app/login.php" method="post"id="form1" onsubmit="return false">
+          <h2>Students</h2>
+
+          <label for="username">Username</label>
+          <div class="input-group">
+            <input class="input-group-text" type="email" name="email" id="email" placeholder="Enter email" >
+          </div>
+          
+          <label for="pwd">Password</label>
+          <div class="input-group" >
+            <input class="input-group-text" value="Bakali" type="password" name="passwd" id="pw" placeholder="Enter password" >
+          </div>
+
+          <div class="input-group" >
+            <input class="input-group-text" type="submit" name="submit" id="submit">
+
+            <input class="btn bg-secondary"  onclick="add()" type="button" class="" value="Sign up"/>
+          </div>
+        </form>
+
+        <!-- student registration form -->
+        <div id="panel" class="panel">
+          <form action="./toDb/reg_student.php" method="POST" >
+
+            <label for="fName">First Name</label>
+            <div class="input-group" >
+              <input class="input-group-text" type="text" name="firstname" placeholder="Enter first name" value="Bakali" required>
+            </div>
+            
+            <label>Last Name</label>
+            <div class="input-group" >
+              <input class="input-group-text" type="text" name="lastname" placeholder="Enter last name" value="Phiri" required >
+            </div>
+            
+            <!-- <label>Student Number</label>
+            <div class="input-group" >
+              <input class="input-group-text" type="text" name="sNum" id="sNum">
+            </div> -->
+
+            
+            <label for="email">School Email</label>
+            <div class="input-group" >
+              <input class="input-group-text" type="email" name="email" placeholder="Enter school email" value="9999999@student.uj.ac.za" required >
+            </div>
+
+            
+            <label>Current year</label>
+            <div class="input-group" >
+              <input class="input-group-text" type="number" name="current_year" placeholder="Enter current year" value="3" required >
+            </div>
+
+            
+            <label>Department</label>
+            <div class="input-group" >
+              <input class="input-group-text" type="text" name="department" placeholder="Enter department" value="AIS" required >
+            </div>
+
+            
+            <label for="passwd">Password</label>
+            <div class="input-group" >
+              <input class="input-group-text" type="password" name="passwd" placeholder="Enter password" required value="Bakali" >
+            </div>
+
+            <label for="passwd_con">Confirm Password</label>
+            <div class="input-group" >
+              <input class="input-group-text" type="password" name="passwd_con" placeholder="Confirm password"  required value="Bakali" >
+            </div>
+
+            
+            <div class="input-group" >
+              <input class="btn"  type="submit" id="signup" name="signup" value="SignUp" >
+            
+              <input class="btn bg-danger" type="reset" id="disard" value="Discard" />
+            </div>
+            
+          </form>
         </div>
-      </form>
+        <!-- applies to students. -->
+        <!-- after account is successfully deleted from db -->
+        <span >
+          <?php
+            // message about the deleted account.
+            echo $_SESSION["acc_del"];
+
+            // set the session variable value to null;
+            // $_SESSION["acc_del"] = null;
+            unset( $_SESSION["acc_del"] );
+          ?>
+        </span>
+
+        <!-- applies to students. -->
+        <span >
+          <!-- put a timer to make this message disappear. -->
+          <?php
+            // feedback onm registration process.
+            echo $_SESSION["reg_msg"];
+
+            // set session variable to null
+            // $_SESSION["reg_msg"] = null;
+            unset( $_SESSION["reg_msg"] );
+          ?>
+        </span>
+      </div>
+
+      <!-- Savvy block -->
+      <div class="col-sm-6 bg-warning" id="savvy_block" >
+        <!-- Second Form     -->
+        <form action="./app/login_savvy.php" method="post" id="form2" onsubmit="return false">
+          <h2>Public</h2>
+          <label for="email">Email </label>
+          <div class="input-group">
+            <input class="input-group-text" type="email" name="email" placeholder="Enter your email" id="">
+          </div>
+          
+          <div class="input-group">
+            <input class="btn"  type="submit" name="submit" value="login" id="">
+            <input type="button" class="btn bg-secondary" onclick="add1()" class="accordion1" value="Sign Up"/>
+          </div>
+        </form>
+
+        <!--Second Hidden Form-->
+        <div id="panel1" class="panel1">
+          <form action="./toDb/reg_savvy.php" method="post" >
+            <label>First Name </label>
+            <div class="input-group" >
+              <input class="input-group-text" type="text" name="fname" placeholder="Enter firstname" value="micheal" >
+            </div>
+
+            <label>Last Name </label>
+            <div class="input-group" >
+              <input class="input-group-text" type="text" name="lname" placeholder="Enter lastname" value="Banda" >
+            </div>
+
+            <label> Email</label>
+            <div class="input-group" >
+              <input class="input-group-text" type="email" name="email" placeholder="Enter email" value="micheal@gmail.com" >
+            </div>
+
+            <label> Confirm Email</label>
+            <div class="input-group" >
+              <input class="input-group-text" type="email" name="email" placeholder="Enter email" value="micheal@gmail.com" >
+            </div>
+
+            <div class="input-group" >
+              <input type="submit" name="signup" value="sign up" >
+              
+              <input type="reset" class="btn bg-danger" id="discard2" value="Discard" />
+            </div>
+
+          </form>
+        </div>
+      </div>
+                  
     </div>
 
-    <!-- after account is successfully deleted from db -->
-    <span >
-      <?php
-        // message about the deleted account.
-        echo $_SESSION["acc_del"];
 
-        // set the session variable value to null;
-        // $_SESSION["acc_del"] = null;
-        unset( $_SESSION["acc_del"] );
-
-        // destroy all sessions
-        // session_destroy();
-      ?>
-    </span>
-
-    <span >
-      <!-- put a timer to make this message disappear. -->
-      <?php
-        // feedback onm registration process.
-        echo $_SESSION["reg_msg"];
-
-        // set session variable to null
-        // $_SESSION["reg_msg"] = null;
-        unset( $_SESSION["reg_msg"] );
-
-        // maybe destroy the message.
-        // session_destroy();
-      ?>
-    </span>
-
-
-    <div >
-      <h2 >Log in</h2>
-      <form action="./app/login.php" method="post">
-        <div >
-          <input type="email" name="email" id="email" placeholder="Enter email" >
-        </div>
-
-        <div >
-          <input value="Bakali" type="password" name="passwd" id="pw" placeholder="Enter password" >
-        </div>
-
-        <div >
-          <input type="submit" name="submit" id="submit">
-        </div>
-      </form>
-
-    </div>
-    
 
     <?php
       echo $_SESSION["login_msg"];
@@ -132,7 +220,12 @@
 
 
 
-  
+
+
+
+
+
+
     <!-- SAVVY REGISTRATION FORM -->
     <!-- <div >
       <h2 >Tech Savvy Sign up</h2>
@@ -155,6 +248,7 @@
       </form>
     </div>
 
+
     <div >
       <h2 >Tech Savvy log in</h2>
       <form action="./app/login_savvy.php" method="post">
@@ -169,16 +263,6 @@
     </div> -->
 
 
-
-
-
-
-
-
-
-
-
-
     <!-- this is a form for the comment  -->
     <!-- <form action="./toDb/comment.php" method="post" >
       <div >
@@ -191,15 +275,6 @@
     </form> -->
 
 
-
-
-
-
-
-
-
-
-    
     <!-- this is uploading a team members details to db. -->
     <!-- <form action="./toDb/team.php" method="post">
       <div >
@@ -219,9 +294,13 @@
       </div>
     </form> -->
       
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script ></script>
-    <script ></script>
+
+    <script src="./js/jQuery.js" ></script>
+    <script src="./js/bootstrap.min.js" ></script>
+    <script src="./js/script.js" ></script>
+  
   </body>
 </html>
