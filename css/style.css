@@ -10,6 +10,13 @@
 }
 
 
+/* this applies to the title of pages */
+
+title {
+    text-transform: capitalize;
+}
+
+
 /* remove every default styling applied by the browser. */
 
 * {
@@ -64,6 +71,7 @@ a {
 input[type="submit"] {
     color: white;
     background-color: rgb(27, 4, 43);
+    font-weight: bold;
 }
 
 
@@ -71,8 +79,16 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     color: rgb(27, 4, 43);
-    background-color: white;
+    /* color: white; */
+    background-color: rgb(238, 130, 48);
     /* font-weight: bold; */
+}
+
+
+/* this applies to the input-group-text from bootstrap, to align text to the left, cause it currently aligns by the center */
+
+.input-group-text {
+    text-align: left;
 }
 
 
@@ -165,6 +181,14 @@ div {
     text-align: left;
     width: 80%;
     padding-left: 10px;
+}
+
+
+/* this rules applies to main page search function. */
+
+#mainp_search_gr {
+    margin: 0em auto;
+    text-align: center;
 }
 
 

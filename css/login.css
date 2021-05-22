@@ -32,7 +32,7 @@ button {
 /* this rules applies to the savvy block */
 
 #savvy_block {
-    padding: auto;
+    font-size: 1em;
 }
 
 

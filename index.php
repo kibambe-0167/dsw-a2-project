@@ -47,16 +47,68 @@
 
 
     <div id="login_content" class="container row bg-dark">
+
+
+      <!-- Savvy block -->
+      <div class="col-sm-6 bg-warning" id="savvy_block" >
+        <!-- Second Form     -->
+        <form action="./app/login_savvy.php" method="post" id="form2" >
+          <h2>Public</h2>
+          <label for="email">Email </label>
+          <div class="input-group">
+            <input class="input-group-text" type="email" name="email" placeholder="Enter your email" id="" autofocus>
+          </div>
+          
+          <div class="input-group">
+            <input class="btn"  type="submit" name="submit" value="login" id="">
+            <input type="reset" class="btn bg-secondary" onclick="add1()" class="accordion1" value="Sign Up"/>
+          </div>
+        </form>
+
+        <!--Second Hidden Form-->
+        <div id="panel1" class="panel1">
+          <form action="./toDb/reg_savvy.php" method="post" >
+            <label>First Name </label>
+            <div class="input-group" >
+              <input class="input-group-text" type="text" name="fname" placeholder="Enter firstname" value="micheal" autofocus >
+            </div>
+
+            <label>Last Name </label>
+            <div class="input-group" >
+              <input class="input-group-text" type="text" name="lname" placeholder="Enter lastname" value="Banda" >
+            </div>
+
+            <label> Email</label>
+            <div class="input-group" >
+              <input class="input-group-text" type="email" name="email" placeholder="Enter email" value="micheal@gmail.com" >
+            </div>
+
+            <label> Confirm Email</label>
+            <div class="input-group" >
+              <input class="input-group-text" type="email" name="email" placeholder="Enter email" value="micheal@gmail.com" >
+            </div>
+
+            <div class="input-group" >
+              <input class="btn" type="submit" name="signup" value="sign up" >
+              
+              <input type="reset" class="btn bg-danger" id="discard2" value="Discard" />
+            </div>
+
+          </form>
+        </div>
+      </div>
       
+
+
       <!-- student block -->
       <div class="col-sm-6 bg-info" id="student_block">
         <!-- First form -->
-        <form action="./app/login.php" method="post"id="form1" onsubmit="return false">
+        <form action="./app/login.php" method="post"id="form1" >
           <h2>Students</h2>
 
           <label for="username">Username</label>
           <div class="input-group">
-            <input class="input-group-text" type="email" name="email" id="email" placeholder="Enter email" >
+            <input class="input-group-text" type="email" name="email" id="email" placeholder="Enter email" autofocus >
           </div>
           
           <label for="pwd">Password</label>
@@ -65,9 +117,9 @@
           </div>
 
           <div class="input-group" >
-            <input class="input-group-text" type="submit" name="submit" id="submit">
+            <input class="btn" value="Signin" type="submit" name="submit" id="submit">
 
-            <input class="btn bg-secondary"  onclick="add()" type="button" class="" value="Sign up"/>
+            <input class="btn bg-secondary"  onclick="add()" type="reset" class="" value="Sign up"/>
           </div>
         </form>
 
@@ -77,7 +129,7 @@
 
             <label for="fName">First Name</label>
             <div class="input-group" >
-              <input class="input-group-text" type="text" name="firstname" placeholder="Enter first name" value="Bakali" required>
+              <input class="input-group-text" type="text" name="firstname" placeholder="Enter first name" value="Bakali" required autofocus>
             </div>
             
             <label>Last Name</label>
@@ -153,55 +205,6 @@
             unset( $_SESSION["reg_msg"] );
           ?>
         </span>
-      </div>
-
-      <!-- Savvy block -->
-      <div class="col-sm-6 bg-warning" id="savvy_block" >
-        <!-- Second Form     -->
-        <form action="./app/login_savvy.php" method="post" id="form2" onsubmit="return false">
-          <h2>Public</h2>
-          <label for="email">Email </label>
-          <div class="input-group">
-            <input class="input-group-text" type="email" name="email" placeholder="Enter your email" id="">
-          </div>
-          
-          <div class="input-group">
-            <input class="btn"  type="submit" name="submit" value="login" id="">
-            <input type="button" class="btn bg-secondary" onclick="add1()" class="accordion1" value="Sign Up"/>
-          </div>
-        </form>
-
-        <!--Second Hidden Form-->
-        <div id="panel1" class="panel1">
-          <form action="./toDb/reg_savvy.php" method="post" >
-            <label>First Name </label>
-            <div class="input-group" >
-              <input class="input-group-text" type="text" name="fname" placeholder="Enter firstname" value="micheal" >
-            </div>
-
-            <label>Last Name </label>
-            <div class="input-group" >
-              <input class="input-group-text" type="text" name="lname" placeholder="Enter lastname" value="Banda" >
-            </div>
-
-            <label> Email</label>
-            <div class="input-group" >
-              <input class="input-group-text" type="email" name="email" placeholder="Enter email" value="micheal@gmail.com" >
-            </div>
-
-            <label> Confirm Email</label>
-            <div class="input-group" >
-              <input class="input-group-text" type="email" name="email" placeholder="Enter email" value="micheal@gmail.com" >
-            </div>
-
-            <div class="input-group" >
-              <input type="submit" name="signup" value="sign up" >
-              
-              <input type="reset" class="btn bg-danger" id="discard2" value="Discard" />
-            </div>
-
-          </form>
-        </div>
       </div>
                   
     </div>

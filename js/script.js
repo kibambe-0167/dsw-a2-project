@@ -27,7 +27,7 @@ $(function() { // console.log("J Query loaded");
 
 
 
-    // when the mobile nav button losses focus, remove the nav menu
+    // when the search_btnmobile nav button losses focus, remove the nav menu
     $("#menu_btn").click(function() {
         $("#nav_mobile").toggle();
         $(".wrap").toggle();
@@ -36,6 +36,14 @@ $(function() { // console.log("J Query loaded");
         $("#nav_mobile").toggle();
         $(".wrap").toggle();
     });
+
+    // when search btn in main page is clicked, and the search field is not empty
+    // remove any text or data in the div that shows project at default state.
+    $("#search_btn").click(function() {
+        // if the search field is not empty, remove everydata project view element.
+        console.log($("#show_project").val());
+    });
+
 
 
 });

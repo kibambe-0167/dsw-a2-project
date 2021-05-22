@@ -14,13 +14,17 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Main Page</title>
+    <title>
+      <?php echo ucwords( $_SESSION["firstname"] ) . " | main page "; ?>
+    </title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/head.css">
     <style >
       .sep {
         margin: 3em .1em;
@@ -32,9 +36,7 @@
       div {
         margin: 2em .1em;
       }
-      #s {
-        text-align: center;
-      }
+      
     </style>
   </head>
   <body>
@@ -67,28 +69,30 @@
     </div>
 
 
-    <div id="s">
+    <div id="mainp_search_gr" class="container bg-secondary">
     <!-- < ?php echo isset($_POST['search_pro']) ? $_POST['search_pro'] : '' ? > -->
       <!-- @request["inputText"] -->
       <!-- onsubmit="return false" -->
       <form action="../views/show_pro.php" method="post" >
-        <input type="text" name="search_pro" id="search_pro" 
-          placeholder="Type to search for a project......"
-          value="" >
+        <div class="input-group" >
+          <input class="input-group-text" type="text" name="search_pro" id="search_pro" 
+            placeholder="Type to search for a project......"
+            value="" >
 
-        <input type="submit" name="search_btn" value="Search" onclick="">
+          <input class="btn" type="submit" id="search_btn" name="search_btn" value="Search" >
+
+        </div>
+        
       </form>
     </div>
 
 
-    <div >
+    <div id="show_project" class="container">
       <?php
         // include_once("../views/show_pro.php");
         echo $_SESSION["show"];
       ?>
     </div>
-
-
 
 
 
@@ -102,6 +106,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src=""></script>
+    <script src="./js/jQuery.js" ></script>
+    <script src="./js/bootstrap.min.js" ></script>
+    <script src="./js/script.js" ></script>
   </body>
 </html>
