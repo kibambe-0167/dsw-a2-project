@@ -26,7 +26,7 @@
         // echo $email . " | " . $passwd;
 
         // make query to check for user in db.
-        $query = "select * from student where school_email='$email' and password='$passwd' ";
+        $query = "select * from student where school_email='$email' and password='$passwd' LIMIT 1";
 
         // query the table for all users.
         // $query = "select * from student";
@@ -54,7 +54,7 @@
           // $_SESSION["project_query_result"];
           
           header( "location:main.php" ); // redirect to the main page.
-          exit();
+          // exit();
         }
 
         else {

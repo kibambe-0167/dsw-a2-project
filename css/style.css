@@ -66,9 +66,18 @@ a {
 }
 
 
+/* this applies to the remove btn in the search bar field */
+
+#search_remove {
+    color: white;
+}
+
+
 /* this make all submit button to have a color set of the same */
 
-input[type="submit"] {
+input[type="submit"],
+#search_btn,
+#search_remove {
     color: white;
     background-color: rgb(27, 4, 43);
     font-weight: bold;

@@ -1,0 +1,83 @@
+.info {
+    border: 1px solid;
+    clear: both;
+}
+
+img {
+    width: 20%;
+    padding: 1px;
+    margin-top: 2px;
+}
+
+#search_gr {
+    margin: 3em auto;
+}
+
+.comment {
+    margin: 1px;
+    padding: 5px;
+}
+
+input[type="submit"],
+#com_btn {
+    margin-left: -5px;
+    color: white;
+    background-color: rgb(27, 4, 43);
+}
+
+#usr_com {
+    width: 70%
+}
+
+
+/* /////////////////////////////////// */
+
+.type {
+    float: right;
+    background-color: blueviolet;
+    padding: .1em 1em;
+    font-size: 1.3em;
+}
+
+#main_details div {
+    display: inline;
+    margin: 5px;
+}
+
+#main_details {
+    margin: 5px 0px;
+}
+
+#main_details #main_desc {
+    background-color: blueviolet;
+    padding: 5px;
+}
+
+#main_details #main_contact {
+    background-color: blueviolet;
+    padding: 5px;
+}
+
+#main_img {
+    text-align: center;
+}
+
+
+/* table mobile.................... */
+
+@media ( max-width: 770px) {
+    img {
+        width: 50%;
+        height: 10em;
+        /* height: auto; */
+    }
+    #main_img {
+        /* margin: 10px auto; */
+        text-align: left;
+    }
+}
+
+#main_img {
+    /* margin: 10px auto; */
+    text-align: left;
+}

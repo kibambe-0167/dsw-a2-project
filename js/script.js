@@ -37,11 +37,40 @@ $(function() { // console.log("J Query loaded");
         $(".wrap").toggle();
     });
 
+
+
+
     // when search btn in main page is clicked, and the search field is not empty
     // remove any text or data in the div that shows project at default state.
     $("#search_btn").click(function() {
-        // if the search field is not empty, remove everydata project view element.
-        console.log($("#show_project").val());
+        console.log("search btn clicked");
+        // if the search field value is not empty
+        if ($("#search_pro").val() != "") {
+            var key_word = $("#search_pro").val();
+            // console.log(key_word);
+
+            // send data to server. the url to send data to. the data to send. and the call back function, when the data is send.
+            $.post("../views/show_pro.php", {
+                "key_word": key_word
+            }, (data) => {
+                var dataObj = JSON.parse(data);
+                if ("search_result" in dataObj) {
+                    $("#show_project").html("");
+                    $("#show_project").html(dataObj["search_result"]);
+                    console.log("From server", dataObj);
+                }
+
+            });
+        }
+
+    });
+
+
+    // 
+    // when the search remove btn is clicked, delete value in search input field
+    // 
+    $("#search_remove").click(() => {
+        $("#search_pro").val("");
     });
 
 

@@ -301,9 +301,9 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-    <script src="./js/jQuery.js" ></script>
-    <script src="./js/bootstrap.min.js" ></script>
-    <script src="./js/script.js" ></script>
+    <script type="text/javascript" src="./js/jQuery.js" ></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="./js/script.js" ></script>
   
   </body>
 </html>

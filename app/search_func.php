@@ -99,9 +99,15 @@
     $score_v = array_column( $new_arr_return, "score" );
     array_multisort( $score_v, SORT_DESC, $new_arr_return );
 
-    // foreach($new_arr_return as $new) {print_r( $new ); echo "<br /><br />";}
 
-    return $new_arr_return;
+    $rank = "";
+
+    foreach($new_arr_return as $new) {
+      // print_r( $new ); echo "<br /><br />";
+      $rank .= "<div><a href='#?pro_id=" . $new["id"] . "'>" . $new["id"] . " | " . $new["pro_name"] . " | " . $new["type"] . " | " . $new["pro_desc"] . "</a></div >";
+    }
+
+    return $rank;
 
   } 
 

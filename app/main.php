@@ -7,8 +7,9 @@
   if( session_status() === PHP_SESSION_ACTIVE ) {
     session_start();
   }
+  session_start();
   // include this file here.
-  include("../views/show_pro.php");
+  // include("../views/show_pro.php");
 ?>
 
 <!doctype html>
@@ -22,19 +23,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <script src="https://kit.fontawesome.com/b369a29969.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/head.css">
+    <link rel="stylesheet" href="../css/p_snippet.css">
+
     <style >
       .sep {
-        margin: 3em .1em;
+        margin: 1em .1em;
       }
       li {
         display: inline;
         margin: .2em 1em;
       }
       div {
-        margin: 2em .1em;
+        margin: 1em .1em;
       }
       
     </style>
@@ -69,25 +73,40 @@
     </div>
 
 
-    <div id="mainp_search_gr" class="container bg-secondary">
-    <!-- < ?php echo isset($_POST['search_pro']) ? $_POST['search_pro'] : '' ? > -->
-      <!-- @request["inputText"] -->
-      <!-- onsubmit="return false" -->
-      <form action="../views/show_pro.php" method="post" >
-        <div class="input-group" >
-          <input class="input-group-text" type="text" name="search_pro" id="search_pro" 
+    <div id="mainp_search_gr" class="container">
+
+        <div class="input-group rounded">
+          <input class="form-control" type="text" name="search_pro" id="search_pro" 
             placeholder="Type to search for a project......"
             value="" >
 
-          <input class="btn" type="submit" id="search_btn" name="search_btn" value="Search" >
+          <button type="button" class="btn" id="search_remove" name="search_btn" >
+            <i class="fa fa-remove" ></i> Cancel
+          </button>
 
+          <button type="button" class="btn" id="search_btn" name="search_btn" >
+            <i class="fas fa-search"></i> Search
+          </button>
         </div>
-        
-      </form>
+
+        <!-- <div id="search_gr" class="input-group rounded">
+          <input type="search" class="form-control" name="search_pro" id="search_pro" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+
+          <button class="input-group-text border-0" id="search_logo" id="search_btn" name="search_btn" >
+            <i class="fas fa-search"> </i> Search
+          </button> 
+        </div> -->
     </div>
 
 
+
+
+
+
+
+
     <div id="show_project" class="container">
+
       <?php
         // include_once("../views/show_pro.php");
         echo $_SESSION["show"];
@@ -96,18 +115,18 @@
 
 
 
-    <div >
-      <?php
+    <!-- <div >
+      < ?php
         // include_once("./get_pro.php");
-      ?>
-    </div>
+      ? >
+    </div> -->
 
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./js/jQuery.js" ></script>
-    <script src="./js/bootstrap.min.js" ></script>
-    <script src="./js/script.js" ></script>
+    <script type="text/javascript" src="../js/jQuery.js" ></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="../js/script.js" ></script>
   </body>
 </html>

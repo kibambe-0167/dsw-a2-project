@@ -11,36 +11,20 @@
   include("../app/search_func.php"); // call file with search function.
 
 
-  if( isset( $_POST["search_btn"] ) ) {// echo "search btn clicked.....";
-    $_SESSION["show"] = "";
-    $pro_array = array();
-    while( $projects = mysqli_fetch_assoc( $_SESSION["pro_query"] ) ) {
+  // get key word to search for from post.
+  $key_word = $_POST["key_word"];
 
-      // $_SESSION["show"] .= "<div><a href='#'>" . $projects["id"] . " | " . $projects["pro_name"] . " | " . $projects["type"] . " | " . $projects["pro_desc"] . "</a></div >";
+  // to store new data
+  $pro_array = array();
 
-      // push all the array project to an array variable, for searching.
-      array_push( $pro_array, $projects );
-    }
-    
-    $search_result = search_function( $pro_array, "mobile app from blah blah blah blah blah" );
-
-    foreach( $search_result as $ranks ) {
-      // print_r( $ranks ); echo "<br /><br />";
-
-      $_SESSION["show"] .= "<div><a href='#'>" . $ranks["id"] . " | " . $ranks["pro_name"] . " | " . $ranks["type"] . " | " . $ranks["pro_desc"] . " | " . $ranks["score"] . "</a></div >";
-    }
-
-    header("location:../app/main.php");
+  while( $projects = mysqli_fetch_assoc( $_SESSION["pro_query"] ) ) {
+    // push all the array project to an array variable, for searching.
+    array_push( $pro_array, $projects );
   }
 
-  else { // echo "<br/><br/>No filter provided<br/>";
-    // print_r( $_SESSION["pro_query"] );
-    $_SESSION["show"] = "";
+  // call the function that ranks and shows the projects.
+  $search_result = search_function( $pro_array, $key_word );
 
-    while( $projects = mysqli_fetch_assoc( $_SESSION["pro_query"] ) ) {
-      $_SESSION["show"] .= "<div><a href='#'>" . $projects["id"] . " | " . $projects["pro_name"] . " | " . $projects["type"] . " | " . $projects["pro_desc"] . "</a></div >";
-    }
-  }
-
+  echo json_encode( [ "pv" => $key_word, "search_result" => $search_result ]);
 
 ?>
