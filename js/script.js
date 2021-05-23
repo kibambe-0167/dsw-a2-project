@@ -26,10 +26,12 @@ $(function() { // console.log("J Query loaded");
     });
 
 
-    // toggle the basic
-    // $("#menu_btn").click( function() {
-    //   $("#nav_mobile").toggle();
-    // });
+    // when element that shows feedback after uploading a project
+    // has text in it. sleep for some seconds and remove text.
+    if ($("#pro_up_msg").html() != "") {
+        setTimeout(() => {}, 3000);
+        console.log($("#pro_up_msg").html(""));
+    }
 
 
 

@@ -24,8 +24,9 @@
   }
 
   // call the function that ranks and shows the projects.
-  $search_result = search_function( $pro_array, $key_word ) == ""? "no data found": search_function( $pro_array, $key_word );
 
-  echo json_encode( [ "pv"=>$key_word, "search_result"=>$search_result ]);exit;
+  $search_result = search_function( $pro_array, $key_word );
+
+  // echo json_encode( [ "pv"=>$key_word, "search_result"=>$search_result ]);exit;
 
 ?>

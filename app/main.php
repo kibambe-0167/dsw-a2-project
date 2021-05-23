@@ -115,7 +115,7 @@
     <div class="container show_project" >
     <!-- <div class = "container main_pro_"> -->
       <div class="type" >
-        <?php echo $project["type"] ?>
+        <?php echo strtolower( $project["type"] ) ?>
       </div>
 
       <div class="info">
@@ -123,14 +123,17 @@
           <img src="picture.jpg">
         </div> -->
 
-        <div class="bg-info" id="main_details">
-          <div id="main_contact"> <?php echo  ucwords($project["pro_name"] );  ?> </div>
-          <div id="main_desc" > <?php echo $project["pro_desc"] ?> </div>
+        <div class="" id="main_details">
+          <div class="main_name"> <?php echo  ucwords($project["pro_name"] );  ?> </div>
+          <div id="main_desc" > 
+            <a href="?#project=<?php echo $project["id"] ?>" >
+              <?php echo $project["pro_desc"] ?> </a>
+            </div>
         </div>
           
         <div class= "comment input-group" >
-          <input class="input-group-text" type="text" name="comment"  placeholder="Type a comment..." id="usr_com">
-          <input class="form-control" type="submit" value="Comment" name="com_btn" id="com_btn">
+          <input class="form-control" type="text" name="comment"  placeholder="Type a comment..." id="usr_com">
+          <input class="form-control" type="submit" value="Comment" name="com_btn" id="com_btn" />
         </div>
       </div>
 

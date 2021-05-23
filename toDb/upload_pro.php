@@ -35,7 +35,7 @@
         // also set uploading message via sessions.
         if( mysqli_query( $connObj, $query ) ) {
           echo "Project " . $name . " Successfully saved";
-          $_SESSION["upload_pro_msg"] = "<span class='success' >Project " . $name . " Successfully saved</span>";
+          $_SESSION["upload_pro_msg"] = "<span class='success' >Project " . $name . " successfully saved</span>";
 
           // redirect user back to the project upload form.
           header( "location:../app/main.php" );

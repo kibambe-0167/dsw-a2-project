@@ -57,9 +57,16 @@ input[type="submit"],
     padding: 0em;
 }
 
-#main_details #main_contact {
+#main_details {
     /* background-color: blueviolet; */
     padding: 0em;
+}
+
+
+/* this applies to the div with the name of the project */
+
+.main_name {
+    font-weight: bold;
 }
 
 #main_img {
