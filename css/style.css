@@ -17,6 +17,14 @@ title {
 }
 
 
+/* this applies to div holding message from .php after uploading a project */
+
+#pro_up_msg {
+    margin: 2em auto;
+    text-align: center;
+}
+
+
 /* remove every default styling applied by the browser. */
 
 * {
@@ -86,7 +94,9 @@ input[type="submit"],
 
 /* when someone hover over the btn */
 
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+#search_btn:hover,
+#search_remove:hover {
     color: rgb(27, 4, 43);
     /* color: white; */
     background-color: rgb(238, 130, 48);
@@ -110,6 +120,20 @@ div {
 #reg_form {
     margin: 3em;
     display: none;
+}
+
+
+/* this code applies to any span that has error class */
+
+.error {
+    color: red;
+}
+
+
+/* this applies to any element that has class success */
+
+.success {
+    color: green;
 }
 
 

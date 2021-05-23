@@ -19,12 +19,12 @@
       // if the key word is found in name, give a higher rating to that project score.
       // echo strtolower( $a["pro_name"] );
       // echo preg_match_all( $patt, strtolower($a["pro_name"]) ) . "<br/>";
-      $score += preg_match_all( $patt, strtolower($a["pro_name"]) ) + 5;
+      $score += preg_match_all( $patt, strtolower($a["pro_name"]))==0 ? 0: preg_match_all( $patt, strtolower($a["pro_name"])) + 5; // making sure its get more ratings.
 
       // // check in  type.
       // echo strtolower( $a["type"] );
       // echo preg_match_all( strtolower($patt), strtolower($a["type"])) . "<br/>";
-      $score += preg_match_all( strtolower($patt), strtolower($a["type"]));
+      $score += preg_match_all( $patt, strtolower($a["type"]))==0 ? 0: preg_match_all( $patt, strtolower($a["type"])) + 5; // making sure its get more ratings. add only when a match is found, else add 0.
 
       // // check in project description
       // echo strtolower( $a["pro_desc"] );
@@ -73,7 +73,7 @@
         foreach( $words_seq as $w ) { // echo $w;
           $pat_w = "/". $w ."/i";
           // echo preg_match_all( $pat_w, strtolower($a["pro_desc"])) . "<br/>";
-          $score += preg_match_all( $pat_w, strtolower($a["pro_name"])) + 5; // making sure its get more ratings.
+          $score += preg_match_all( $pat_w, strtolower($a["pro_name"]))==0 ? 0: preg_match_all( $pat_w, strtolower($a["pro_name"])) + 5; // making sure its get more ratings.
           $pat_w = "";
         }
 
@@ -81,7 +81,7 @@
         foreach( $words_seq as $w ) { // echo $w;
           $pat_w = "/". $w ."/i";
           // echo preg_match_all( $pat_w, strtolower($a["pro_desc"])) . "<br/>";
-          $score += preg_match_all( $pat_w, strtolower($a["type"])) + 5; // making sure its get more ratings.
+          $score += preg_match_all( $pat_w, strtolower($a["type"]))==0 ? 0: preg_match_all( $pat_w, strtolower($a["type"])) + 5; // making sure its get more ratings. add only when a match is found, else add 0.
           $pat_w = "";
         }
       }
@@ -104,10 +104,15 @@
 
     foreach($new_arr_return as $new) {
       // print_r( $new ); echo "<br /><br />";
-      $rank .= "<div><a href='#?pro_id=" . $new["id"] . "'>" . $new["id"] . " | " . $new["pro_name"] . " | " . $new["type"] . " | " . $new["pro_desc"] . "</a></div >";
+      if( $new["score"] > 0 ) {
+        $rank .= "<div><a href='#?pro_id=" . $new["id"] . "'>" . $new["id"] . " | " . $new["pro_name"] . " | " . $new["type"] . " | " . $new["pro_desc"] . "</a></div >";
+      } 
+      
     }
 
-    return $rank;
+    // return $rank;
+
+    return $new_arr_return;
 
   } 
 

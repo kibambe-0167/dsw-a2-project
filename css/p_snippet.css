@@ -5,8 +5,8 @@
 
 img {
     width: 20%;
-    padding: 1px;
-    margin-top: 2px;
+    padding: 0em;
+    margin: 0em;
 }
 
 #search_gr {
@@ -14,13 +14,13 @@ img {
 }
 
 .comment {
-    margin: 1px;
-    padding: 5px;
+    margin: 0em;
+    padding: 0em;
 }
 
 input[type="submit"],
 #com_btn {
-    margin-left: -5px;
+    /* margin-left: -5px; */
     color: white;
     background-color: rgb(27, 4, 43);
 }
@@ -34,32 +34,44 @@ input[type="submit"],
 
 .type {
     float: right;
-    background-color: blueviolet;
-    padding: .1em 1em;
-    font-size: 1.3em;
+    padding: .01em 1em;
+    font-size: 1em;
+    color: rgb( 255, 255, 255);
+    background-color: rgb(27, 4, 43);
+    margin: 0em;
+    border-top-right-radius: .4em;
+    border-top-left-radius: 1.5em;
 }
 
 #main_details div {
-    display: inline;
-    margin: 5px;
+    /* display: inline; */
+    margin: .5em 0em;
 }
 
 #main_details {
-    margin: 5px 0px;
+    margin: 0em;
 }
 
 #main_details #main_desc {
-    background-color: blueviolet;
-    padding: 5px;
+    /* background-color: blueviolet; */
+    padding: 0em;
 }
 
 #main_details #main_contact {
-    background-color: blueviolet;
-    padding: 5px;
+    /* background-color: blueviolet; */
+    padding: 0em;
 }
 
 #main_img {
     text-align: center;
+}
+
+
+/* this applies to the div that holds individual projects */
+
+.show_project {
+    margin: 3em auto;
+    /* padding: 0em; */
 }
 
 

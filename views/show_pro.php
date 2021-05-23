@@ -17,14 +17,15 @@
   // to store new data
   $pro_array = array();
 
-  while( $projects = mysqli_fetch_assoc( $_SESSION["pro_query"] ) ) {
+  //  $_SESSION["pro_query"] 
+  while( $projects = mysqli_fetch_assoc( $result ) ) {
     // push all the array project to an array variable, for searching.
     array_push( $pro_array, $projects );
   }
 
   // call the function that ranks and shows the projects.
-  $search_result = search_function( $pro_array, $key_word );
+  $search_result = search_function( $pro_array, $key_word ) == ""? "no data found": search_function( $pro_array, $key_word );
 
-  echo json_encode( [ "pv" => $key_word, "search_result" => $search_result ]);
+  echo json_encode( [ "pv"=>$key_word, "search_result"=>$search_result ]);exit;
 
 ?>

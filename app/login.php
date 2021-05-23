@@ -5,6 +5,7 @@
   
   // include the connectoion file to get objects.
   include( "../config/connection.php" );
+  include("./get_pro.php");
 
 
 
@@ -50,10 +51,21 @@
           $_SESSION["school_email"] = $student["school_email"];
           $_SESSION["current_year"] = $student["current_year"];
           $_SESSION["department"] = $student["department"];
-          $_SESSION["projects"];
-          // $_SESSION["project_query_result"];
+
+          // get all project from db.
+          $projects = get_project_func();
+
+          if( $projects != null ) {
+            $_SESSION["show_projects"] = $projects;
+            header( "location:./main.php" ); // redirect to the main page.
+            exit;
+
+          }
+          else {
+            $_SESSION["show_projects"] = null;
+          }
           
-          header( "location:main.php" ); // redirect to the main page.
+          // header( "location:./main.php" ); // redirect to the main page.
           // exit();
         }
 

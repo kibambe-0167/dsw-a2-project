@@ -3,7 +3,7 @@
 <?php 
   session_start(); // start a session.
 
-  include("connection.php"); // call the connnection object.
+  include("../config/connection.php"); // call the connnection object.
 
   if( !$connObj ) {
     $err_conn = "<div id='err_conn' >
@@ -15,8 +15,7 @@
     die( "Error: " . mysqli_connect_error());
   }
 
-  else { // connection to DB was successful.s
-    // echo "Connected";
+  else { // connection to DB was successful.// echo "Connected";
 
     // if upload btn is cliked and defined.
     if( isset( $_POST["upload"] ) ) {
@@ -36,17 +35,17 @@
         // also set uploading message via sessions.
         if( mysqli_query( $connObj, $query ) ) {
           echo "Project " . $name . " Successfully saved";
-          $_SESSION["upload_pro_msg"] = "Project " . $name . " Successfully saved";
+          $_SESSION["upload_pro_msg"] = "<span class='success' >Project " . $name . " Successfully saved</span>";
 
           // redirect user back to the project upload form.
-          header( "location:../app/pro_form.php" );
+          header( "location:../app/main.php" );
         }
         else {// if there was an error saving the message
           echo "Error saving project to db";
-          $_SESSION["upload_pro_msg"] = "Error saving project ".$name." to db";
+          $_SESSION["upload_pro_msg"] = "<span class='error' >Error saving project ".$name." to database</span>";
 
           // redirect user back to the project upload form.
-          header( "location:../app/pro_form.php" );
+          header( "location:../app/main.php" );
         }
       }
       else {// some required field are empty

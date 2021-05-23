@@ -45,9 +45,8 @@
 
 
 
-
+    <!-- contains login and signin forms -->
     <div id="login_content" class="container row bg-dark">
-
 
       <!-- Savvy block -->
       <div class="col-sm-6 bg-warning" id="savvy_block" >
