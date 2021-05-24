@@ -15,8 +15,11 @@
   // include("../app/get_pro.php"); // to make sure that the code runs.
 
   include_once("./get_pro.php");
-  
   $_SESSION["show_projects"] = get_project_func();
+
+  // file that receive search word and change session projects.
+  include("./search_pro.php");
+  
 ?>
 
 <!doctype html>

@@ -31,9 +31,6 @@
   
         // turn into associative array
         while( $projects = mysqli_fetch_assoc( $result) ) {
-  
-          // $_SESSION["show_projects"] .= "<div class='container'><a href='#'>" . $projects["id"] . " | " . $projects["pro_name"] . " | " . $projects["type"] . " | " . $projects["pro_desc"] . "</a></div >";
-          
           array_push( $project, $projects );
         }
   

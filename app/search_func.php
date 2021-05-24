@@ -86,12 +86,9 @@
         }
       }
 
-      // echo $a["pro_name"] . " | " . $score . "<br/>";
-      $a["score"] = $score;
-      // print_r( $a ); echo "<br/><br/>";
+      $a["score"] = $score; // print_r( $a ); echo "<br/><br/>";
 
-      array_push( $new_arr_return, $a );
-      // make the
+      array_push( $new_arr_return, $a ); // push to new array.
       
     }
 
@@ -99,20 +96,7 @@
     $score_v = array_column( $new_arr_return, "score" );
     array_multisort( $score_v, SORT_DESC, $new_arr_return );
 
-
-    $rank = "";
-
-    foreach($new_arr_return as $new) {
-      // print_r( $new ); echo "<br /><br />";
-      if( $new["score"] > 0 ) {
-        $rank .= "<div><a href='#?pro_id=" . $new["id"] . "'>" . $new["id"] . " | " . $new["pro_name"] . " | " . $new["type"] . " | " . $new["pro_desc"] . "</a></div >";
-      } 
-      
-    }
-
-    // return $rank;
-
-    return $new_arr_return;
+    return $new_arr_return; // return sorted projects..
 
   } 
 
