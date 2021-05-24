@@ -14,8 +14,7 @@
     // echo "Connection to db was okay";
     
     // when the submit btn is clicked...
-    if( isset( $_POST["submit"] ) ) {
-      // echo "btn clicked";
+    if( isset( $_POST["submit"] ) ) { // echo "btn clicked";
 
       // check for empty field of email.
       if( !empty( $_POST["email"] ) ) {

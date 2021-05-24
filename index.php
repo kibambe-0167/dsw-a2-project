@@ -69,6 +69,8 @@
           <?php echo $_SESSION["email_provide"]; ?>
 
           <?php echo $_SESSION["no_user"]; ?>
+
+          <?php echo $_SESSION["savvy_del_msg"]; ?>
         </div>
         
 

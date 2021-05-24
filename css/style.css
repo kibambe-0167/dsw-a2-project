@@ -84,6 +84,7 @@ a {
 /* this make all submit button to have a color set of the same */
 
 input[type="submit"],
+input[type="reset"],
 #search_btn,
 #search_remove {
     color: white;
@@ -92,9 +93,17 @@ input[type="submit"],
 }
 
 
+/* this applies to the div on the delete project */
+
+#del_savvy {
+    text-align: center;
+}
+
+
 /* when someone hover over the btn */
 
 input[type="submit"]:hover,
+input[type="reset"]:hover,
 #search_btn:hover,
 #search_remove:hover {
     color: rgb(27, 4, 43);
@@ -127,6 +136,7 @@ div {
 
 .error {
     color: red;
+    text-align: center;
 }
 
 
@@ -134,6 +144,14 @@ div {
 
 .success {
     color: green;
+    text-align: center;
+}
+
+
+/* this applies to the footer element of html */
+
+footer {
+    background-color: rgb(27, 4, 43);
 }
 
 

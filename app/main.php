@@ -123,7 +123,7 @@
     <?php
       // echo $_SESSION["show_projects"];// echo "sldjfnsdjf";
 
-      foreach( $_SESSION["show_projects"] as $project ) { echo "main loop";
+      foreach( $_SESSION["show_projects"] as $project ) { // echo "main loop";
         // print_r( $project ); echo "<br /><br />";
     ?>
     <div class="container show_project" >
