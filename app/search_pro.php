@@ -10,25 +10,32 @@
   include("../app/search_func.php"); // call file with search function.
 
 
-  // get key word to search for from post.
-  $key_word = $_POST["key_word"];
+  if( isset( $_POST["search_btn"] ) ) { //echo "btn clicked..<br />";
+    // get key word to search for from post.
+    $key_word = $_POST["key_word"];
 
-  if( !empty( $key_word ) ) { // when search word from user is not empty.
-    $pro_array = array(); // to store new data
+    if( !empty( $key_word ) ) { // when search word from user is not empty.
+      // echo "search word not empty<br />";
+      $results = get_project_func();
 
-    $results = get_project_func();
+      // $pro_array = array(); // to store new data
+      // while( $projects = mysqli_fetch_assoc( $result ) ) {
+      //   // push all the array project to an array variable, for searching.
+      //   array_push( $pro_array, $projects );
+      // }
 
-    // while( $projects = mysqli_fetch_assoc( $result ) ) {
-    //   // push all the array project to an array variable, for searching.
-    //   array_push( $pro_array, $projects );
-    // }
+      // call the function that ranks and shows the projects.
+      $search_result = search_function( $results, $key_word );
 
-    // call the function that ranks and shows the projects.
-    $search_result = search_function( $results, $key_word );
+      print_r( $search_result );
 
-    // change the session variable that is holding the data.
-    $_SESSION["show_projects"] = $search_result;
+      // change the session variable that is holding the data.
+      $_SESSION["show_projects"] = $search_result;
+
+      header("location:./main.php");
+    }
   }
+  
 
   exit;
 

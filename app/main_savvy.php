@@ -1,15 +1,13 @@
 
 
-<?php
-  // start a php session to send data and information.
 
+<?php
   // only start a session when a session exist.
   // if( session_status() === PHP_SESSION_ACTIVE ) {
   //   session_start();
   // }
 
-
-  session_start();
+  session_start(); // start a php session to send data and information.
   // include this file here.
   // include("../app/show_pro.php");
   // include("../app/get_pro.php"); // to make sure that the code runs.
@@ -27,13 +25,7 @@
   <head>
     <title>
       <?php
-        if( isset($_SESSION["firstname"]) && !empty($_SESSION["firstname"]) ) {
-          // echo ucwords( $_SESSION["firstname"] ) . " | main page "; 
-        }
-
-        if( isset($_SESSION["savvy_fname"]) && !empty($_SESSION["savvy_fname"]) ) {
-          // echo ucwords( $_SESSION["savvy_fname"] ) . " | main page ";
-        }
+        echo ucwords( $_SESSION["savvy_fname"] ) . " | main page ";
       ?>
       
     </title>
@@ -64,11 +56,12 @@
       <div >
         <ul >
           <li>
-            <a href="./pro_form.php">Upload</a>
+            <!-- <a href="./pro_form.php">Upload</a> -->
           </li>
 
           <li>
-            <a href="./profile.php">Profile</a>
+            <a href="./savvy_profile.php?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>">
+            Profile</a>
           </li>
         </ul>
       </div>
@@ -79,12 +72,7 @@
     <!-- show user details -->
     <div class="sep">
       <?php
-        echo $_SESSION["student_id"] . " | ";
-        echo $_SESSION["firstname"] . " | ";
-        echo $_SESSION["lastname"] . " | ";
-        echo $_SESSION["school_email"] . " | ";
-        echo $_SESSION["current_year"] . " | ";
-        echo $_SESSION["department"] . " | ";
+        echo $_SESSION["savvy_id"] . " | " . $_SESSION["savvy_fname"] . " | " . $_SESSION["savvy_lname"] . " | " . $_SESSION["savvy_email"];
       ?>
     </div>
 
@@ -110,20 +98,10 @@
     </div>
 
 
-
-
-    <!-- this message is sent when project is saved to db.
-    put a timer to remove it after some seconds in js. -->
-    <div class="container" id="pro_up_msg">
-      <?php echo $_SESSION["upload_pro_msg"]; ?>
-    </div>
-
-
-
     <?php
       // echo $_SESSION["show_projects"];// echo "sldjfnsdjf";
 
-      foreach( $_SESSION["show_projects"] as $project ) { echo "main loop";
+      foreach( $_SESSION["show_projects"] as $project ) { // echo "main loop";
         // print_r( $project ); echo "<br /><br />";
     ?>
     <div class="container show_project" >

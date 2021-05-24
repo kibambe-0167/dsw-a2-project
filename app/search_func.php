@@ -88,7 +88,9 @@
 
       $a["score"] = $score; // print_r( $a ); echo "<br/><br/>";
 
-      array_push( $new_arr_return, $a ); // push to new array.
+      if( $a["score"] > 0 ) { // push to return when score is greater than 0
+        array_push( $new_arr_return, $a ); // push to new array.
+      }
       
     }
 

@@ -50,7 +50,7 @@
 
       <!-- Savvy block -->
       <div class="col-sm-6 bg-warning" id="savvy_block" >
-        <!-- Second Form     -->
+        <!-- Second Form, tech savvy login form     -->
         <form action="./app/login_savvy.php" method="post" id="form2" >
           <h2>Public</h2>
           <label for="email">Email </label>
@@ -63,6 +63,14 @@
             <input type="reset" class="btn bg-secondary" onclick="add1()" class="accordion1" value="Sign Up"/>
           </div>
         </form>
+
+        <!-- this shows error messages when tech savvy logsin -->
+        <div id="tech_savvy_log_msg" >
+          <?php echo $_SESSION["email_provide"]; ?>
+
+          <?php echo $_SESSION["no_user"]; ?>
+        </div>
+        
 
         <!--Second Hidden Form-->
         <div id="panel1" class="panel1">
