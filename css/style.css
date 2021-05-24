@@ -120,6 +120,22 @@ input[type="reset"]:hover,
 }
 
 
+/* this applies to all buttons */
+
+button {
+    background-color: rgb(27, 4, 43);
+    color: rgb( 255, 255, 255);
+}
+
+
+/* when btn is hovered */
+
+button:hover {
+    background-color: rgb(238, 130, 48);
+    color: rgb(27, 4, 43)
+}
+
+
 /* //////////////////////////////////////////////// */
 
 div {
@@ -129,6 +145,13 @@ div {
 #reg_form {
     margin: 3em;
     display: none;
+}
+
+
+/* this applies to all divs that have message in them */
+
+.messages {
+    text-align: center;
 }
 
 
@@ -152,6 +175,23 @@ div {
 
 footer {
     background-color: rgb(27, 4, 43);
+    padding: 2em 2em;
+}
+
+
+/* this applies to the div element holding user data */
+
+#savvy_profile {
+    border-radius: .5em;
+    border: .1em solid rgb(27, 4, 43);
+    margin: 2em auto;
+}
+
+
+/* this applies to div that are inside footer */
+
+footer div {
+    margin: 1em;
 }
 
 

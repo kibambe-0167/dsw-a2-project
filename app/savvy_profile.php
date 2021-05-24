@@ -26,6 +26,20 @@
     <link rel="stylesheet" href="../css/head.css">
     <link rel="stylesheet" href="../css/p_snippet.css">
 
+    <style >
+      /* this applies to all buttons */
+      button {
+        background-color: rgb(27, 4, 43);
+        color: rgb( 255, 255, 255);
+      }
+
+      /* when btn is hovered */
+      button:hover {
+        background-color: rgb(238, 130, 48);
+        color: rgb(27, 4, 43);
+      }
+    </style>
+
   </head>
   <body>
 
@@ -54,12 +68,6 @@
               <a href="./main_savvy.php" class="nav-link" >Home</a>
             </li>
             <li class="nav-item" >
-              <a href="./edit_savvy_acc.php?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >Edit</a>
-            </li>
-            <li class="nav-item" >
-              <a href="../del/del_savvy_acc.php?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >Delete</a>
-            </li>
-            <li class="nav-item" >
               <a href="#" class="nav-link" >Contact</a>
             </li>
             <li class="nav-item" >
@@ -71,49 +79,74 @@
       </div>
        
       <!-- the menu for the mobile version of the code. -->
-      <div class="collapse bg-success" id="nav_mobile">
+      <div class="collapse bg-warning" id="nav_mobile">
         <div >
-          <a href="./main_savvy.php" class="nav-link" >Home</a>
+          <a href="./main_savvy.php" class="nav-link" >
+            Home <i class="fa fa-home" ></i>
+          </a>
         </div>
+        
+        <!-- <div >
+          <a href="?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >
+            Delete <i class="fa fa-trash" ></i>
+          </a>
+        </div> -->
+
         <div >
-          <a href="./edit_savvy_acc.php?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >
-            Edit</a>
+          <a href="#" class="nav-link" >
+            Contact <i class="fa fa-phone" ></i>
+          </a>
         </div>
+
         <div >
-          <a href="../del/del_savvy_acc.php?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >Delete</a> </p>
+          <a href="#" class="nav-link" >
+            About
+          </a>
         </div>
       </div>
+
+      <!-- <div class="wrap" style="display: none;"></div> -->
     </header>
     <div class="wrap" style="display: none;"></div>
 
 
 
-
-
-
-
-
-
-
-
-
-    <div class="container" >
+    <!-- contains messages from other files. -->
+    <div id="feedback" class="container messages" >
       <?php echo $_SESSION["update_msg"]; ?>
     </div>
 
 
-    <div class="container" >
-      <div class="" id="savvy_profile" >
 
+    <!-- contains the details of current logged in user. -->
+    <div class="container" id="savvy_profile" >
+      <div >
         <?php echo ucwords( $_SESSION["savvy_fname"] ); ?>
-
         <?php echo ucwords( $_SESSION["savvy_lname"] ); ?>
-
-        <p>
-          <?php echo ucwords( $_SESSION["savvy_email"] ); ?>
-        </p>
-
       </div>
+      
+      <div>
+        <?php echo ucwords( $_SESSION["savvy_email"] ); ?>
+      </div>
+
+      <div >
+        <a href="./edit_savvy_acc.php?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >
+          <i class="fa fa-edit" ></i> Edit
+        </a>        
+      </div>
+
+      <div >
+        <a href="../del/del_savvy_acc.php?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >
+          <i class="fa fa-trash"></i> Delete
+        </a>
+      </div>
+
+      <div >
+        <a href="../log-out_student.php?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >
+          <i class="fa fa-sign-out"></i> Sign out
+        </a>
+      </div>
+
     </div>
 
 
@@ -121,41 +154,52 @@
 
 
     <!-- this is the footer of the page. -->
-    <footer >
-      <div class="container-fluid bg-secondary" id="social_med">
+    <footer class="row">
+      <div class="container-fluid col-md-6" id="social_med">
         <span >
-          <a href="">
+          <a href="https://touch.facebook.com/U-Innovate-104260611862082/?ref=bookmarks" target="_blank">
             <i class="fa fa-facebook" >
             </i>
           </a>
         </span>
   
         <span >
-          <a href="">
+          <a href="https://www.linkedin.com/company/u-innovate" target="_blank">
             <i class="fa fa-linkedin"></i>
           </i>
           </a>
         </span>
   
         <span >
-          <a href="#">
-            <i class="fa fa-twitter-square "></i></i>
+          <a href="https://twitter.com/NovateUin" target="_blank">
+            <i class="fa fa-twitter-square"></i></i>
           </a>
-          
+        </span>
+
+        <span >
+          <a href="https://www.instagram.com/uin.novate/" target="_blank">
+            <i class="fa fa-instagram"></i></i>
+          </a>
         </span>
       </div>
 
-      <div id="footer_details" >
+      <div id="footer_details" class="container col-md-6" >
         <span >
           <a href="#"> About us</a>
         </span>
         |
         <span >
-          <a href="#"> Contact us</a>
+          <a href="#">
+            Contact us
+            <i class="fa fa-phone" ></i>
+          </a>
         </span>
       </div>
+
     </footer>
-      
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript" src="../js/jQuery.js" ></script>

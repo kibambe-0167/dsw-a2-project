@@ -29,8 +29,20 @@ $(function() { // console.log("J Query loaded");
     // when element that shows feedback after uploading a project
     // has text in it. sleep for some seconds and remove text.
     if ($("#pro_up_msg").html() != "") {
+        setTimeout(() => {}, 10000);
+        // console.log($("#pro_up_msg").html(""));
+        // remove any text in the elements
+        $("#pro_up_msg").html("");
+    }
+
+
+    // this applies to all div elements that have message class in em.
+    if ($("#feedback").html() != "") {
+        // console.log($("#feedback").html());
+        // sleep for 3 seconds
         setTimeout(() => {}, 3000);
-        console.log($("#pro_up_msg").html(""));
+        // remove any data in html element
+        $("#feedback").html("");
     }
 
 
