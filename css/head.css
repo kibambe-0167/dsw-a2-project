@@ -123,15 +123,3 @@ a {
         display: block;
     }
 }
-
-
-/* //////////////////////////////////////////////// */
-
-div {
-    margin: .5em .1em;
-}
-
-#reg_form {
-    margin: 3em;
-    display: none;
-}

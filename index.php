@@ -4,12 +4,7 @@
 
   // if there is a alreay a set, start that session here. 
   // to exchange information and messages.
-  if ( session_status() === PHP_SESSION_ACTIVE ) {
-    session_start();
-    $_SESSION["session_id"] = session_id();
-    echo "Session started<br/>";
-    echo "<br/>Session ID:" . $_SESSION["session_id"] . "<br/><br/>";
-  }
+  session_start();
 ?>
 
 <!doctype html>
@@ -32,23 +27,105 @@
   <body>
 
 
-    <!-- header of the page -->
-    <header >
-			<div >
-				logo
-			</div>
 
-			<div >
-				About | Contact
-			</div>
-		</header>
+  <header class="bg-danger">
+    <div class="container-fluid row" id="header" >
+      <!-- logo -->
+      <div class="col-md-3 col-sm-3 col-xs-3 bg-warning bar" id="logo">
+        <a href="./main_savvy.php" class="nav-link" >Logo</a>
+
+        <span class="bg-warning" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
+          <!-- Collapse --> B
+          <i class="fa fa-bars"></i>
+        </span>
+      </div>
+      <!-- navbar links,  -->
+      <div id="b_nav" class="col-md-9 col-sm-9 col-xs-9 bg-info" >
+        <ul class="nav" id="nav-link-bs"  >
+          <li class="nav-item" >
+            <a href="./main_savvy.php" class="nav-link" >Home</a>
+          </li>
+          <li class="nav-item" >
+            <a href="#" class="nav-link" >Contact</a>
+          </li>
+          <li class="nav-item" >
+            <a href="#" class="nav-link" >About</a>
+          </li>
+        </ul>
+      </div>        
+      
+    </div>
+       
+    <!-- the menu for the mobile version of the code. -->
+    <div class="collapse bg-warning" id="nav_mobile">
+      <div >
+        <a href="./main_savvy.php" class="nav-link" >
+          Home <i class="fa fa-home" ></i>
+        </a>
+      </div>
+      
+      <div >
+        <a href="" class="nav-link" >
+          Contact <i class="fa fa-phone" ></i>
+        </a>
+      </div>
+
+      <div >
+        <a href="" class="nav-link" >
+          About
+        </a>
+      </div>
+    </div>
+
+      <!-- <div class="wrap" style="display: none;"></div> -->
+  </header>
+  <div class="wrap" style="display: none;"></div>
 
 
+
+
+    <!-- applies to students. -->
+    <!-- after account is successfully deleted from db -->
+    <span >
+      <?php
+        // message about the deleted account.
+        echo $_SESSION["acc_del"];
+
+        // set the session variable value to null;
+        // $_SESSION["acc_del"] = null;
+        unset( $_SESSION["acc_del"] );
+      ?>
+    </span>
+
+    <!-- applies to students. -->
+    <span >
+      <!-- put a timer to make this message disappear. -->
+      <?php
+        // feedback onm registration process.
+        echo $_SESSION["reg_msg"];
+
+        // set session variable to null
+        // $_SESSION["reg_msg"] = null;
+        unset( $_SESSION["reg_msg"] );
+      ?>
+    </span>
+    
+
+    <!-- this shows error messages when tech savvy logsin -->
+    <div id="tech_savvy_log_msg" >
+      <?php echo $_SESSION["email_provide"]; ?>
+
+      <?php echo $_SESSION["no_user"]; ?>
+
+      <?php echo $_SESSION["savvy_del_msg"]; ?>
+    </div>
+
+    
 
     <!-- contains login and signin forms -->
     <div id="login_content" class="container row bg-dark">
 
-      <!-- Savvy block -->
+      <!-- Savvy block -->login_content
       <div class="col-sm-6 bg-warning" id="savvy_block" >
         <!-- Second Form, tech savvy login form     -->
         <form action="./app/login_savvy.php" method="post" id="form2" >
@@ -60,18 +137,9 @@
           
           <div class="input-group">
             <input class="btn"  type="submit" name="submit" value="login" id="">
-            <input type="reset" class="btn bg-secondary" onclick="add1()" class="accordion1" value="Sign Up"/>
+            <input type="reset" class="btn" onclick="add1()" class="accordion1" value="Sign Up"/>
           </div>
         </form>
-
-        <!-- this shows error messages when tech savvy logsin -->
-        <div id="tech_savvy_log_msg" >
-          <?php echo $_SESSION["email_provide"]; ?>
-
-          <?php echo $_SESSION["no_user"]; ?>
-
-          <?php echo $_SESSION["savvy_del_msg"]; ?>
-        </div>
         
 
         <!--Second Hidden Form-->
@@ -128,7 +196,7 @@
           <div class="input-group" >
             <input class="btn" value="Signin" type="submit" name="submit" id="submit">
 
-            <input class="btn bg-secondary"  onclick="add()" type="reset" class="" value="Sign up"/>
+            <input class="btn"  onclick="add()" type="reset" class="" value="Sign up"/>
           </div>
         </form>
 
@@ -145,11 +213,6 @@
             <div class="input-group" >
               <input class="input-group-text" type="text" name="lastname" placeholder="Enter last name" value="Phiri" required >
             </div>
-            
-            <!-- <label>Student Number</label>
-            <div class="input-group" >
-              <input class="input-group-text" type="text" name="sNum" id="sNum">
-            </div> -->
 
             
             <label for="email">School Email</label>
@@ -189,31 +252,7 @@
             
           </form>
         </div>
-        <!-- applies to students. -->
-        <!-- after account is successfully deleted from db -->
-        <span >
-          <?php
-            // message about the deleted account.
-            echo $_SESSION["acc_del"];
-
-            // set the session variable value to null;
-            // $_SESSION["acc_del"] = null;
-            unset( $_SESSION["acc_del"] );
-          ?>
-        </span>
-
-        <!-- applies to students. -->
-        <span >
-          <!-- put a timer to make this message disappear. -->
-          <?php
-            // feedback onm registration process.
-            echo $_SESSION["reg_msg"];
-
-            // set session variable to null
-            // $_SESSION["reg_msg"] = null;
-            unset( $_SESSION["reg_msg"] );
-          ?>
-        </span>
+        
       </div>
                   
     </div>

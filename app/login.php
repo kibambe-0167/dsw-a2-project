@@ -95,7 +95,7 @@
   }
   //  Problem connecting to the db.
   else {
-    $err_conn = "<div id='err_conn' >
+    $err_conn = "<div class='error' id='err_conn' >
       <h2>Connection Failed: Connecting to database.<br/>" . mysqli_connect_error() . "
       </h2>
     </div>
