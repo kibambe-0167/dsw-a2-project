@@ -82,19 +82,19 @@
       <div class="collapse bg-warning" id="nav_mobile">
         <div >
           <a href="./main_savvy.php" class="nav-link" >
-            Home <i class="fa fa-home" ></i>
+          <i class="fa fa-home" ></i> Home
           </a>
         </div>
         
         <!-- <div >
-          <a href="?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >
+          <a href="?savvy_id=< ?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >
             Delete <i class="fa fa-trash" ></i>
           </a>
         </div> -->
 
         <div >
           <a href="#" class="nav-link" >
-            Contact <i class="fa fa-phone" ></i>
+          <i class="fa fa-phone" ></i> Contact
           </a>
         </div>
 
@@ -129,19 +129,19 @@
         <?php echo ucwords( $_SESSION["savvy_email"] ); ?>
       </div>
 
-      <div >
+      <div class = "div_btn" >
         <a href="./edit_savvy_acc.php?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >
           <i class="fa fa-edit" ></i> Edit
         </a>        
       </div>
 
-      <div >
+      <div class = "div_btn" >
         <a href="../del/del_savvy_acc.php?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >
           <i class="fa fa-trash"></i> Delete
         </a>
       </div>
 
-      <div >
+      <div class = "div_btn" >
         <a href="../log-out_student.php?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >
           <i class="fa fa-sign-out"></i> Sign out
         </a>

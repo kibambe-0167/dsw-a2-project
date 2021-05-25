@@ -2,7 +2,7 @@
 .pro_team {
     margin-left: 5%;
     width: 200px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .comment {
@@ -15,7 +15,7 @@
     background-color: rgb(27, 4, 43);
     margin: 1em 0em;
     color: rgb( 255, 255, 255);
-    border-radius: 1em;
+    border-radius: 1em 0em 1em 0em;
 }
 
 .ind_comment p {
@@ -29,7 +29,16 @@
 }
 
 .ind_comment .com_time {
+    float: right;
     text-align: right;
     font-style: italic;
     font-size: .8em;
+    padding-right: 1em;
+}
+
+
+/* this code applies to every div that has project description */
+
+.main_desc {
+    padding: 0em 1em;
 }

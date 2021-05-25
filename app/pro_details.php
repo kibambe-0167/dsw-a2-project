@@ -33,8 +33,9 @@
   </head>
   <body>
 
-
-    <?php    ?>
+    <div >
+      <a href="./main_savvy.php">Home</a>
+    </div>
 
     <div class="container show_project" >
       <!-- <div class = "container main_pro_"> -->
@@ -48,13 +49,15 @@
         </div> -->
 
         <div class="" id="main_details">
-          <div class="main_name"> <?php echo  ucwords($project["pro_name"] );  ?> </div>
+          <div class="main_name"> <?php echo  ucwords( $project["pro_name"] );  ?> </div>
 
           <div class="box3">Contact</div>
 
+          <div class="pro_link"> <?php echo $project["pro_ext_link"]; ?> </div>
+
           <div class="pro_team"> Team </div>
 
-          <div id="main_desc" > 
+          <div class="main_desc" > 
             <?php echo $project["pro_desc"]; ?>
           </div>
         </div>
@@ -86,16 +89,17 @@
         ?>
         
         <div class="ind_comment" >
+
+          <p class="com_time">
+            <?php echo $comment["made_time"] ?>
+          </p>
+
           <p >
             <?php echo ucwords($comment["owner_fname"]) . " " . ucwords($comment["owner_lname"]); ?>
           </p>
 
           <p class ="com">
             <?php echo $comment["comment"]; ?>
-          </p>
-
-          <p class="com_time">
-            <?php echo $comment["made_time"] ?>
           </p>
         </div>
 
@@ -107,11 +111,7 @@
 
     </div>
     
-    <?php // } ?>
-
-
-
-      
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript" src="../js/jQuery.js" ></script>

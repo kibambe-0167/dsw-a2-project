@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(229, 224, 238);
+}
+
 #err_conn {
     color: red;
     font-weight: bold;
@@ -25,6 +29,15 @@ title {
 }
 
 
+/* this applies to divs that hold team information. */
+
+.info {
+    border: 1px solid;
+    clear: both;
+    padding: .5em;
+}
+
+
 /* remove every default styling applied by the browser. */
 
 * {
@@ -38,9 +51,13 @@ title {
     padding: 0em;
 }
 
+
+/* this applies to the header html element.  */
+
 header {
     padding: 0em;
     margin: 0em;
+    background-color: rgb(27, 4, 43);
 }
 
 #header div {
@@ -51,6 +68,7 @@ header {
 
 a {
     text-decoration: none;
+    color: rgb( 255, 255, 255);
 }
 
 #nav-drop-down {
@@ -83,6 +101,7 @@ a {
 
 /* this make all submit button to have a color set of the same */
 
+.div_btn,
 input[type="submit"],
 input[type="reset"],
 #search_btn,
@@ -100,8 +119,16 @@ input[type="reset"],
 }
 
 
+/* div_btn are anchor in divs, savvy page. */
+
+.div_btn {
+    margin: .1em 0em;
+}
+
+
 /* when someone hover over the btn */
 
+.div_btn:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 #search_btn:hover,
@@ -133,6 +160,13 @@ button {
 button:hover {
     background-color: rgb(238, 130, 48);
     color: rgb(27, 4, 43)
+}
+
+
+/* this code applies to every div that has project description */
+
+.main_desc {
+    padding: .5em;
 }
 
 

@@ -9,8 +9,8 @@
     // check db connection
     if( $connObj ) { // echo "all cool"; 
       $comment = $_POST["comment"];
+      $pro_id = $_GET["project_id"];
       if( !empty( $comment ) ) { // when comment is provided 
-        $pro_id = $_GET["project_id"];
         $usr_id = $_SESSION["savvy_id"]; $usr_fname = $_SESSION["savvy_fname"];
         $usr_lname = $_SESSION["savvy_lname"];
 
