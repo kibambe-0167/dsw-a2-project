@@ -66,9 +66,19 @@ header {
     margin: 0em
 }
 
+#nav_mobile {
+    background-color: rgb(27, 4, 43);
+}
+
+
+/* make all anchor tags in header and footer to have white colors */
+
+header a {
+    color: rgb( 255, 255, 255);
+}
+
 a {
     text-decoration: none;
-    color: rgb( 255, 255, 255);
 }
 
 #nav-drop-down {
@@ -96,6 +106,13 @@ a {
 
 #search_remove {
     color: white;
+}
+
+
+/* this appplies to anchors in the div, savvy page. */
+
+.div_btn a {
+    color: rgb( 255, 255, 255);
 }
 
 
