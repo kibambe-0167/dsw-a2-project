@@ -1,0 +1,35 @@
+.box3,
+.pro_team {
+    margin-left: 5%;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.comment {
+    margin: 1px;
+    padding: 5px;
+    width: 100%;
+}
+
+.ind_comment {
+    background-color: rgb(27, 4, 43);
+    margin: 1em 0em;
+    color: rgb( 255, 255, 255);
+    border-radius: 1em;
+}
+
+.ind_comment p {
+    margin: 0em;
+    padding: .5em;
+}
+
+.ind_comment .com {
+    font-style: italic;
+    padding-left: 1em;
+}
+
+.ind_comment .com_time {
+    text-align: right;
+    font-style: italic;
+    font-size: .8em;
+}

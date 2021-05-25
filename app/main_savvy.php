@@ -99,10 +99,7 @@
 
 
     <?php
-      // echo $_SESSION["show_projects"];// echo "sldjfnsdjf";
-
       foreach( $_SESSION["show_projects"] as $project ) { // echo "main loop";
-        // print_r( $project ); echo "<br /><br />";
     ?>
     <div class="container show_project" >
     <!-- <div class = "container main_pro_"> -->
@@ -118,15 +115,14 @@
         <div class="" id="main_details">
           <div class="main_name"> <?php echo  ucwords($project["pro_name"] );  ?> </div>
           <div id="main_desc" > 
-            <a href="?#project=<?php echo $project["id"]; ?>" >
+            <a href="./pro_details.php?project_id=<?php echo $project["id"]; ?>" >
               <?php echo $project["pro_desc"]; ?> </a>
             </div>
         </div>
-          
         
         <form action="./post_comment.php?pro_id=<?php echo $project["id"];?>" method="post">
           <div class= "comment input-group" >
-            <input class="form-control" type="text" name="comment"  placeholder="Type a comment..." id="usr_com" value="nice work guys">
+            <input class="form-control" type="text" name="comment"  placeholder="Type a comment..." id="usr_com" value="">
             <input class="form-control" type="submit" value="Comment" name="com_btn" id="com_btn" />
           </div>
         </form>
@@ -134,10 +130,8 @@
       </div>
 
     </div>
-
     
-    <?php }
-    ?>
+    <?php } ?>
 
 
     <!-- Optional JavaScript -->

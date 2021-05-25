@@ -22,7 +22,7 @@
       // bring up the form to edit the project.
     }
     // project not found in db.
-    else { echo "Project not found"; }
+    else { echo null; $project = null; }
   }
 
 ?>
