@@ -71,12 +71,6 @@
           <i class="fa fa-home" ></i> Home
           </a>
         </div>
-        
-        <!-- <div >
-          <a href="?savvy_id=< ?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >
-            Delete <i class="fa fa-trash" ></i>
-          </a>
-        </div> -->
 
         <div >
           <a href="#" class="nav-link" >

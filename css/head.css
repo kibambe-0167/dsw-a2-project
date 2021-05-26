@@ -42,6 +42,14 @@ a {
 }
 
 
+/* all anchor under navigation for mobile. */
+
+#nav_mobile a:hover {
+    background-color: rgb(220, 122, 17);
+    color: rgb(27, 4, 43);
+}
+
+
 /* the navigation for mobile html code */
 
 #nav_mobile {
@@ -53,6 +61,8 @@ a {
     position: absolute;
     right: 0em;
     /* border-radius: .6em; */
+    background-color: rgb(27, 4, 43);
+    border-radius: 1em 0em 1em 0em;
 }
 
 .wrap {
