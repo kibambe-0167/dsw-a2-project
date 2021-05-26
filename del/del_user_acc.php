@@ -25,8 +25,8 @@
       $acc_num = $_GET["student_id"];
 
       // first check if the account is available in the db.
-      $num_q = "select * from student where student_id='$acc_num'";
-      $num_re = mysqli_query( $connObj, $num_q );
+      // $num_q = "select * from student where student_id='$acc_num'";
+      // $num_re = mysqli_query( $connObj, $num_q );
 
       if( mysqli_num_rows( $num_re ) > 0 ) {
         echo "Profile Available";

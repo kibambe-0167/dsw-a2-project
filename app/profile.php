@@ -47,11 +47,11 @@
               <a href="./main.php" class="nav-link" >Home</a>
             </li>
 
-            <li class="nav-item" >
+            <!-- <li class="nav-item" >
               <a href="./pro_form.php" class="nav-link" >
                 Upload Project
               </a>
-            </li>
+            </li> -->
 
             <li class="nav-item" >
               <a href="./contactus.php" class="nav-link" >Contact Us</a>
@@ -73,11 +73,11 @@
           </a>
         </div>
 
-        <div >
-          <a href="./profile.php" class="nav-link" >
+        <!-- <div >
+          <a href="" class="nav-link" >
           <i class="fa fa-upload" ></i> Upload Project
           </a>
-        </div>
+        </div> -->
 
         <div >
           <a href="./contactus.php" class="nav-link" >
@@ -131,28 +131,34 @@
     <!-- contains the details of current logged in user. -->
     <div class="container" id="savvy_profile" >
       <div >
-        <?php echo ucwords( $_SESSION["student_id"]  ); ?>
-        <?php echo ucwords(  $_SESSION["firstname"] ); ?>
+        <?php echo ucwords( $_SESSION["firstname"]  ); ?>
+        <?php echo ucwords( $_SESSION["lastname"] ); ?>
       </div>
       
       <div>
-        <?php echo ucwords( $_SESSION["savvy_email"] ); ?>
+        <?php echo ucwords( $_SESSION["school_email"] ); ?>
       </div>
 
       <div class = "div_btn" >
-        <a href="./edit_savvy_acc.php?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >
-          <i class="fa fa-edit" ></i> Edit
+        <a href="./pro_form.php" class="nav-link" >
+          <i class="fa fa-upload" ></i> Upload Project
         </a>        
       </div>
 
       <div class = "div_btn" >
-        <a href="../del/del_savvy_acc.php?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >
-          <i class="fa fa-trash"></i> Delete
+        <a href="./edit_stud_acc.php?student_id=<?php echo $_SESSION["student_id"]; ?>" class="nav-link" >
+          <i class="fa fa-edit" ></i> Edit Account
+        </a>        
+      </div>
+
+      <div class = "div_btn" >
+        <a href="../del/del_user_acc.php.php?student_id=<?php echo $_SESSION["student_id"]; ?>" class="nav-link" >
+          <i class="fa fa-trash"></i> Delete Account
         </a>
       </div>
 
       <div class = "div_btn" >
-        <a href="./log-out_student.php?savvy_id=<?php echo $_SESSION["savvy_id"]; ?>" class="nav-link" >
+        <a href="./log-out_student.php?student_id=<?php echo $_SESSION["student_id"]; ?>" class="nav-link" >
           <i class="fa fa-sign-out"></i> Sign out
         </a>
       </div>
