@@ -65,7 +65,7 @@
         <form action="./post_comment.php?project_id=<?php echo $project["id"];?>" method="post">
           <div class= "comment input-group" >
             <input class="form-control" type="text" name="comment"  placeholder="Type a comment..." id="usr_com" value="">
-            <input class="form-control" type="submit" value="Comment" name="com_btn" id="com_btn" />
+            <input class="btn" type="submit" value="Comment" name="com_btn" id="com_btn" />
           </div>
         </form>
       </div>

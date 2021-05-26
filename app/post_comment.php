@@ -10,7 +10,7 @@
     if( $connObj ) { // echo "all cool"; 
       $comment = $_POST["comment"];
       $pro_id = $_GET["project_id"];
-      if( !empty( $comment ) ) { // when comment is provided 
+      if( !empty( $comment ) && preg_match("/^[a-z]/i", $comment ) ) { // when comment is provided 
         $usr_id = $_SESSION["savvy_id"]; $usr_fname = $_SESSION["savvy_fname"];
         $usr_lname = $_SESSION["savvy_lname"];
 
