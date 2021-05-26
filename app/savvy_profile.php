@@ -29,12 +29,12 @@
   </head>
   <body>
 
-    <!-- show user details -->
+    <!-- show user details
     <div class="sep">
-      <?php
+      < ?php
         echo $_SESSION["savvy_id"] . " | " . $_SESSION["savvy_fname"] . " | " . $_SESSION["savvy_lname"] . " | " . $_SESSION["savvy_email"];
-      ?>
-    </div>
+      ? >
+    </div> -->
 
     <header >
       <div class="container-fluid row" id="header" >
@@ -43,12 +43,12 @@
           <a href="./main_savvy.php" class="nav-link" >Logo</a>
 
           <span class="bg-warning" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
-            <!-- Collapse --> B
+            <!-- Collapse --> 
             <i class="fa fa-bars"></i>
           </span>
         </div>
         <!-- navbar links,  -->
-        <div id="b_nav" class="col-md-9 col-sm-9 col-xs-9" >
+        <div id="nav_large" class="col-md-9 col-sm-9 col-xs-9" >
           <ul class="nav" id="nav-link-bs"  >
             <li class="nav-item" >
               <a href="./main_savvy.php" class="nav-link" >Home</a>
@@ -67,7 +67,7 @@
       <!-- the menu for the mobile version of the code. -->
       <div class="collapse" id="nav_mobile">
         <div >
-          <a href="./main_savvy.php" class="nav-link" >
+          <a href="./main_savvy.php" class="nav-link nav_link_rad_start" >
           <i class="fa fa-home" ></i> Home
           </a>
         </div>
@@ -79,8 +79,8 @@
         </div>
 
         <div >
-          <a href="#" class="nav-link" >
-            About
+          <a href="#" class="nav-link nav_link_rad_end" >
+            <i class="fa fa-info" ></i> About
           </a>
         </div>
       </div>

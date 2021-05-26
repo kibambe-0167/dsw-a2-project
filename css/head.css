@@ -42,11 +42,32 @@ a {
 }
 
 
+/* this applies to main navigation */
+
+#nav_large a:hover {
+    color: rgb( 255, 133, 4);
+}
+
+
 /* all anchor under navigation for mobile. */
 
 #nav_mobile a:hover {
-    background-color: rgb(220, 122, 17);
+    background-color: rgb(255, 133, 4);
     color: rgb(27, 4, 43);
+}
+
+
+/* this applies to the start of mobile nav menu  */
+
+#nav_mobile .nav_link_rad_start {
+    border-top-left-radius: 1em;
+}
+
+
+/* this applies to the end of mobile nav menu */
+
+#nav_mobile .nav_link_rad_end {
+    border-bottom-right-radius: 1em;
 }
 
 

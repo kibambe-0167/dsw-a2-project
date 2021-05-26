@@ -1,17 +1,11 @@
 $(function() { // console.log("J Query loaded");
 
-    // when user logs in, go get all projects
-    // $.get("../app/get_pro.php", function(project) {
-    //     console.log("data", project["data"]);
-    //     $("#show_project").html(data["data"]);
-    // });
-
     // when the width of the browser is less than
     // 30em = 480px. this code runs when the pages reloads.
     if ($(window).width() <= 480) {
         // console.log( $(window).width() <= 480 );
         // make the div element go on or off
-        $("#b_nav").toggle();
+        $("#nav_large").toggle();
     }
     // 
     // 
@@ -21,18 +15,21 @@ $(function() { // console.log("J Query loaded");
         if ($(window).width() <= 480) {
             // console.log( $(window).width() <= 480 );
             // make the div element go on or off
-            $("#b_nav").toggle();
+            $("#nav_large").toggle();
         }
+        if ($(window).width() > 480) {
+            $("#nav_large").toggle();
+        }
+
     });
 
 
     // when element that shows feedback after uploading a project
     // has text in it. sleep for some seconds and remove text.
     if ($("#pro_up_msg").html() != "") {
-        setTimeout(() => {}, 10000);
-        // console.log($("#pro_up_msg").html(""));
         // remove any text in the elements
-        $("#pro_up_msg").html("");
+        setTimeout(() => { $("#pro_up_msg").html(""); }, 10000);
+        // console.log($("#pro_up_msg").html(""));
     }
 
 
@@ -40,9 +37,8 @@ $(function() { // console.log("J Query loaded");
     if ($("#feedback").html() != "") {
         // console.log($("#feedback").html());
         // sleep for 3 seconds
-        setTimeout(() => {}, 3000);
         // remove any data in html element
-        $("#feedback").html("");
+        setTimeout(() => { $("#feedback").html(""); }, 3000);
     }
 
 
@@ -55,26 +51,6 @@ $(function() { // console.log("J Query loaded");
     $(".wrap").click(function() {
         $("#nav_mobile").toggle();
         $(".wrap").toggle();
-    });
-
-
-
-
-    // when search btn in main page is clicked, and the search field is not empty
-    // remove any text or data in the div that shows project at default state.
-    $("#search_btn").click(function() {
-        console.log("search btn clicked");
-        // if the search field value is not empty
-        if ($("#search_pro").val() != "") {
-            var key_word = $("#search_pro").val(); // console.log(key_word);
-            // send data to server. the url to send data to. the data to send. and the call back function, when the data is send.
-            $.post("../app/search_pro.php", {
-                "key_word": key_word
-            }, (data) => {
-                console.log("fnsdlfnlsdkfn");
-            });
-        }
-
     });
 
 
