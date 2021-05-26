@@ -3,22 +3,7 @@
 <?php
   // start a php session to send data and information.
 
-  // only start a session when a session exist.
-  // if( session_status() === PHP_SESSION_ACTIVE ) {
-  //   session_start();
-  // }
-
-
   session_start();
-  // include this file here.
-  // include("../app/show_pro.php");
-  // include("../app/get_pro.php"); // to make sure that the code runs.
-
-  // include_once("./get_pro.php");
-  // $_SESSION["show_projects"] = get_project_func();
-
-  // file that receive search word and change session projects.
-  // include("./search_pro.php");
   
 ?>
 
@@ -172,7 +157,7 @@
     <!-- this message is sent when project is saved to db.
     put a timer to remove it after some seconds in js. -->
     <div class="container" id="pro_up_msg">
-      <?php echo $_SESSION["upload_pro_msg"]; ?>
+      <?php echo $_SESSION["upload_pro_msg"]; unset( $_SESSION["upload_pro_msg"] ); ?>
     </div>
 
 

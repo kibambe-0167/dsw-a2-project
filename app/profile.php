@@ -96,24 +96,10 @@
     </header>
     <div class="wrap" style="display: none;"></div>
 
-<!-- 
-    <header >
-      <div >
-        <ul >
-        <li>
-          <a href="../del/del_user_acc.php?student_id=< ?php echo $_SESSION['student_id']; ?>" >Delete Profile</a>
-        </li>
 
-        <li>
-          <a href="?student_id=< ?php echo $_SESSION['student_id']; ?>" >Edit Profile</a>
-        </li>
-
-        <li>
-          <a href="./log-out_student.php?student_id=< ?php echo $_SESSION['student_id']; ?>" >Sign-out</a>
-        </li>
-        </ul>
-      </div>
-    </header> -->
+    <div id="usr_prof_msg" class="messages" >
+      <?php echo $_SESSION["up_usr_msg"]; unset( $_SESSION["up_usr_msg"] ); ?>
+    </div>
 
 
     <div >
@@ -152,7 +138,7 @@
       </div>
 
       <div class = "div_btn" >
-        <a href="../del/del_user_acc.php.php?student_id=<?php echo $_SESSION["student_id"]; ?>" class="nav-link" >
+        <a href="../del/del_user_acc.php?student_id=<?php echo $_SESSION["student_id"]; ?>" class="nav-link" >
           <i class="fa fa-trash"></i> Delete Account
         </a>
       </div>
@@ -172,6 +158,52 @@
         include("./get_usr_pro.php"); 
       ?>
     </div>
+
+
+    <!-- this is the footer -->
+    <footer class="row">
+      <div class="container-fluid col-md-6" id="social_med">
+        <span >
+          <a href="https://touch.facebook.com/U-Innovate-104260611862082/?ref=bookmarks" target="_blank">
+            <i class="fa fa-facebook" >
+            </i>
+          </a>
+        </span>
+  
+        <span >
+          <a href="https://www.linkedin.com/company/u-innovate" target="_blank">
+            <i class="fa fa-linkedin"></i>
+          </i>
+          </a>
+        </span>
+  
+        <span >
+          <a href="https://twitter.com/NovateUin" target="_blank">
+            <i class="fa fa-twitter-square"></i></i>
+          </a>
+        </span>
+
+        <span >
+          <a href="https://www.instagram.com/uin.novate/" target="_blank">
+            <i class="fa fa-instagram"></i></i>
+          </a>
+        </span>
+      </div>
+
+      <div id="footer_details" class="container col-md-6" >
+        <span >
+          <a href="#"> About us</a>
+        </span>
+        |
+        <span >
+          <a href="#">
+            Contact us
+            <i class="fa fa-phone" ></i>
+          </a>
+        </span>
+      </div>
+
+    </footer>
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

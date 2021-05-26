@@ -41,7 +41,7 @@ input[type="submit"],
     background-color: rgb(27, 4, 43);
     margin: 0em;
     border-top-right-radius: .4em;
-    border-top-left-radius: 1.5em;
+    /* border-top-left-radius: 1.5em; */
 }
 
 #main_details div {

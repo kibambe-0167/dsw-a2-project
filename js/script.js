@@ -42,6 +42,14 @@ $(function() { // console.log("J Query loaded");
     }
 
 
+    if ($("#usr_prof_msg").html() != "") {
+        setTimeout(() => { $("#usr_prof_msg").html(""); }, 3000);
+    }
+
+    if ($("#usr_msg").html() != "") {
+        setTimeout(() => { $("#usr_msg").html(""); }, 3000);
+    }
+
 
     // when the search_btnmobile nav button losses focus, remove the nav menu
     $("#menu_btn").click(function() {

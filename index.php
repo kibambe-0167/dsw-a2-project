@@ -100,18 +100,19 @@
       ?>
     </span>
 
+    
     <!-- applies to students. -->
-    <span >
+    <div id="usr_msg" class="messages" >
       <!-- put a timer to make this message disappear. -->
       <?php
         // feedback onm registration process.
         echo $_SESSION["reg_msg"];
-
-        // set session variable to null
-        // $_SESSION["reg_msg"] = null;
         unset( $_SESSION["reg_msg"] );
+
+        echo $_SESSION["del_usr_acc_msg"];
+        unset( $_SESSION["del_usr_acc_msg"] );
       ?>
-    </span>
+    </div>
     
 
     <!-- this shows error messages when tech savvy logsin -->
@@ -267,7 +268,7 @@
 
 
 
-        <!-- this is the footer of the page. -->
+    <!-- this is the footer of the page. -->
     <footer class="row">
       <div class="container-fluid col-md-6" id="social_med">
         <span >

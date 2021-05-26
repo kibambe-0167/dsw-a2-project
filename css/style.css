@@ -16,9 +16,66 @@ body {
     z-index: -1;
 }
 
+h2 {
+    margin: 1em 0em;
+}
+
 #err_conn {
     color: red;
     font-weight: bold;
+}
+
+
+/* upload project page */
+
+#up_project {
+    border: 1px solid black;
+    border-radius: 1em;
+    margin: 1.5em auto;
+}
+
+
+/* this is used to delete user account */
+
+#del_usr_acc {
+    border: 1px solid rgb(27, 4, 43);
+    border-radius: 1em;
+    margin: 2em auto;
+}
+
+
+/* all btns in input-group */
+
+.input-group button,
+.input-group button a {
+    background-color: rgb(27, 4, 43);
+    font-weight: bold;
+    color: rgb( 255, 255, 255);
+}
+
+
+/* hover input-group button */
+
+.input-group button a:hover,
+.input-group button:hover {
+    background-color: rgb(255, 133, 4);
+    color: rgb( 27, 4, 43);
+}
+
+
+/* student update page with form. */
+
+#stu_up_prof {
+    border: 1px solid rgb(27, 4, 43);
+    border-radius: 1em;
+    margin: 2em auto;
+}
+
+
+/* this applies to students projects. */
+
+#usr_pro {
+    z-index: -1000000;
 }
 
 
