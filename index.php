@@ -17,69 +17,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <script src="https://kit.fontawesome.com/b369a29969.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/login.css">
-    <!-- <link rel="stylesheet" href="./css/login.css"> -->
+    <link rel="stylesheet" href="./css/head.css">
 
     </style>
   </head>
   <body>
 
 
+    <!-- header of the page. -->
+    <header >
+      <div class="container-fluid row" id="header" >
+        <!-- logo -->
+        <div class="col-md-3 col-sm-3 col-xs-3 bar" id="logo">
+          <a href="./main_savvy.php" class="nav-link" >Logo</a>
 
-  <header class="bg-danger">
-    <div class="container-fluid row" id="header" >
-      <!-- logo -->
-      <div class="col-md-3 col-sm-3 col-xs-3 bg-warning bar" id="logo">
-        <a href="./main_savvy.php" class="nav-link" >Logo</a>
+          <span class="bg-warning" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
+            <!-- Collapse --> 
+            <i class="fa fa-bars"></i>
+          </span>
+        </div>
+        <!-- navbar links,  -->
+        <div id="nav_large" class="col-md-9 col-sm-9 col-xs-9" >
+          <ul class="nav" id="nav-link-bs"  >
+            <!-- <li class="nav-item" >
+              <a href="./index.php" class="nav-link" >Home</a>
+            </li> -->
 
-        <span class="bg-warning" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
-          <!-- Collapse --> B
-          <i class="fa fa-bars"></i>
-        </span>
+            <li class="nav-item" >
+              <a href="#" class="nav-link" >Contact</a>
+            </li>
+
+            <li class="nav-item" >
+              <a href="#" class="nav-link" >About</a>
+            </li>
+          </ul>
+        </div>        
+        
       </div>
-      <!-- navbar links,  -->
-      <div id="b_nav" class="col-md-9 col-sm-9 col-xs-9 bg-info" >
-        <ul class="nav" id="nav-link-bs"  >
-          <li class="nav-item" >
-            <a href="./main_savvy.php" class="nav-link" >Home</a>
-          </li>
-          <li class="nav-item" >
-            <a href="#" class="nav-link" >Contact</a>
-          </li>
-          <li class="nav-item" >
-            <a href="#" class="nav-link" >About</a>
-          </li>
-        </ul>
-      </div>        
-      
-    </div>
        
-    <!-- the menu for the mobile version of the code. -->
-    <div class="collapse bg-warning" id="nav_mobile">
-      <div >
-        <a href="./main_savvy.php" class="nav-link" >
-          Home <i class="fa fa-home" ></i>
-        </a>
-      </div>
-      
-      <div >
-        <a href="" class="nav-link" >
-          Contact <i class="fa fa-phone" ></i>
-        </a>
-      </div>
+      <!-- the menu for the mobile version of the code. -->
+      <div class="collapse" id="nav_mobile">
+        <div >
+          <a href="./main_savvy.php" class="nav-link nav_link_rad_start" >
+          <i class="fa fa-home" ></i> Home
+          </a>
+        </div>
 
-      <div >
-        <a href="" class="nav-link" >
-          About
-        </a>
+        <div >
+          <a href="#" class="nav-link" >
+          <i class="fa fa-phone" ></i> Contact
+          </a>
+        </div>
+
+        <div >
+          <a href="#" class="nav-link nav_link_rad_end" >
+            <i class="fa fa-info" ></i> About
+          </a>
+        </div>
       </div>
-    </div>
 
       <!-- <div class="wrap" style="display: none;"></div> -->
-  </header>
-  <div class="wrap" style="display: none;"></div>
+    </header>
+    <div class="wrap" style="display: none;"></div>
 
 
 
@@ -123,10 +126,10 @@
     
 
     <!-- contains login and signin forms -->
-    <div id="login_content" class="container row bg-dark">
+    <div id="login_content" class="container bg-dark">
 
-      <!-- Savvy block -->login_content
-      <div class="col-sm-6 bg-warning" id="savvy_block" >
+      <!-- Savvy block -->
+      <div class="bg-warning" id="savvy_block" >
         <!-- Second Form, tech savvy login form     -->
         <form action="./app/login_savvy.php" method="post" id="form2" >
           <h2>Public</h2>
@@ -140,10 +143,9 @@
             <input type="reset" class="btn" onclick="add1()" class="accordion1" value="Sign Up"/>
           </div>
         </form>
-        
 
         <!--Second Hidden Form-->
-        <div id="panel1" class="panel1">
+        <!-- <div id="panel1" class="panel1">
           <form action="./toDb/reg_savvy.php" method="post" >
             <label>First Name </label>
             <div class="input-group" >
@@ -172,13 +174,13 @@
             </div>
 
           </form>
-        </div>
+        </div> -->
       </div>
       
 
 
       <!-- student block -->
-      <div class="col-sm-6 bg-info" id="student_block">
+      <div class="bg-info" id="student_block">
         <!-- First form -->
         <form action="./app/login.php" method="post"id="form1" >
           <h2>Students</h2>
@@ -201,7 +203,7 @@
         </form>
 
         <!-- student registration form -->
-        <div id="panel" class="panel">
+        <!-- <div id="panel" class="panel">
           <form action="./toDb/reg_student.php" method="POST" >
 
             <label for="fName">First Name</label>
@@ -251,8 +253,7 @@
             </div>
             
           </form>
-        </div>
-        
+        </div> -->
       </div>
                   
     </div>
@@ -266,12 +267,50 @@
 
 
 
+        <!-- this is the footer of the page. -->
+    <footer class="row">
+      <div class="container-fluid col-md-6" id="social_med">
+        <span >
+          <a href="https://touch.facebook.com/U-Innovate-104260611862082/?ref=bookmarks" target="_blank">
+            <i class="fa fa-facebook" >
+            </i>
+          </a>
+        </span>
+  
+        <span >
+          <a href="https://www.linkedin.com/company/u-innovate" target="_blank">
+            <i class="fa fa-linkedin"></i>
+          </i>
+          </a>
+        </span>
+  
+        <span >
+          <a href="https://twitter.com/NovateUin" target="_blank">
+            <i class="fa fa-twitter-square"></i></i>
+          </a>
+        </span>
 
+        <span >
+          <a href="https://www.instagram.com/uin.novate/" target="_blank">
+            <i class="fa fa-instagram"></i></i>
+          </a>
+        </span>
+      </div>
 
+      <div id="footer_details" class="container col-md-6" >
+        <span >
+          <a href="#"> About us</a>
+        </span>
+        |
+        <span >
+          <a href="#">
+            Contact us
+            <i class="fa fa-phone" ></i>
+          </a>
+        </span>
+      </div>
 
-
-
-
+    </footer>
 
 
 

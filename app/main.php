@@ -46,6 +46,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/head.css">
+    <link rel="stylesheet" href="../css/pro_details.css">
     <link rel="stylesheet" href="../css/p_snippet.css">
 
     <style >
@@ -60,19 +61,71 @@
   <body>
 
 
+    <!-- header of the page. -->
     <header >
-      <div >
-        <ul >
-          <li>
-            <a href="./pro_form.php">Upload</a>
-          </li>
+      <div class="container-fluid row" id="header" >
+        <!-- logo -->
+        <div class="col-md-3 col-sm-3 col-xs-3 bar" id="logo">
+          <a href="./main_savvy.php" class="nav-link" >Logo</a>
 
-          <li>
-            <a href="./profile.php">Profile</a>
-          </li>
-        </ul>
+          <span class="bg-warning" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
+            <!-- Collapse --> 
+            <i class="fa fa-bars"></i>
+          </span>
+        </div>
+        <!-- navbar links,  -->
+        <div id="nav_large" class="col-md-9 col-sm-9 col-xs-9" >
+          <ul class="nav" id="nav-link-bs"  >
+            <li class="nav-item" >
+              <a href="./main.php" class="nav-link" >Home</a>
+            </li>
+
+            <li class="nav-item" >
+              <a href="./profile.php" class="nav-link" >Profile</a>
+            </li>
+
+            <li class="nav-item" >
+              <a href="./contactus.php" class="nav-link" >Contact</a>
+            </li>
+
+            <li class="nav-item" >
+              <a href="./aboutus.php" class="nav-link" >About</a>
+            </li>
+          </ul>
+        </div>        
+        
       </div>
+       
+      <!-- the menu for the mobile version of the code. -->
+      <div class="collapse" id="nav_mobile">
+        <div >
+          <a href="./main.php" class="nav-link nav_link_rad_start" >
+          <i class="fa fa-home" ></i> Home
+          </a>
+        </div>
+
+        <div >
+          <a href="./profile.php" class="nav-link" >
+          <i class="fa fa-user" ></i> Profile
+          </a>
+        </div>
+
+        <div >
+          <a href="./contactus.php" class="nav-link" >
+          <i class="fa fa-phone" ></i> Contact
+          </a>
+        </div>
+
+        <div >
+          <a href="./aboutus.php" class="nav-link nav_link_rad_end" >
+            <i class="fa fa-info" ></i> &nbsp About
+          </a>
+        </div>
+      </div>
+
+      <!-- <div class="wrap" style="display: none;"></div> -->
     </header>
+    <div class="wrap" style="display: none;"></div>
 
 
 
@@ -94,6 +147,10 @@
     <div id="mainp_search_gr" class="container">
       <form action="./search_pro.php" method="post">
         <div class="input-group rounded">
+          <button type="submit" class="btn" id="search_btn" name="search_btn" >
+            <i class="fas fa-search"></i> Search
+          </button>
+
           <input class="form-control" type="text" name="key_word" id="key_word" 
             placeholder="Type to search for a project......"
             value="" aria-describedby="search-addon">
@@ -102,9 +159,9 @@
             <i class="fa fa-remove" ></i> Cancel
           </button>
 
-          <button type="submit" class="btn" id="search_btn" name="search_btn" >
+          <!-- <button type="submit" class="btn" id="search_btn" name="search_btn" >
             <i class="fas fa-search"></i> Search
-          </button>
+          </button> -->
         </div>
       </form>
     </div>
@@ -147,7 +204,7 @@
           
         <div class= "comment input-group" >
           <input class="form-control" type="text" name="comment"  placeholder="Type a comment..." id="usr_com">
-          <input class="form-control" type="submit" value="Comment" name="com_btn" id="com_btn" />
+          <input class="btn" type="submit" value="Comment" name="com_btn" id="com_btn" />
         </div>
       </div>
 

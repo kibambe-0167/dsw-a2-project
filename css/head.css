@@ -74,14 +74,12 @@ a {
 /* the navigation for mobile html code */
 
 #nav_mobile {
-    /* padding: auto; */
+    z-index: 1000000000000000;
     text-align: left;
     margin: .1em .4em;
     width: 50%;
-    /* float: right; */
     position: absolute;
     right: 0em;
-    /* border-radius: .6em; */
     background-color: rgb(27, 4, 43);
     border-radius: 1em 0em 1em 0em;
 }

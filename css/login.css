@@ -26,6 +26,7 @@ button {
 
 #student_block {
     margin: 0em 0em;
+    flex: 6;
 }
 
 
@@ -33,11 +34,21 @@ button {
 
 #savvy_block {
     font-size: 1em;
+    flex: 6;
 }
 
 
 /* this code applies to the login content page */
 
 #login_content {
-    margin: 0em auto;
+    /* margin: 0em auto; */
+    font-size: 1em;
+    display: flex;
+    /* flex-direction: row; */
+    z-index: 1000000000;
 }
+
+
+/* #login_content div {
+    display: inline;
+} */

@@ -10,6 +10,10 @@
 body {
     background-color: rgb(229, 224, 238);
     height: 100vh;
+    position: relative;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    z-index: -1;
 }
 
 #err_conn {
@@ -233,6 +237,8 @@ footer {
     bottom: 0em;
     left: 0em;
     right: 0em;
+    margin-top: 1em;
+    z-index: -1;
 }
 
 
