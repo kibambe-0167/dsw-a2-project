@@ -19,9 +19,6 @@ button {
 }
 
 
-/* .panel {} */
-
-
 /* Div block containing students forms */
 
 #student_block {
@@ -47,11 +44,3 @@ button {
     /* flex-direction: row; */
     z-index: 1000000000;
 }
-
-
-/* add media query */
-
-
-/* @media screen ma {
-    
-} */

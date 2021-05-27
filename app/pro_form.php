@@ -34,7 +34,7 @@
         <div class="col-md-3 col-sm-3 col-xs-3 bar" id="logo">
           <a href="./main_savvy.php" class="nav-link" >Logo</a>
 
-          <span class="bg-warning" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
+          <span class="" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
             <!-- Collapse --> 
             <i class="fa fa-bars"></i>
           </span>

@@ -4,6 +4,8 @@
   // start a php session to send data and information.
 
   session_start();
+
+  include("../code_snippets/help_code.php");
   
 ?>
 
@@ -34,14 +36,6 @@
     <link rel="stylesheet" href="../css/pro_details.css">
     <link rel="stylesheet" href="../css/p_snippet.css">
 
-    <style >
-      
-      li {
-        display: inline;
-        margin: .2em 1em;
-      }
-      
-    </style>
   </head>
   <body>
 
@@ -53,7 +47,7 @@
         <div class="col-md-3 col-sm-3 col-xs-3 bar" id="logo">
           <a href="./main_savvy.php" class="nav-link" >Logo</a>
 
-          <span class="bg-warning" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
+          <span class="" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
             <!-- Collapse --> 
             <i class="fa fa-bars"></i>
           </span>
@@ -164,7 +158,6 @@
 
     <?php
       // echo $_SESSION["show_projects"];// echo "sldjfnsdjf";
-
       foreach( $_SESSION["show_projects"] as $project ) { // echo "main loop";
         // print_r( $project ); echo "<br /><br />";
     ?>
@@ -182,8 +175,8 @@
         <div class="" id="main_details">
           <div class="main_name"> <?php echo  ucwords($project["pro_name"] );  ?> </div>
           <div id="main_desc" > 
-            <a href="?#project=<?php echo $project["id"] ?>" >
-              <?php echo $project["pro_desc"] ?> </a>
+            <a href="./pro_details.php?project=<?php echo $project["id"]; ?>" >
+              <?php echo few_letters( $project["pro_desc"] ); ?> </a>
             </div>
         </div>
           

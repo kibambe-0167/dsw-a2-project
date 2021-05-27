@@ -419,9 +419,10 @@ footer div {
 }
 
 
-/* Media query, applies when the screen is less than 576 */
+/* Media query, applies when the screen is less than 576 
+this applies to mobile devices. */
 
-@media ( max-width: 30em) {
+@media (min-width: 20em) and ( max-width: 30em) {
     #nav-link-bs {
         /* display: none; */
         font-size: 1em;
@@ -436,6 +437,30 @@ footer div {
     #savvy_block,
     #student_block {
         flex: 12;
-        display: block;
+        /* display: block; */
     }
 }
+
+
+/* this applies to big mobile devices and small tables. */
+
+@media (min-width: 30.1em) and (max-width: 47.9em) {
+    /* CSS */
+}
+
+
+/* this applies to tablets. */
+
+@media (min-width: 48em) and (max-width: 61.9em) {
+    /* CSS */
+}
+
+
+/* this applies to laptops and big screens  */
+
+@media (min-width: 62em) {
+    /* CSS */
+}
+
+
+/* @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {} */

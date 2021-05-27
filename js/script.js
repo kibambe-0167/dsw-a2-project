@@ -124,6 +124,14 @@ $(function() { // console.log("J Query loaded");
             $("#panel1").toggle(); // toggle the btn when the other form is open
         }
     });
+
+
+    // // when the search input field has data or text, display the cancel btn
+    // if ($("#key_word").val() != "") {
+    //     console.log($("#key_word").val());
+    //     // search_remove
+    // }
+
 });
 
 

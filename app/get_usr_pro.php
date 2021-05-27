@@ -26,7 +26,9 @@
         }
       }
       // if user contains no projects
-      else { echo " User contains no projects"; }
+      else { 
+        echo ucwords( $_SESSION["firstname"] ). " " . ucwords( $_SESSION["lastname"] ) . " has no projects yet."; 
+      }
     }
     else { echo ""; }
 

@@ -11,6 +11,6 @@
   // make connection object.
   $connObj=mysqli_connect($severname, $user, $passwd, $dbname);
 
-  print_r( $connObj );
+  // print_r( $connObj );
 
 ?>
