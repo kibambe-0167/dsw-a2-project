@@ -41,6 +41,28 @@ $(function() { // console.log("J Query loaded");
         setTimeout(() => { $("#feedback").html(""); }, 3000);
     }
 
+    // remove feedback messages.
+    if ($("#tech_savvy_log_msg").html() != "") {
+        setTimeout(() => {
+            $("$tech_savvy_log_msg").html("");
+        }, 3000);
+    }
+
+    // savvy_msg1
+    // remove feedback messages.
+    if ($("#savvy_msg1").html() != "") {
+        setTimeout(() => {
+            $("#savvy_msg1").html("");
+        }, 3000);
+    }
+
+    // remove feedback messages.
+    if ($("#savvy_msg2").html() != "") {
+        setTimeout(() => {
+            $("$savvy_msg2").html("");
+        }, 3000);
+    }
+
 
     if ($("#usr_prof_msg").html() != "") {
         setTimeout(() => { $("#usr_prof_msg").html(""); }, 3000);
@@ -71,7 +93,18 @@ $(function() { // console.log("J Query loaded");
 
 
 
+    // when discard btn is clicked. close the drop down btn
+    $("#discard2").click(() => {
+        console.log("btn clidkhfkb");
+        $("#panel1").toggle();
+    });
 
+
+    // when discard btn is clicked. close the drop down btn
+    $("#disard").click(() => {
+        console.log("btn clidkhfkb");
+        $("#panel").toggle();
+    });
 });
 
 

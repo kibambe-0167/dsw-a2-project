@@ -33,7 +33,7 @@
       <div class="container-fluid row" id="header" >
         <!-- logo -->
         <div class="col-md-3 col-sm-3 col-xs-3 bar" id="logo">
-          <a href="./main_savvy.php" class="nav-link" >Logo</a>
+          <a href="./index.php" class="nav-link" >Logo</a>
 
           <span class="bg-warning" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
             <!-- Collapse --> 
@@ -43,16 +43,16 @@
         <!-- navbar links,  -->
         <div id="nav_large" class="col-md-9 col-sm-9 col-xs-9" >
           <ul class="nav" id="nav-link-bs"  >
-            <!-- <li class="nav-item" >
-              <a href="./index.php" class="nav-link" >Home</a>
-            </li> -->
-
             <li class="nav-item" >
-              <a href="#" class="nav-link" >Contact</a>
+              <a href="./index.php" class="nav-link" >Home</a>
             </li>
 
             <li class="nav-item" >
-              <a href="#" class="nav-link" >About</a>
+              <a href="./app/contactus.php" class="nav-link" >Contact Us</a>
+            </li>
+
+            <li class="nav-item" >
+              <a href="./app/aboutus.php" class="nav-link" >About Us</a>
             </li>
           </ul>
         </div>        
@@ -62,20 +62,20 @@
       <!-- the menu for the mobile version of the code. -->
       <div class="collapse" id="nav_mobile">
         <div >
-          <a href="./main_savvy.php" class="nav-link nav_link_rad_start" >
+          <a href="./index.php" class="nav-link nav_link_rad_start" >
           <i class="fa fa-home" ></i> Home
           </a>
         </div>
 
         <div >
           <a href="#" class="nav-link" >
-          <i class="fa fa-phone" ></i> Contact
+          <i class="fa fa-phone" ></i> Contact Us
           </a>
         </div>
 
         <div >
           <a href="#" class="nav-link nav_link_rad_end" >
-            <i class="fa fa-info" ></i> About
+            <i class="fa fa-info" ></i> About Us
           </a>
         </div>
       </div>
@@ -85,11 +85,9 @@
     <div class="wrap" style="display: none;"></div>
 
 
-
-
     <!-- applies to students. -->
     <!-- after account is successfully deleted from db -->
-    <span >
+    <div class="messages" >
       <?php
         // message about the deleted account.
         echo $_SESSION["acc_del"];
@@ -98,14 +96,14 @@
         // $_SESSION["acc_del"] = null;
         unset( $_SESSION["acc_del"] );
       ?>
-    </span>
+    </div>
 
     
     <!-- applies to students. -->
     <div id="usr_msg" class="messages" >
       <!-- put a timer to make this message disappear. -->
       <?php
-        // feedback onm registration process.
+        // feedback on registration process.
         echo $_SESSION["reg_msg"];
         unset( $_SESSION["reg_msg"] );
 
@@ -116,21 +114,22 @@
     
 
     <!-- this shows error messages when tech savvy logsin -->
-    <div id="tech_savvy_log_msg" >
-      <?php echo $_SESSION["email_provide"]; ?>
-
-      <?php echo $_SESSION["no_user"]; ?>
-
-      <?php echo $_SESSION["savvy_del_msg"]; ?>
+    <div id="tech_savvy_log_msg"  class="container messages" >
+      <?php echo $_SESSION["email_provide"]; unset($_SESSION["email_provide"]); ?>
+    </div>
+    <div class="container messages" id="savvy_msg1" >
+      <?php echo $_SESSION["no_user"]; unset($_SESSION["no_user"]); ?>
+    </div>
+    <div class="container messages" id="savvy_msg2" >
+      <?php echo $_SESSION["savvy_del_msg"]; unset($_SESSION["savvy_del_msg"]); ?>
     </div>
 
     
-
     <!-- contains login and signin forms -->
-    <div id="login_content" class="container bg-dark">
+    <div id="login_content" class="container">
 
       <!-- Savvy block -->
-      <div class="bg-warning" id="savvy_block" >
+      <div class="container" id="savvy_block" >
         <!-- Second Form, tech savvy login form     -->
         <form action="./app/login_savvy.php" method="post" id="form2" >
           <h2>Public</h2>
@@ -140,13 +139,13 @@
           </div>
           
           <div class="input-group">
-            <input class="btn"  type="submit" name="submit" value="login" id="">
-            <input type="reset" class="btn" onclick="add1()" class="accordion1" value="Sign Up"/>
+            <input class="btn"  type="submit" name="submit" value="Sign in" id="">
+            <input type="reset" class="btn" onclick="add1()" class="accordion1" value="Sign up"/>
           </div>
         </form>
 
         <!--Second Hidden Form-->
-        <!-- <div id="panel1" class="panel1">
+        <div id="panel1" class="container panel1">
           <form action="./toDb/reg_savvy.php" method="post" >
             <label>First Name </label>
             <div class="input-group" >
@@ -175,13 +174,12 @@
             </div>
 
           </form>
-        </div> -->
+        </div>
       </div>
       
 
-
       <!-- student block -->
-      <div class="bg-info" id="student_block">
+      <div class="container" id="student_block">
         <!-- First form -->
         <form action="./app/login.php" method="post"id="form1" >
           <h2>Students</h2>
@@ -204,7 +202,7 @@
         </form>
 
         <!-- student registration form -->
-        <!-- <div id="panel" class="panel">
+        <div id="panel" class="container panel">
           <form action="./toDb/reg_student.php" method="POST" >
 
             <label for="fName">First Name</label>
@@ -249,23 +247,20 @@
             
             <div class="input-group" >
               <input class="btn"  type="submit" id="signup" name="signup" value="SignUp" >
-            
               <input class="btn bg-danger" type="reset" id="disard" value="Discard" />
             </div>
             
           </form>
-        </div> -->
+        </div>
       </div>
                   
     </div>
 
 
 
-    <?php
+    <!-- < ?php
       echo $_SESSION["login_msg"];
-    ?>
-
-
+    ?> -->
 
 
     <!-- this is the footer of the page. -->
@@ -314,58 +309,6 @@
     </footer>
 
 
-
-
-
-    <!-- SAVVY REGISTRATION FORM -->
-    <!-- <div >
-      <h2 >Tech Savvy Sign up</h2>
-      <form action="./toDb/reg_savvy.php" method="post" >
-        <div >
-          <input type="text" name="fname" placeholder="Enter firstname" value="micheal" >
-        </div>
-
-        <div >
-          <input type="text" name="lname" placeholder="Enter lastname" value="Banda" >
-        </div>
-
-        <div >
-          <input type="email" name="email" placeholder="Enter email" value="micheal@gmail.com" >
-        </div>
-
-        <div >
-          <input type="submit" name="signup" value="sign up" >
-        </div>
-      </form>
-    </div>
-
-
-    <div >
-      <h2 >Tech Savvy log in</h2>
-      <form action="./app/login_savvy.php" method="post">
-        <div >
-          <input type="email" name="email" placeholder="Enter your email" id="">
-        </div>
-        
-        <div >
-          <input type="submit" name="submit" value="login" id="">
-        </div>
-      </form>
-    </div> -->
-
-
-    <!-- this is a form for the comment  -->
-    <!-- <form action="./toDb/comment.php" method="post" >
-      <div >
-        <input type="text" name="comment" placeholder="Type a comment" />
-      </div>
-
-      <div >
-        <input type="submit" name="submit" />
-      </div>
-    </form> -->
-
-
     <!-- this is uploading a team members details to db. -->
     <!-- <form action="./toDb/team.php" method="post">
       <div >
@@ -388,7 +331,6 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
     <script type="text/javascript" src="./js/jQuery.js" ></script>
     <script type="text/javascript" src="./js/bootstrap.min.js" ></script>
     <script type="text/javascript" src="./js/script.js" ></script>

@@ -1,7 +1,7 @@
 
 <?php
   // define and assign conections objects.
-  $severname = "localhost";
+  $severname = "";
   $dbname = "Uinnovate";
   $user = "root";
   $passwd = "";
@@ -10,4 +10,7 @@
 
   // make connection object.
   $connObj=mysqli_connect($severname, $user, $passwd, $dbname);
+
+  print_r( $connObj );
+
 ?>
