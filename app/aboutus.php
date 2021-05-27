@@ -19,7 +19,6 @@
 
     <div class="container" id="aboutus">
         <h4>About us</h4>
-        <p></p>
     </div>
 
     <!-- Optional JavaScript -->

@@ -35,7 +35,7 @@
         <div class="col-md-3 col-sm-3 col-xs-3 bar" id="logo">
           <a href="./index.php" class="nav-link" >Logo</a>
 
-          <span class="bg-warning" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
+          <span class="" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
             <!-- Collapse --> 
             <i class="fa fa-bars"></i>
           </span>
@@ -68,13 +68,13 @@
         </div>
 
         <div >
-          <a href="#" class="nav-link" >
+          <a href="./app/contactus.php" class="nav-link" >
           <i class="fa fa-phone" ></i> Contact Us
           </a>
         </div>
 
         <div >
-          <a href="#" class="nav-link nav_link_rad_end" >
+          <a href="./app/aboutus.php" class="nav-link nav_link_rad_end" >
             <i class="fa fa-info" ></i> About Us
           </a>
         </div>
@@ -140,7 +140,7 @@
           
           <div class="input-group">
             <input class="btn"  type="submit" name="submit" value="Sign in" id="">
-            <input type="reset" class="btn" onclick="add1()" class="accordion1" value="Sign up"/>
+            <input id="savvy_in_btn" type="reset" class="btn" onclick="add1()" class="accordion1" value="Sign up"/>
           </div>
         </form>
 
@@ -197,7 +197,7 @@
           <div class="input-group" >
             <input class="btn" value="Signin" type="submit" name="submit" id="submit">
 
-            <input class="btn"  onclick="add()" type="reset" class="" value="Sign up"/>
+            <input id="stud_in_btn" class="btn"  onclick="add()" type="reset" class="" value="Sign up"/>
           </div>
         </form>
 

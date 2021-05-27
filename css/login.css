@@ -11,15 +11,15 @@ button {
 
 .panel,
 .panel1 {
-    background-color: white;
+    background-color: rgb(229, 224, 238);
     display: none;
+    transition: max-height 0.5s ease-out;
+    padding: 1em;
+    color: rgb(27, 4, 43);
 }
 
-.panel,
-.panel {
-    background-color: white;
-    transition: max-height 0.5s ease-out;
-}
+
+/* .panel {} */
 
 
 /* Div block containing students forms */
@@ -47,3 +47,11 @@ button {
     /* flex-direction: row; */
     z-index: 1000000000;
 }
+
+
+/* add media query */
+
+
+/* @media screen ma {
+    
+} */

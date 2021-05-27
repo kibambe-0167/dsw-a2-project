@@ -433,4 +433,9 @@ footer div {
     .bar #menu_btn {
         display: block;
     }
+    #savvy_block,
+    #student_block {
+        flex: 12;
+        display: block;
+    }
 }

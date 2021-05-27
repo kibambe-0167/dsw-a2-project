@@ -44,7 +44,7 @@ $(function() { // console.log("J Query loaded");
     // remove feedback messages.
     if ($("#tech_savvy_log_msg").html() != "") {
         setTimeout(() => {
-            $("$tech_savvy_log_msg").html("");
+            $("#tech_savvy_log_msg").html("");
         }, 3000);
     }
 
@@ -59,7 +59,7 @@ $(function() { // console.log("J Query loaded");
     // remove feedback messages.
     if ($("#savvy_msg2").html() != "") {
         setTimeout(() => {
-            $("$savvy_msg2").html("");
+            $("#savvy_msg2").html("");
         }, 3000);
     }
 
@@ -104,6 +104,25 @@ $(function() { // console.log("J Query loaded");
     $("#disard").click(() => {
         console.log("btn clidkhfkb");
         $("#panel").toggle();
+    });
+
+
+    // when the sign in btn for tech savvy is clicked.
+    $("#savvy_in_btn").click(() => {
+        // toggle the form for student if it open.
+        // console.log($("#panel").css("display"));
+        if ($("#panel").css("display") === "block") {
+            $("#panel").toggle(); // toggle the btn when the other form is open
+        }
+    });
+
+    // when the sign in btn for student is clicked.
+    $("#stud_in_btn").click(() => {
+        // toggle the form for savvy if it open.
+        // console.log($("#panel").css("display"));
+        if ($("#panel1").css("display") === "block") {
+            $("#panel1").toggle(); // toggle the btn when the other form is open
+        }
     });
 });
 
