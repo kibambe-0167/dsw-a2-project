@@ -23,11 +23,23 @@
 
         // echo "Found something";
         while( $project = mysqli_fetch_assoc( $result ) ) { ?>
-          <div>
-            <a href="edit_pro.php?project_id=<?php echo $project["id"]; ?>">
-              <?php echo $project["pro_name"]." | ".$project["type"]; ?></a>
+          <div class="container usr_proj">
+
+            <a href="./pro_det_stu.php?project_id=<?php echo $project["id"]; ?>">
+              <?php echo $project["pro_name"]." [".$project["type"] ."]"; ?>
+            </a>
+
+            <i > | </i>
+
             <a href="../del/delete_pro.php?project_id=<?php echo$project["id"]; ?>" > 
-              | Delete Project</a>
+              Delete Project
+            </a>
+
+            <i > | </i>
+
+            <a href="../app/add_member.php?project_id=<?php echo $project["id"]; ?>">
+              Add Team Member
+            </a>
           </div>
         <?php
         }

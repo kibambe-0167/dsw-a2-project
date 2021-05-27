@@ -313,27 +313,7 @@
       </div>
 
     </footer>
-
-
-    <!-- this is uploading a team members details to db. -->
-    <!-- <form action="./toDb/team.php" method="post">
-      <div >
-        <input type="text" name="fname" placeholder="Enter a team members name" value="Surprise" >
-      </div>
-
-      <div >
-        <input type="text" name="lname" placeholder="Enter a team members last name" value="Mumba"  >
-      </div>
-
-      <div >
-        <input type="email" name="email" placeholder="Enter a team members email" value="mumba@gmail.com"  >
-      </div>
-
-      <div >
-        <input type="submit" name="submit" >
-      </div>
-    </form> -->
-      
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

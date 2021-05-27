@@ -210,7 +210,7 @@ input[type="reset"],
 
 /* when someone hover over the btn */
 
-.div_btn:hover,
+.div_btn a:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 #search_btn:hover,
@@ -375,12 +375,25 @@ footer div {
     margin: .6em;
 }
 
+#student_profile p {
+    margin: .5em auto .7em auto;
+}
+
+
+/* this applies to individual user projects */
+
+.usr_proj {
+    padding: 1em;
+}
+
 
 /* this rules applies to student profile information */
 
+.usr_proj,
+#savvy_profile,
 #student_profile {
     margin: 1em auto;
-    box-shadow: .1em .1em 1em;
+    box-shadow: .1em .1em 1em rgb(27, 4, 43);
     padding: .8em 1em;
     border-radius: 1em;
 }

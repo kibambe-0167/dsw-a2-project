@@ -1,18 +1,17 @@
-
-
 <?php
   // this code manages the user profile. they can delete and edit their account here
   // start a session to send data and information.
   session_start();
   // echo "<br/>Session ID:" . session_id() . "<br/><br/>";
-
   // include("./get_usr_pro.php"); // this file get all projects from user db.
 ?>
 
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Profile Page</title>
+    <title>
+      <?php echo ucwords( $_SESSION["firstname"] ); ?> | Profile
+    </title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,7 +26,6 @@
 
   </head>
   <body>
-
 
     <!-- header of the page. -->
     <header >
@@ -97,12 +95,11 @@
     </header>
     <div class="wrap" style="display: none;"></div>
 
-
     <div id="usr_prof_msg" class="messages" >
       <?php echo $_SESSION["up_usr_msg"]; unset( $_SESSION["up_usr_msg"] ); ?>
     </div>
 
-
+    <!-- user details -->
     <div >
       <?php
         echo $_SESSION["student_id"] . " | ";
@@ -114,18 +111,13 @@
       ?>
     </div>
 
-
     <!-- contains the details of current logged in user. -->
     <div class="container" id="student_profile" >
       <div >
         <?php echo ucwords( $_SESSION["firstname"]  ); ?>
         <?php echo ucwords( $_SESSION["lastname"] ); ?>
 
-        <p >
-          <a href="mailto:<?php echo ( $_SESSION["school_email"] ); ?>" >
-            <i class="fa fa-paper-plane" ></i> &nbsp; Send email
-          </a>
-        </p>
+        <p > <?php echo ucwords( ( $_SESSION["school_email"] )); ?> </p>
       </div>
       
       <div class = "div_btn" >
@@ -154,12 +146,10 @@
 
     </div>
 
-
     <!-- this contains the project of the user. -->
-    <div class="container" id="usr_pro">
+    <div class="" id="usr_projects">
       <?php include("./get_usr_pro.php"); // this file get all projects from user db. ?>
     </div>
-
 
     <!-- this is the footer -->
     <footer class="row">
