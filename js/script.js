@@ -126,11 +126,12 @@ $(function() { // console.log("J Query loaded");
     });
 
 
-    // // when the search input field has data or text, display the cancel btn
-    // if ($("#key_word").val() != "") {
-    //     console.log($("#key_word").val());
-    //     // search_remove
-    // }
+    // this applies to public user registration feedback.
+    if ($("#reg_msg").html() != "") {
+        setTimeout(() => {
+            $("#reg_msg").html("");
+        }, 3000);
+    }
 
 });
 

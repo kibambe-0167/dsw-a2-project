@@ -42,7 +42,7 @@
         <div class="col-md-3 col-sm-3 col-xs-3 bar" id="logo">
           <a href="./main_savvy.php" class="nav-link" >Logo</a>
 
-          <span class="bg-warning" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
+          <span class="" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
             <!-- Collapse --> 
             <i class="fa fa-bars"></i>
           </span>
@@ -57,7 +57,7 @@
               <a href="#" class="nav-link" >Contact</a>
             </li>
             <li class="nav-item" >
-              <a href="#" class="nav-link" >About</a>
+              <a href="./aboutus.php" class="nav-link" >About</a>
             </li>
           </ul>
         </div>        
@@ -73,14 +73,14 @@
         </div>
 
         <div >
-          <a href="#" class="nav-link" >
+          <a href="./contactus.php" class="nav-link" >
           <i class="fa fa-phone" ></i> Contact
           </a>
         </div>
 
         <div >
-          <a href="#" class="nav-link nav_link_rad_end" >
-            <i class="fa fa-info" ></i> About
+          <a href="./aboutus.php" class="nav-link nav_link_rad_end" >
+            <i class="fa fa-info" ></i> &nbsp; About
           </a>
         </div>
       </div>

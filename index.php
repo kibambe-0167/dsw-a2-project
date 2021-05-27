@@ -113,6 +113,11 @@
         unset( $_SESSION["del_usr_acc_msg"] );
       ?>
     </div>
+
+    <!-- registration feedback from savvy or public user. -->
+    <div id="reg_msg" class="messages" >
+      <?php echo $_SESSION["reg_msg"]; unset( $_SESSION["reg_msg"] ); ?>
+    </div>
     
 
     <!-- this shows error messages when tech savvy logsin -->
@@ -161,17 +166,16 @@
 
             <label> Email</label>
             <div class="input-group" >
-              <input class="input-group-text" type="email" name="email" placeholder="Enter email" value="micheal@gmail.com" >
+              <input class="input-group-text" type="email" name="email" placeholder="Enter email..." value="micheal@gmail.com" >
             </div>
 
             <label> Confirm Email</label>
             <div class="input-group" >
-              <input class="input-group-text" type="email" name="email" placeholder="Enter email" value="micheal@gmail.com" >
+              <input class="input-group-text" type="email" name="con_email" placeholder="Re-enter email..." value="micheal@gmail.com" >
             </div>
 
             <div class="input-group" >
               <input class="btn" type="submit" name="signup" value="sign up" >
-              
               <input type="reset" class="btn bg-danger" id="discard2" value="Discard" />
             </div>
 

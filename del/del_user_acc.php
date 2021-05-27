@@ -101,8 +101,6 @@
 
 
 
-    
-
     <div id="del_usr_acc" class="container" >
       <h2 >
           Deleting User Account

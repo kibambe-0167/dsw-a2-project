@@ -20,14 +20,21 @@
 
       // when result return have something.
       if( mysqli_num_rows( $result ) > 0 ) {
+
         // echo "Found something";
-        while( $project = mysqli_fetch_assoc( $result ) ) {
-          echo "<div class='pro'><a href='edit_pro.php?project_id=" . $project["id"] . "'>" . $project["id"] . " | " . $project["pro_name"] . " | " . $project["type"] . " | " . $project["pro_desc"] . "</a></div ><div ><a href='../del/delete_pro.php?project_id=". $project["id"] . "' >Delete Project</a></div>";
+        while( $project = mysqli_fetch_assoc( $result ) ) { ?>
+          <div>
+            <a href="edit_pro.php?project_id=<?php echo $project["id"]; ?>">
+              <?php echo $project["pro_name"]." | ".$project["type"]; ?></a>
+            <a href="../del/delete_pro.php?project_id=<?php echo$project["id"]; ?>" > 
+              | Delete Project</a>
+          </div>
+        <?php
         }
       }
       // if user contains no projects
       else { 
-        echo ucwords( $_SESSION["firstname"] ). " " . ucwords( $_SESSION["lastname"] ) . " has no projects yet."; 
+        echo ucwords( $_SESSION["firstname"] ). " " . ucwords( $_SESSION["lastname"] ) . " has no projects yet.";
       }
     }
     else { echo ""; }

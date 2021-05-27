@@ -376,6 +376,16 @@ footer div {
 }
 
 
+/* this rules applies to student profile information */
+
+#student_profile {
+    margin: 1em auto;
+    box-shadow: .1em .1em 1em;
+    padding: .8em 1em;
+    border-radius: 1em;
+}
+
+
 /* this rules applies to the footer details. */
 
 #footer_details {

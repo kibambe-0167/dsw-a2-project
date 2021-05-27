@@ -2,9 +2,7 @@
 
 <?php
   session_start(); // start a sesison to send and retrieve data.
-
   include("./get_1_pro.php"); // run function, that get one project.
-
   include("../config/connection.php"); // get the connection object.
 ?>
 
@@ -33,13 +31,63 @@
   </head>
   <body>
 
-    <div >
-      <a href="./main_savvy.php">Home</a>
-    </div>
+
+    <!-- header or the navigation bar. -->
+    <header >
+      <div class="container-fluid row" id="header" >
+        <!-- logo -->
+        <div class="col-md-3 col-sm-3 col-xs-3 bar" id="logo">
+          <a href="./main_savvy.php" class="nav-link" >Logo</a>
+
+          <span class="" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
+            <!-- Collapse --> 
+            <i class="fa fa-bars"></i>
+          </span>
+        </div>
+        <!-- navbar links,  -->
+        <div id="nav_large" class="col-md-9 col-sm-9 col-xs-9" >
+          <ul class="nav" id="nav-link-bs"  >
+            <li class="nav-item" >
+              <a href="./main_savvy.php" class="nav-link" >Home</a>
+            </li>
+            <li class="nav-item" >
+              <a href="./contactus.php" class="nav-link" >Contact Us</a>
+            </li>
+            <li class="nav-item" >
+              <a href="./aboutus.php" class="nav-link" >About Us</a>
+            </li>
+          </ul>
+        </div>        
+        
+      </div>
+       
+      <!-- the menu for the mobile version of the code. -->
+      <div class="collapse" id="nav_mobile">
+        <div >
+          <a href="./main_savvy.php" class="nav-link nav_link_rad_start" >
+          <i class="fa fa-home" ></i> Home
+          </a>
+        </div>
+
+        <div >
+          <a href="./contactus.php" class="nav-link" >
+          <i class="fa fa-phone" ></i> Contact Us
+          </a>
+        </div>
+
+        <div >
+          <a href="./aboutus.php" class="nav-link nav_link_rad_end" >
+            <i class="fa fa-info" ></i> &nbsp; About Us
+          </a>
+        </div>
+      </div>
+
+      <!-- <div class="wrap" style="display: none;"></div> -->
+    </header>
+    <div class="wrap" style="display: none;"></div>
 
 
 
-    
     <div class="container show_project" >
       <!-- <div class = "container main_pro_"> -->
       <div class="type" >

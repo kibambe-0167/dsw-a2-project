@@ -5,6 +5,8 @@
   // start a session to send data and information.
   session_start();
   // echo "<br/>Session ID:" . session_id() . "<br/><br/>";
+
+  // include("./get_usr_pro.php"); // this file get all projects from user db.
 ?>
 
 <!doctype html>
@@ -27,7 +29,6 @@
   <body>
 
 
-      
     <!-- header of the page. -->
     <header >
       <div class="container-fluid row" id="header" >
@@ -115,16 +116,18 @@
 
 
     <!-- contains the details of current logged in user. -->
-    <div class="container" id="savvy_profile" >
+    <div class="container" id="student_profile" >
       <div >
         <?php echo ucwords( $_SESSION["firstname"]  ); ?>
         <?php echo ucwords( $_SESSION["lastname"] ); ?>
+
+        <p >
+          <a href="mailto:<?php echo ( $_SESSION["school_email"] ); ?>" >
+            <i class="fa fa-paper-plane" ></i> &nbsp; Send email
+          </a>
+        </p>
       </div>
       
-      <div>
-        <?php echo ucwords( $_SESSION["school_email"] ); ?>
-      </div>
-
       <div class = "div_btn" >
         <a href="./pro_form.php" class="nav-link" >
           <i class="fa fa-upload" ></i> Upload Project
@@ -154,9 +157,7 @@
 
     <!-- this contains the project of the user. -->
     <div class="container" id="usr_pro">
-      <?php
-        include("./get_usr_pro.php"); 
-      ?>
+      <?php include("./get_usr_pro.php"); // this file get all projects from user db. ?>
     </div>
 
 
