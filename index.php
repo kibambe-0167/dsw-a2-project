@@ -91,10 +91,12 @@
       <?php
         // message about the deleted account.
         echo $_SESSION["acc_del"];
+        echo $_SESSION["student_acc_del_msg"];
 
         // set the session variable value to null;
         // $_SESSION["acc_del"] = null;
         unset( $_SESSION["acc_del"] );
+        unset( $_SESSION["student_acc_del_msg"] );
       ?>
     </div>
 

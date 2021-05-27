@@ -38,7 +38,7 @@
         <div class="col-md-3 col-sm-3 col-xs-3 bar" id="logo">
           <a href="./main_savvy.php" class="nav-link" >Logo</a>
 
-          <span class="bg-warning" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
+          <span class="" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
             <!-- Collapse --> 
             <i class="fa fa-bars"></i>
           </span>
@@ -112,6 +112,11 @@
           <input class="form-control" type="password" name="passwd" id="passwd" placeholder="Enter password to continue">
         </div>
 
+        <div class="form-check" >
+          <input class="btn" type="checkbox" name="no_yes" id="no_yes">
+          <label for="yes">Else delete all project(s)</label>
+        </div>
+
         <div class="input-group" >
           <input class="btn" name="submit" type="submit" value="Delete">
           <button class="btn" >
@@ -180,17 +185,16 @@
 
 
 
-
-
-
-
 <?php
 
   if( isset( $_POST["submit"] ) ) {
     if( $connObj ) { // echo "in";
       $passwd = $_POST["passwd"];
-      $usr = $_SESSION["school_email"];
-      // when password is not empty
+      $usr = $_SESSION["school_email"]; $usr_id = $_SESSION["student_id"];
+      $delete_project = $_POST["no_yes"]; // echo $usr_id;
+      // echo $delete_project == "on";
+
+      // // when password is not empty
       if( !empty( $passwd ) ) {
         // echo $passwd; echo $usr;
 
@@ -209,8 +213,25 @@
           if( mysqli_query( $connObj, $del_q ) ) { // echo "<br/>sldfnslkd";
             $_SESSION["del_usr_acc_msg"] = "<span class='success'>Account Successfully Deleted</span>";
 
+            // if user agreed to delete all projects, deletes all projects.
+            if( $delete_project == "on" ) { echo "going to delete project";
+              // make query to delete all project that are under that usr.
+              $pro_q = "delete from Project where student_id='$usr_id'";
+              // $pro_re = mysqli_query( $connObj, $pro_q );
+
+              if( mysqli_query( $connObj, $pro_q ) ) {
+                echo "<span class='success'>". mysqli_affected_rows( $connObj ) . " project(s) successfully deleted</span>";
+                $_SESSION["student_acc_del_msg"] = "<span class='success'>". mysqli_affected_rows( $connObj ) . " project(s) successfully deleted</span>";
+                header( "location:../index.php" ); // redirect user to index page. and send feedback msg.
+              }
+              else {
+                echo "<span class='error'>Error: Cannot Delete Projects.</span>";
+                $_SESSION["student_acc_del_msg"] = "<span class='error'>Error: Cannot Delete Projects.</span>";
+                header( "location:../index.php" ); // redirect user to index page. and send feedback msg.
+              }
+            }
+
             // session_destroy(); // destroy all sessions.
-            header( "location:../index.php" ); // redirect user to index page. and send feedback msg.
           }
           else {
             // echo "<div class='error'>Error in deleting account.<br/>" . mysqli_error( $connObj ) ."</div>";

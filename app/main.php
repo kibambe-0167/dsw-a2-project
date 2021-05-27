@@ -2,11 +2,8 @@
 
 <?php
   // start a php session to send data and information.
-
   session_start();
-
   include("../code_snippets/help_code.php");
-  
 ?>
 
 <!doctype html>
@@ -175,22 +172,23 @@
         <div class="" id="main_details">
           <div class="main_name"> <?php echo  ucwords($project["pro_name"] );  ?> </div>
           <div id="main_desc" > 
-            <a href="./pro_details.php?project=<?php echo $project["id"]; ?>" >
+            <a href="./pro_det_stu.php?project_id=<?php echo $project["id"]; ?>" >
               <?php echo few_letters( $project["pro_desc"] ); ?> </a>
             </div>
         </div>
           
-        <div class= "comment input-group" >
-          <input class="form-control" type="text" name="comment"  placeholder="Type a comment..." id="usr_com">
-          <input class="btn" type="submit" value="Comment" name="com_btn" id="com_btn" />
-        </div>
+        
+        <form action="./stud_comment.php?project_id=<?php echo $project["id"]; ?>" method="post">
+          <div class= "comment input-group" >
+            <input class="form-control" type="text" name="comment"  placeholder="Type a comment..." id="usr_com">
+            <input class="btn" type="submit" value="Comment" name="com_btn" id="com_btn" />
+          </div>
+        </form>
       </div>
 
     </div>
 
-    
-    <?php }
-    ?>
+    <?php } ?>
 
 
 
