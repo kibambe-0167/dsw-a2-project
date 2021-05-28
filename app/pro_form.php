@@ -31,8 +31,11 @@
     <header >
       <div class="container-fluid row" id="header" >
         <!-- logo -->
-        <div class="col-md-3 col-sm-3 col-xs-3 bar" id="logo">
-          <a href="./main_savvy.php" class="nav-link" >Logo</a>
+        <div class="col-md-3 col-sm-3 col-xs-3 bar" >
+          <a href="./main_savvy.php" class="nav-link" >
+            <!-- Logo -->
+            <img id="logo" src="../logo.png" alt="logo picture" />
+          </a>
 
           <span class="" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
             <!-- Collapse --> 
@@ -46,18 +49,18 @@
               <a href="./main.php" class="nav-link" >Home</a>
             </li>
 
-            <!-- <li class="nav-item" >
-              <a href="./pro_form.php" class="nav-link" >
-                Upload Project
-              </a>
-            </li> -->
-
             <li class="nav-item" >
-              <a href="./contactus.php" class="nav-link" >Contact Us</a>
+              <a href="./profile.php" class="nav-link" >
+                Profile
+              </a>
             </li>
 
             <li class="nav-item" >
-              <a href="./aboutus.php" class="nav-link" >About Us</a>
+              <a href="./contactus.php" target="blank" class="nav-link" >Contact us</a>
+            </li>
+
+            <li class="nav-item" >
+              <a href="./aboutus.php" target="blank" class="nav-link" >About us</a>
             </li>
           </ul>
         </div>        
@@ -72,21 +75,21 @@
           </a>
         </div>
 
-        <!-- <div >
-          <a href="" class="nav-link" >
-          <i class="fa fa-upload" ></i> Upload Project
-          </a>
-        </div> -->
-
         <div >
-          <a href="./contactus.php" class="nav-link" >
-          <i class="fa fa-phone" ></i> Contact Us
+          <a href="./profile.php" class="nav-link" >
+          <i class="fa fa-user" ></i> Profile
           </a>
         </div>
 
         <div >
-          <a href="./aboutus.php" class="nav-link nav_link_rad_end" >
-            <i class="fa fa-info" ></i> &nbsp About Us
+          <a href="./contactus.php" target="blank" class="nav-link" >
+          <i class="fa fa-phone" ></i> Contact us
+          </a>
+        </div>
+
+        <div >
+          <a href="./aboutus.php" target="blank" class="nav-link nav_link_rad_end" >
+            <i class="fa fa-info" ></i> &nbsp About us
           </a>
         </div>
       </div>
@@ -110,23 +113,42 @@
     <!-- store a project details in the DB. -->
     <div id="up_project" class="container" >
 
-      <form action="../toDb/upload_pro.php" method="post" >
+      <form action="../toDb/upload_pro.php" method="post" class="inline" >
         <div class="input-group" >
-          <input class="form-control" type="text" value="Smart Alert" name="name" placeholder="Enter project name">
+          <input class="form-control" type="text" value="Smart Alert" name="name" placeholder="Enter project name" required>
         </div>
 
-        <div class="input-group" >
+
+        <div class="form-group-inline">
+          <select name="type" class="form-control" id="project_type" required>
+            <option value="mobile app" >Mobile App</option>
+            <option value="web app" >Web App</option>
+            <option value="android app" >Android App</option>
+            <option value="ios app" >IOS App</option>
+            <option value="unknown yet" >General | Unknown yet</option>
+          </select>
+        </div>
+
+
+        <!-- <div class="input-group" >
           <input class="form-control" type="text" value="mobile App" name="type" placeholder="Enter project type">
-        </div>
+        </div> -->
 
         <div class="input-group" >
-          <textarea class="form-control" name="desc" placeholder="Enter project description" style="padding: 10px;" rows="5" cols="30">This is an app that helps blah blah blah and blah, its was made with blah, html, js, blah, backend with mysql, php and blah. Its helps users do this and that and this is the problem we are solving....
+          <textarea class="form-control" name="desc" placeholder="Enter project description" style="padding: 10px;" rows="4" cols="30" required >This is an app that helps blah blah blah and blah, its was made with blah, html, js, blah, backend with mysql, php and blah. Its helps users do this and that and this is the problem we are solving....
           </textarea>
         </div>
 
         <div class="input-group" >
-          <input class="form-control" type="text" name="ext_link" placeholder="Enter project external link">
+          <input class="form-control" type="text" name="ext_link" placeholder="Project external link | wwww.url.com">
         </div>
+
+
+        <div class="form-group">
+          <label for="exampleFormControlFile1">file input</label>
+          <input type="file" class="form-control-file" id="">
+        </div>
+
 
         <div class="input-group" >
           <input class="btn" type="submit" value="Upload" name="upload">

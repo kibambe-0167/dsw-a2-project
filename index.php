@@ -53,11 +53,11 @@
             </li>
 
             <li class="nav-item" >
-              <a href="./app/contactus.php" class="nav-link" >Contact Us</a>
+              <a href="./app/contactus.php" target="blank" class="nav-link" >Contact us</a>
             </li>
 
             <li class="nav-item" >
-              <a href="./app/aboutus.php" class="nav-link" >About Us</a>
+              <a href="./app/aboutus.php" target="blank" class="nav-link" >About us</a>
             </li>
           </ul>
         </div>        
@@ -82,14 +82,14 @@
         </div>
 
         <div >
-          <a href="./app/contactus.php" class="nav-link" >
-          <i class="fa fa-phone" ></i> Contact Us
+          <a href="./app/contactus.php" target="blank" class="nav-link" >
+          <i class="fa fa-phone" ></i> Contact us
           </a>
         </div>
 
         <div >
-          <a href="./app/aboutus.php" class="nav-link nav_link_rad_end" >
-            <i class="fa fa-info" ></i> &nbsp; About Us
+          <a href="./app/aboutus.php" target="blank"  class="nav-link nav_link_rad_end" >
+            <i class="fa fa-info" ></i> &nbsp; About us
           </a>
         </div>
       </div>
@@ -172,8 +172,11 @@
 
         <!--Second Hidden Form-->
         <div id="panel1" class="container panel1">
-          <i class="error" style="font-weight: bold;" >*</i>
-          <span class="error">required fields</span>
+          <p >
+            <i class="error" style="font-weight: bolder;" >*</i>
+            <i class="error">required fields</i>
+          </p>
+          
           <form action="./toDb/reg_savvy.php" method="post" >
             <label>First Name </label> <i class="error" >*</i>
             <div class="input-group" >
@@ -230,43 +233,46 @@
 
         <!-- student registration form -->
         <div id="panel" class="container panel">
+          <p >
+            <i class="error" style="font-weight: bolder;" >*</i>
+            <i class="error">required fields</i>
+          </p>
           <form action="./toDb/reg_student.php" method="POST" >
-
-            <label for="fName">First Name</label>
+            <label for="fName">First Name</label> <i class="error">*</i>
             <div class="input-group" >
               <input class="input-group-text" type="text" name="firstname" placeholder="Enter first name" value="Bakali" required autofocus>
             </div>
             
-            <label>Last Name</label>
+            <label>Last Name</label> <i class="error">*</i>
             <div class="input-group" >
               <input class="input-group-text" type="text" name="lastname" placeholder="Enter last name" value="Phiri" required >
             </div>
 
             
-            <label for="email">School Email</label>
+            <label for="email">School Email</label> <i class="error">*</i>
             <div class="input-group" >
               <input class="input-group-text" type="email" name="email" placeholder="Enter school email" value="9999999@student.uj.ac.za" required >
             </div>
 
             
-            <label>Current year</label>
+            <label>Current year</label> <i class="error">*</i>
             <div class="input-group" >
               <input class="input-group-text" type="number" name="current_year" placeholder="Enter current year" value="3" required >
             </div>
 
             
-            <label>Department</label>
+            <label>Department</label> <i class="error">*</i>
             <div class="input-group" >
               <input class="input-group-text" type="text" name="department" placeholder="Enter department" value="AIS" required >
             </div>
 
             
-            <label for="passwd">Password</label>
+            <label for="passwd">Password</label> <i class="error">*</i>
             <div class="input-group" >
               <input class="input-group-text" type="password" name="passwd" placeholder="Enter password" required value="Bakali" >
             </div>
 
-            <label for="passwd_con">Confirm Password</label>
+            <label for="passwd_con">Confirm Password</label> <i class="error">*</i>
             <div class="input-group" >
               <input class="input-group-text" type="password" name="passwd_con" placeholder="Confirm password"  required value="Bakali" >
             </div>

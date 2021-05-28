@@ -27,7 +27,7 @@
 
     
     <div class="container" id="validate_usr" >
-      <h2 >Enter Password To Continue</h2>
+      <h2 >Enter Password To Delete Project</h2>
       <form action="./delete_pro.php?project_id=<?php echo $_GET["project_id"]; ?>" method="post">
         <div class="input-group" >
           <input class="input-group-text" type="password" name="passwd" id="passwd" placeholder="Enter password to continue" required autofocus >

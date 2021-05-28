@@ -104,7 +104,6 @@ title {
 /* this applies to divs that hold team information. */
 
 .info {
-    border: 1px solid;
     clear: both;
     padding: .5em;
 }
@@ -441,6 +440,17 @@ footer div {
 #footer_details {
     padding: auto;
     text-align: center;
+}
+
+
+/* when somone hovers over the comment buttons */
+
+input[type="submit"]:hover,
+input[type="submit"]:active,
+#com_btn:hover,
+#com_btn:active {
+    color: rgb(27, 4, 43);
+    background-color: rgb( 255, 133, 4);
 }
 
 

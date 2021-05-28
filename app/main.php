@@ -41,8 +41,11 @@
     <header >
       <div class="container-fluid row" id="header" >
         <!-- logo -->
-        <div class="col-md-3 col-sm-3 col-xs-3 bar" id="logo">
-          <a href="./main_savvy.php" class="nav-link" >Logo</a>
+        <div class="col-md-3 col-sm-3 col-xs-3 bar" >
+          <a href="./main.php" class="nav-link" >
+            <!-- Logo  -->
+            <img id="logo" src="../logo.png" alt="logo picture" />
+          </a>
 
           <span class="" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
             <!-- Collapse --> 

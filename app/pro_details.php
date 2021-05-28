@@ -4,6 +4,7 @@
   session_start(); // start a sesison to send and retrieve data.
   include("./get_1_pro.php"); // run function, that get one project.
   include("../config/connection.php"); // get the connection object.
+  // include(""); // we need the email of this user here.
 ?>
 
 
@@ -15,6 +16,7 @@
         echo ucwords( $_SESSION["savvy_fname"] ) . " | main page ";
       ?>
     </title>
+    <link rel="icon" href="../logo.png" />
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -36,8 +38,11 @@
     <header >
       <div class="container-fluid row" id="header" >
         <!-- logo -->
-        <div class="col-md-3 col-sm-3 col-xs-3 bar" id="logo">
-          <a href="./main_savvy.php" class="nav-link" >Logo</a>
+        <div class="col-md-3 col-sm-3 col-xs-3 bar" >
+          <a href="./main_savvy.php" class="nav-link" >
+            <!-- Logo -->
+            <img id="logo" src="../logo.png" alt="logo picture" />
+          </a>
 
           <span class="" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
             <!-- Collapse --> 
@@ -51,10 +56,13 @@
               <a href="./main_savvy.php" class="nav-link" >Home</a>
             </li>
             <li class="nav-item" >
-              <a href="./contactus.php" class="nav-link" >Contact Us</a>
+              <a href="./savvy_profile.php" class="nav-link" >Profile</a>
             </li>
             <li class="nav-item" >
-              <a href="./aboutus.php" class="nav-link" >About Us</a>
+              <a href="./contactus.php" class="nav-link" >Contact us</a>
+            </li>
+            <li class="nav-item" >
+              <a href="./aboutus.php" class="nav-link" >About us</a>
             </li>
           </ul>
         </div>        
@@ -70,14 +78,20 @@
         </div>
 
         <div >
+          <a href="./savvy_profile.php" class="nav-link" >
+          <i class="fa fa-user" ></i> Profile
+          </a>
+        </div>
+
+        <div >
           <a href="./contactus.php" class="nav-link" >
-          <i class="fa fa-phone" ></i> Contact Us
+          <i class="fa fa-phone" ></i> Contact us
           </a>
         </div>
 
         <div >
           <a href="./aboutus.php" class="nav-link nav_link_rad_end" >
-            <i class="fa fa-info" ></i> &nbsp; About Us
+            <i class="fa fa-info" ></i> &nbsp; About us
           </a>
         </div>
       </div>
@@ -102,14 +116,18 @@
         <div class="" id="main_details">
           <div class="main_name"> <?php echo  ucwords( $project["pro_name"] );  ?> </div>
 
-          <div class="box3">Contact</div>
+          <div class="box3">
+            <a href="mailto:<?php echo $_SESSION ?>" >
+              <?php ?>
+            </a>
+          </div>
 
           <div class="pro_link"> <?php echo $project["pro_ext_link"]; ?> </div>
 
           <div class="pro_team"> Team </div>
 
           <div class="main_desc" > 
-            <?php echo $project["pro_desc"]; ?>
+            <?php echo strtolower( $project["pro_desc"] ); ?>
           </div>
         </div>
         
