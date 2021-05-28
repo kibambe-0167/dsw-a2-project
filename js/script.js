@@ -133,6 +133,36 @@ $(function() { // console.log("J Query loaded");
         }, 3000);
     }
 
+    // remove this messages after 3 seconds
+    if ($("#team_msg1").html() != "") {
+        setTimeout(() => {
+            $("#team_msg1").html("");
+        }, 3000);
+    }
+
+    // remove this messages after 3 seconds
+    if ($("#team_msg2").html() != "") {
+        setTimeout(() => {
+            $("#team_msg2").html("");
+        }, 3000);
+    }
+
+    // remove this messages after 3 seconds
+    if ($("#team_msg3").html() != "") {
+        setTimeout(() => {
+            $("#team_msg3").html("");
+        }, 3000);
+    }
+
+    // remove this messages after 3 seconds
+    if ($("#team_msg4").html() != "") {
+        setTimeout(() => {
+            $("#team_msg4").html("");
+        }, 3000);
+    }
+
+
+
 });
 
 

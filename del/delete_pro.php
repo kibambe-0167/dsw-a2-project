@@ -1,15 +1,9 @@
 
 
-<?php
-  // this code is used to delete a user account.
-
+<?php // delete  a project from db.
+  session_start(); // start a session.
   include("../config/connection.php"); // connection to db.
-
-  // if the session is enabled, and a session already exist, 
-  // start a session here to send data and information.
-  if( session_start() == PHP_SESSION_ACTIVE ) {
-    session_start();
-  }
+  
 ?>
 
 <!doctype html>
@@ -21,25 +15,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="">
+    <script src="https://kit.fontawesome.com/b369a29969.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/head.css">
+    <link rel="stylesheet" href="../css/pro_details.css">
+    <link rel="stylesheet" href="../css/p_snippet.css">
   </head>
-  <style >
-    .h {
-      margin: 2em 1em;
-    }
-  </style >
+ 
   <body>
 
-    <div class="h">
-      <a href="../app/profile.php" >Go Back</a>
-    </div>
+    
+    <div class="container" id="validate_usr" >
+      <h2 >Enter Password To Continue</h2>
+      <form action="./delete_pro.php?project_id=<?php echo $_GET["project_id"]; ?>" method="post">
+        <div class="input-group" >
+          <input class="input-group-text" type="password" name="passwd" id="passwd" placeholder="Enter password to continue" required autofocus >
+        </div>
 
-    <form action="./delete_pro.php?project_id=<?php echo $_GET["project_id"]; ?>" method="post">
-      <div >
-        <input type="password" name="passwd" id="passwd" placeholder="Enter password to continue" required autofocus >
-        <input type="submit" name="validate" value="Validate">
-      </div>
-    </form>
+        <div class="input-group" >
+          <input class="btn" type="submit" name="validate" value="Validate">
+          <button class="btn" >
+            <a href="../app/profile.php">Cancel</a>
+          </button>
+        </div>
+      </form>
+
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

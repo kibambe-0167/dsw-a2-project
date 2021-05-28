@@ -16,6 +16,7 @@
     margin: 1em 0em;
     color: rgb( 255, 255, 255);
     border-radius: 1em 0em 1em 0em;
+    box-shadow: .1em .1em .5em rgb(255, 133, 4);
 }
 
 .ind_comment p {

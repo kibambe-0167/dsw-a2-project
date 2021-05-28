@@ -387,13 +387,33 @@ footer div {
 }
 
 
+/* this applies to all anchors that are under user project */
+
+.usr_proj a {
+    color: rgb(27, 4, 43);
+}
+
+.usr_proj a:hover {
+    color: rgb(255, 133, 4);
+}
+
+
+/* applies to validate form before deleting a project */
+
+#validate_usr {
+    margin: 4em auto;
+    /* text-align: center; */
+}
+
+
 /* this rules applies to student profile information */
 
 .usr_proj,
 #savvy_profile,
-#student_profile {
+#student_profile,
+#team_form {
     margin: 1em auto;
-    box-shadow: .1em .1em 1em rgb(27, 4, 43);
+    box-shadow: .1em .1em .5em rgb(27, 4, 43);
     padding: .8em 1em;
     border-radius: 1em;
 }
