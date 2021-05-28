@@ -50,7 +50,7 @@
     </div>
 
 
-    
+
     <?php
       if( $connObj ) {
 
@@ -59,7 +59,7 @@
           
           if( !empty( $fname ) && !empty( $lname ) && !empty( $email ) && preg_match( "/^[a-z]/i", $fname) && preg_match( "/^[a-z]/i", $lname)  ) { // echo "all well";
             $project_id = $_GET["project_id"];
-            echo $fanme . $lname . $email . $project_id;
+            // echo $fanme . $lname . $email . $project_id;
 
             $query = "insert into Team_member( firstname, lastname, email) values('$fname', '$lname', '$email')";
 
