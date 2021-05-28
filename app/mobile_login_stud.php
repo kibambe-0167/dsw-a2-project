@@ -1,31 +1,23 @@
-
-
 <?php
-
-  // if there is a alreay a set, start that session here. 
-  // to exchange information and messages.
-  session_start();
+  session_start(); // start a session.
 ?>
-
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Index
+    <title> login/out student
     </title>
-
-    <link rel="icon" href="./logo.png" />
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link href="../logo.png" rel="icon" >
     <!-- Bootstrap CSS -->
     <script src="https://kit.fontawesome.com/b369a29969.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/login.css">
-    <link rel="stylesheet" href="./css/head.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/head.css">
 
-    </style>
   </head>
   <body>
 
@@ -35,9 +27,9 @@
       <div class="container-fluid row" id="header" >
         <!-- logo -->
         <div class="col-md-3 col-sm-3 col-xs-3 bar" >
-          <a href="./index.php" class="nav-link" >
+          <a href="../index.php" class="nav-link" >
             <!-- Logo -->
-            <img id="logo" src="./logo.png" alt="logo" />
+            <img id="logo" src="../logo.png" alt="logo" />
           </a>
 
           <span class="" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
@@ -49,7 +41,7 @@
         <div id="nav_large" class="col-md-9 col-sm-9 col-xs-9" >
           <ul class="nav" id="nav-link-bs"  >
             <li class="nav-item" >
-              <a href="./index.php" class="nav-link" >Home</a>
+              <a href="./mobile_login_stud.php" class="nav-link" >Home</a>
             </li>
 
             <li class="nav-item" >
@@ -67,28 +59,20 @@
       <!-- the menu for the mobile version of the code. -->
       <div class="collapse" id="nav_mobile">
         <div >
-          <a href="./index.php" class="nav-link nav_link_rad_start" >
+          <a href="../index.php" class="nav-link nav_link_rad_start" >
           <i class="fa fa-home" ></i> Home
           </a>
         </div>
+        
 
         <div >
-          <a href="./app/mobile_login_stud.php" class="nav-link" >
-          <i class="fa fa-sign-in" ></i> &nbsp;
-          <i class="fa fa-user-plus" ></i> &nbsp;
-          Student 
-          <!-- login | logout -->
-          </a>
-        </div>
-
-        <div >
-          <a href="./app/contactus.php" class="nav-link" >
+          <a href="./contactus.php" class="nav-link" >
           <i class="fa fa-phone" ></i> Contact Us
           </a>
         </div>
 
         <div >
-          <a href="./app/aboutus.php" class="nav-link nav_link_rad_end" >
+          <a href="./aboutus.php" class="nav-link nav_link_rad_end" >
             <i class="fa fa-info" ></i> &nbsp; About Us
           </a>
         </div>
@@ -149,69 +133,16 @@
       <?php echo $_SESSION["savvy_del_msg"]; unset($_SESSION["savvy_del_msg"]); ?>
     </div>
 
-    
-    <!-- contains login and signin forms -->
-    <div id="login_content" class="container">
 
-      <!-- Savvy block -->
-      <div class="container" id="savvy_block" >
-        <!-- Second Form, tech savvy login form     -->
-        <div class="center_content" >
-        <form action="./app/login_savvy.php" method="post" id="form2" >
-          <h2>Public Login | Logout</h2>
-          <label for="email">Email </label>
-          <div class="input-group">
-            <input class="input-group-text" type="email" name="email" placeholder="Enter your email" id="" autofocus>
-          </div>
-          
-          <div class="input-group">
-            <input class="btn"  type="submit" name="submit" value="Sign in" id="">
-            <input id="savvy_in_btn" type="reset" class="btn" onclick="add1()" class="accordion1" value="Sign up"/>
-          </div>
-        </form> </div>
 
-        <!--Second Hidden Form-->
-        <div id="panel1" class="container panel1">
-          <i class="error" style="font-weight: bold;" >*</i>
-          <span class="error">required fields</span>
-          <form action="./toDb/reg_savvy.php" method="post" >
-            <label>First Name </label> <i class="error" >*</i>
-            <div class="input-group" >
-              <input class="input-group-text" type="text" name="fname" placeholder="Enter firstname" value="micheal" autofocus required >
-            </div>
-
-            <label>Last Name </label>  <i class="error" >*</i>
-            <div class="input-group" >
-              <input class="input-group-text" type="text" name="lname" placeholder="Enter lastname" value="Banda" required >
-            </div>
-
-            <label> Email</label> <i class="error" >*</i>
-            <div class="input-group" >  
-              <input class="input-group-text" type="email" name="email" placeholder="Enter email..." value="micheal@gmail.com" required >
-            </div>
-
-            <label> Confirm Email</label> <i class="error" >*</i>
-            <div class="input-group" >
-              <input class="input-group-text" type="email" name="con_email" placeholder="Re-enter email..." value="micheal@gmail.com" required >
-            </div>
-
-            <div class="input-group" >
-              <input class="btn" type="submit" name="signup" value="sign up" >
-              <input type="reset" class="btn bg-danger" id="discard2" value="Discard" />
-            </div>
-
-          </form>
-        </div>
-      </div>
-      
-
-      <!-- student block -->
-      <div class="container" id="student_block">
+    <!-- student block -->
+    <div class="container" id="student_block_mobile">
         <!-- First form -->
-        <form action="./app/login.php" method="post"id="form1" >
-          <h2>Students</h2>
+        <div class="center_content" >
+        <form action="./login.php" method="post"id="form1" >
+          <h2>Students Login | Logout</h2>
 
-          <label for="username">Username</label>
+          <label for="username">Email</label>
           <div class="input-group">
             <input class="input-group-text" type="email" name="email" id="email" placeholder="Enter email" autofocus >
           </div>
@@ -226,11 +157,11 @@
 
             <input id="stud_in_btn" class="btn"  onclick="add()" type="reset" class="" value="Sign up"/>
           </div>
-        </form>
+        </form> </div>
 
         <!-- student registration form -->
         <div id="panel" class="container panel">
-          <form action="./toDb/reg_student.php" method="POST" >
+          <form action="../toDb/reg_student.php" method="POST" >
 
             <label for="fName">First Name</label>
             <div class="input-group" >
@@ -280,8 +211,7 @@
           </form>
         </div>
       </div>
-                  
-    </div>
+      
 
 
     <!-- this is the footer of the page. -->
@@ -328,13 +258,12 @@
       </div>
 
     </footer>
-    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script type="text/javascript" src="./js/jQuery.js" ></script>
-    <script type="text/javascript" src="./js/bootstrap.min.js" ></script>
-    <script type="text/javascript" src="./js/script.js" ></script>
-  
+    <script type="text/javascript" src="../js/jQuery.js" ></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="../js/script.js" ></script>
+    
   </body>
 </html>

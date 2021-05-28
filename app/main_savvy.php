@@ -1,12 +1,4 @@
-
-
-
 <?php
-  // only start a session when a session exist.
-  // if( session_status() === PHP_SESSION_ACTIVE ) {
-  //   session_start();
-  // }
-
   session_start(); // start a php session to send data and information.
   // include this file here.
   // include("../app/show_pro.php");
@@ -40,14 +32,7 @@
     <link rel="stylesheet" href="../css/head.css">
     <link rel="stylesheet" href="../css/p_snippet.css">
 
-    <style >
-      
-      li {
-        display: inline;
-        margin: .2em 1em;
-      }
-      
-    </style>
+
   </head>
   <body>
 
@@ -56,8 +41,11 @@
     <header >
       <div class="container-fluid row" id="header" >
         <!-- logo -->
-        <div class="col-md-3 col-sm-3 col-xs-3 bar" id="logo">
-          <a href="./main_savvy.php" class="nav-link" >Logo</a>
+        <div class="col-md-3 col-sm-3 col-xs-3 bar" >
+          <a href="./main_savvy.php" class="nav-link" >
+            <!-- Logo -->
+            <img id="logo" src="../logo.png" alt="logo" >
+          </a>
 
           <span class="" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
             <!-- Collapse --> 

@@ -35,6 +35,13 @@ h2 {
 }
 
 
+/* this applies to the logo picture */
+
+#logo {
+    width: 2em;
+}
+
+
 /* this is used to delete user account */
 
 #del_usr_acc {
@@ -406,6 +413,16 @@ footer div {
 }
 
 
+/* applies to main page of information for projects */
+
+.info {
+    margin: 1em auto;
+    box-shadow: .1em .1em .5em rgb(27, 4, 43);
+    padding: .8em 1em;
+    border-radius: 1em 0em 1em 1em;
+}
+
+
 /* this rules applies to student profile information */
 
 .usr_proj,
@@ -482,13 +499,34 @@ this applies to mobile devices. */
         flex: 12;
         /* display: block; */
     }
+    /* when screen is in mobile mode, make element 100% */
+    #login_content {
+        width: 100%;
+    }
+    /* this applies to the mobile version of student sign in/out form */
+    .center_content {
+        display: flex;
+        justify-content: center;
+    }
+    /* make form display block */
+    .center_content form {
+        display: block;
+    }
+    /* this applies to the logo picture */
+    #logo {
+        width: 3em;
+        height: auto;
+    }
 }
 
 
 /* this applies to big mobile devices and small tables. */
 
 @media (min-width: 30.1em) and (max-width: 47.9em) {
-    /* CSS */
+    /* when screen is in tablet mode, make element 100% */
+    #login_content {
+        width: 100%;
+    }
 }
 
 

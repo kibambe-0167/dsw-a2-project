@@ -73,7 +73,7 @@
           // session_start();
           // echo "result NOT found";
           // make a session variable to send back message about no user found
-          $_SESSION["login_msg"] = "Invalid user | Cant find user in db";
+          $_SESSION["login_msg"] = "<span class='error'>Invalid user | Cant find user in db</span>";
 
           header( "location:../index.php" );
           // exit();
@@ -84,7 +84,7 @@
         // session_start();
         // echo "Field are empty";
         // make session variable to send message about empty fields.
-        $_SESSION["empty_msg"] = "Please fill in all fields.";
+        $_SESSION["empty_msg"] = "<span class='error'>Please fill in all fields.</span>";
 
         // header( "location:../index.php" );
         // exit();
