@@ -11,11 +11,11 @@
 }
 
 .ind_comment {
-    background-color: rgb(27, 4, 43);
+    background-color: rgb(229, 224, 238);
     margin: 1em 0em;
-    color: rgb( 255, 255, 255);
+    color: rgb( 27, 4, 43);
     border-radius: 1em 0em 1em 0em;
-    box-shadow: .1em .1em .5em rgb(255, 133, 4);
+    box-shadow: .1em .1em .5em rgb(27, 4, 43);
 }
 
 .ind_comment p {

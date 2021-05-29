@@ -158,10 +158,10 @@
         <!-- Second Form, tech savvy login form     -->
         <div class="center_content" >
         <form action="./app/login_savvy.php" method="post" id="form2" >
-          <h2>Public Login | Logout</h2>
-          <label for="email">Email </label>
+          <h2>Public user Login</h2>
+          <label for="email">Enter email to login</label>
           <div class="input-group">
-            <input class="input-group-text" type="email" name="email" placeholder="Enter your email" id="" autofocus>
+            <input class="input-group-text" type="email" name="email" placeholder="name@example.com" id="" autofocus>
           </div>
           
           <div class="input-group">
@@ -172,6 +172,7 @@
 
         <!--Second Hidden Form-->
         <div id="panel1" class="container panel1">
+          <h3 >Public user Sign up</h3>
           <p >
             <i class="error" style="font-weight: bolder;" >*</i>
             <i class="error">required fields</i>
@@ -212,11 +213,11 @@
       <div class="container" id="student_block">
         <!-- First form -->
         <form action="./app/login.php" method="post"id="form1" >
-          <h2>Students</h2>
+          <h2>Students login</h2>
 
-          <label for="username">Username</label>
+          <label for="username">Enter student email</label>
           <div class="input-group">
-            <input class="input-group-text" type="email" name="email" id="email" placeholder="Enter email" autofocus >
+            <input class="input-group-text" type="email" name="email" id="email" placeholder="xxxxxxx@student.uj.ac.za" autofocus >
           </div>
           
           <label for="pwd">Password</label>
@@ -233,6 +234,7 @@
 
         <!-- student registration form -->
         <div id="panel" class="container panel">
+          <h3 >Student Sign up</h3>
           <p >
             <i class="error" style="font-weight: bolder;" >*</i>
             <i class="error">required fields</i>
@@ -251,7 +253,7 @@
             
             <label for="email">School Email</label> <i class="error">*</i>
             <div class="input-group" >
-              <input class="input-group-text" type="email" name="email" placeholder="Enter school email" value="9999999@student.uj.ac.za" required >
+              <input class="input-group-text" type="email" name="email" placeholder="xxxxxxx@student.uj.ac.za" value="9999999@student.uj.ac.za" required >
             </div>
 
             

@@ -114,12 +114,13 @@
     <div id="up_project" class="container" >
 
       <form action="../toDb/upload_pro.php" method="post" class="inline" >
-        <div class="input-group" >
-          <input class="form-control" type="text" value="Smart Alert" name="name" placeholder="Enter project name" required>
+        <label for="name" >Enter project's name <i class="error" >*</i></label>
+        <div class="form-group-inline" > 
+          <input class="form-control" type="text" value="Smart Alert" name="name" placeholder="Enter project name" required autofocus >
         </div>
 
-
-        <div class="form-group-inline">
+        <div class="form-group-inline"> 
+          <label for="type" >Enter project's type<i class="error" >*</i> </label>
           <select name="type" class="form-control" id="project_type" required>
             <option value="mobile app" >Mobile App</option>
             <option value="web app" >Web App</option>
@@ -129,32 +130,39 @@
           </select>
         </div>
 
-
         <!-- <div class="input-group" >
           <input class="form-control" type="text" value="mobile App" name="type" placeholder="Enter project type">
         </div> -->
 
-        <div class="input-group" >
+        <label for="desc" >Enter project's description <i class="error" >*</i> </label>
+        <div class="input-group" > 
           <textarea class="form-control" name="desc" placeholder="Enter project description" style="padding: 10px;" rows="4" cols="30" required >This is an app that helps blah blah blah and blah, its was made with blah, html, js, blah, backend with mysql, php and blah. Its helps users do this and that and this is the problem we are solving....
           </textarea>
         </div>
 
+       
+        <label for="ext_link" >Enter project's external link</label>
         <div class="input-group" >
-          <input class="form-control" type="text" name="ext_link" placeholder="Project external link | wwww.url.com">
+          <input class="form-control" type="text" name="ext_link" placeholder="where we can access it online | www.example_url.com">
         </div>
 
+        <label for="" >
+          Enter project's main email <i class="error" >*</i>
+        </label>
+        <div class="input-group" >
+          <input class="form-control" type="email" name="pro_email" placeholder="project email | name@example.com" required>
+        </div>
 
         <div class="form-group">
-          <label for="exampleFormControlFile1">file input</label>
-          <input type="file" class="form-control-file" id="">
+          <label for="">
+            pdf presentation file <i class="error" >*</i> </label>
+          <input name="pro_file" type="file" class="form-control-file" id="pro_file">
         </div>
 
 
         <div class="input-group" >
           <input class="btn" type="submit" value="Upload" name="upload">
-          <!-- <input class="btn" type="reset" value="Discard" name="discard"> -->
           <button class="btn" >
-            
             <a href="./profile.php" >Discard </a>
           </button>
         </div>
@@ -163,7 +171,7 @@
 
 
     <!-- this is the footer -->
-    <footer class="row">
+    <!-- <footer class="row">
       <div class="container-fluid col-md-6" id="social_med">
         <span >
           <a href="https://touch.facebook.com/U-Innovate-104260611862082/?ref=bookmarks" target="_blank">
@@ -206,7 +214,7 @@
       </div>
 
     </footer>
-      
+       -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

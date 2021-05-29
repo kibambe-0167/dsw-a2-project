@@ -14,10 +14,6 @@
         if( isset($_SESSION["firstname"]) && !empty($_SESSION["firstname"]) ) {
           // echo ucwords( $_SESSION["firstname"] ) . " | main page "; 
         }
-
-        if( isset($_SESSION["savvy_fname"]) && !empty($_SESSION["savvy_fname"]) ) {
-          // echo ucwords( $_SESSION["savvy_fname"] ) . " | main page ";
-        }
       ?>
       
     </title>
@@ -64,11 +60,11 @@
             </li>
 
             <li class="nav-item" >
-              <a href="./contactus.php" class="nav-link" >Contact</a>
+              <a href="./contactus.php" class="nav-link" >Contact us</a>
             </li>
 
             <li class="nav-item" >
-              <a href="./aboutus.php" class="nav-link" >About</a>
+              <a href="./aboutus.php" class="nav-link" >About us</a>
             </li>
           </ul>
         </div>        
@@ -91,13 +87,13 @@
 
         <div >
           <a href="./contactus.php" class="nav-link" >
-          <i class="fa fa-phone" ></i> Contact
+          <i class="fa fa-phone" ></i> Contact us
           </a>
         </div>
 
         <div >
           <a href="./aboutus.php" class="nav-link nav_link_rad_end" >
-            <i class="fa fa-info" ></i> &nbsp About
+            <i class="fa fa-info" ></i> &nbsp About us
           </a>
         </div>
       </div>
@@ -126,10 +122,7 @@
     <div id="mainp_search_gr" class="container">
       <form action="./search_pro.php" method="post">
         <div class="input-group rounded">
-          <button type="submit" class="btn" id="search_btn" name="search_btn" >
-            <i class="fas fa-search"></i> Search
-          </button>
-
+          
           <input class="form-control" type="text" name="key_word" id="key_word" 
             placeholder="Type to search for a project......"
             value="" aria-describedby="search-addon">
@@ -138,9 +131,9 @@
             <i class="fa fa-remove" ></i> Cancel
           </button>
 
-          <!-- <button type="submit" class="btn" id="search_btn" name="search_btn" >
+          <button type="submit" class="btn" id="search_btn" name="search_btn" >
             <i class="fas fa-search"></i> Search
-          </button> -->
+          </button>
         </div>
       </form>
     </div>

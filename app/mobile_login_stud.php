@@ -41,7 +41,7 @@
         <div id="nav_large" class="col-md-9 col-sm-9 col-xs-9" >
           <ul class="nav" id="nav-link-bs"  >
             <li class="nav-item" >
-              <a href="./mobile_login_stud.php" class="nav-link" >Home</a>
+              <a href="../index.php " class="nav-link" >Home</a>
             </li>
 
             <li class="nav-item" >
@@ -140,16 +140,16 @@
         <!-- First form -->
         <div class="center_content" >
         <form action="./login.php" method="post"id="form1" >
-          <h2>Students Login | Logout</h2>
+          <h2>Students Login</h2>
 
-          <label for="username">Email</label>
+          <label for="username">Enter email to login</label>
           <div class="input-group">
-            <input class="input-group-text" type="email" name="email" id="email" placeholder="Enter email" autofocus >
+            <input class="input-group-text" type="email" name="email" id="email" placeholder="name@example.com" autofocus >
           </div>
           
           <label for="pwd">Password</label>
           <div class="input-group" >
-            <input class="input-group-text" value="Bakali" type="password" name="passwd" id="pw" placeholder="Enter password" >
+            <input class="input-group-text" value="Bakali" type="password" name="passwd" id="pw" placeholder="Enter your password" >
           </div>
 
           <div class="input-group" >
@@ -161,43 +161,48 @@
 
         <!-- student registration form -->
         <div id="panel" class="container panel">
+          <h3 >Student Sign up</h3>
+          <p >
+            <i class="error" style="font-weight: bolder;" >*</i>
+            <i class="error">required fields</i>
+          </p>
           <form action="../toDb/reg_student.php" method="POST" >
 
-            <label for="fName">First Name</label>
+            <label for="fName">First Name</label> <i class="error" >*</i>
             <div class="input-group" >
               <input class="input-group-text" type="text" name="firstname" placeholder="Enter first name" value="Bakali" required autofocus>
             </div>
             
-            <label>Last Name</label>
+            <label>Last Name</label> <i class="error" >*</i>
             <div class="input-group" >
               <input class="input-group-text" type="text" name="lastname" placeholder="Enter last name" value="Phiri" required >
             </div>
 
             
-            <label for="email">School Email</label>
+            <label for="email">School Email</label> <i class="error" >*</i>
             <div class="input-group" >
-              <input class="input-group-text" type="email" name="email" placeholder="Enter school email" value="9999999@student.uj.ac.za" required >
+              <input class="input-group-text" type="email" name="email" placeholder="xxxxxxx@student.uj.ac.za" value="9999999@student.uj.ac.za" required >
             </div>
 
             
-            <label>Current year</label>
+            <label>Current year</label> <i class="error" >*</i>
             <div class="input-group" >
               <input class="input-group-text" type="number" name="current_year" placeholder="Enter current year" value="3" required >
             </div>
 
             
-            <label>Department</label>
+            <label>Department</label> <i class="error" >*</i>
             <div class="input-group" >
               <input class="input-group-text" type="text" name="department" placeholder="Enter department" value="AIS" required >
             </div>
 
             
-            <label for="passwd">Password</label>
+            <label for="passwd">Password</label> <i class="error" >*</i>
             <div class="input-group" >
               <input class="input-group-text" type="password" name="passwd" placeholder="Enter password" required value="Bakali" >
             </div>
 
-            <label for="passwd_con">Confirm Password</label>
+            <label for="passwd_con">Confirm Password</label> <i class="error" >*</i>
             <div class="input-group" >
               <input class="input-group-text" type="password" name="passwd_con" placeholder="Confirm password"  required value="Bakali" >
             </div>

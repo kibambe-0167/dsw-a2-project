@@ -9,6 +9,8 @@
 
   // file that receive search word and change session projects.
   // include("./search_pro.php");
+
+  include("../code_snippets/help_code.php");
   
 ?>
 
@@ -157,7 +159,7 @@
           <div class="main_name"> <?php echo  ucwords($project["pro_name"] );  ?> </div>
           <div id="main_desc" > 
             <a href="./pro_details.php?project_id=<?php echo $project["id"]; ?>" >
-              <?php echo strtolower( $project["pro_desc"] ); ?> </a>
+              <?php echo few_letters( $project["pro_desc"] ); ?> </a>
             </div>
         </div>
         
