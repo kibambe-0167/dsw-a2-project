@@ -56,7 +56,7 @@
             </li>
 
             <li class="nav-item" >
-              <a href="../app/profile.php" class="nav-link" >
+              <a href="../app/profile.php" class="nav-link active_link" >
                 Profile
               </a>
             </li>
@@ -82,7 +82,7 @@
         </div>
 
         <div >
-          <a href="../app/profile.php" class="nav-link" >
+          <a href="../app/profile.php" class="nav-link active_link_m" >
           <i class="fa fa-user" ></i> Profile
           </a>
         </div>

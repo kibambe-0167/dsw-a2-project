@@ -1,7 +1,4 @@
-
-
 <?php
-
   // if there is a alreay a set, start that session here. 
   // to exchange information and messages.
   session_start();

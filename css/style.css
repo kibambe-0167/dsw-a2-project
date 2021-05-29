@@ -73,9 +73,11 @@ h2 {
 /* student update page with form. */
 
 #stu_up_prof {
-    border: 1px solid rgb(27, 4, 43);
+    /* border: 1px solid rgb(27, 4, 43); */
     border-radius: 1em;
     margin: 2em auto;
+    padding: .1em 1em;
+    box-shadow: 1em 1em 5em rgb( 27, 4, 43);
 }
 
 
@@ -295,7 +297,7 @@ div {
 
 footer {
     background-color: rgb(27, 4, 43);
-    padding: 2em 2em;
+    padding: .2em;
     position: fixed;
     bottom: 0em;
     left: 0em;
@@ -317,9 +319,11 @@ footer {
 
 /* this applies to div that are inside footer */
 
+
+/* 
 footer div {
     margin: 1em;
-}
+} */
 
 
 /* the navigation for mobile html code */
@@ -486,6 +490,25 @@ input[type="submit"]:active,
 #mainp_search_gr {
     margin: 0em auto;
     text-align: center;
+}
+
+
+/* make the current page link to have a different color */
+
+.active_link {
+    color: rgb( 255, 133, 4);
+}
+
+.active_link:hover {
+    color: rgb( 255, 255, 255);
+}
+
+.active_link_m:hover {
+    background-color: rgb( 27, 4, 43);
+}
+
+.active_link_m {
+    background-color: rgb( 255, 133, 4);
 }
 
 

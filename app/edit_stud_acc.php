@@ -32,10 +32,13 @@
      <header >
       <div class="container-fluid row" id="header" >
         <!-- logo -->
-        <div class="col-md-3 col-sm-3 col-xs-3 bar" id="logo">
-          <a href="./main_savvy.php" class="nav-link" >Logo</a>
+        <div class="col-md-3 col-sm-3 col-xs-3 bar" >
+          <a href="./main_savvy.php" class="nav-link" >
+            <!-- Logo -->
+            <img id="logo" src="../logo.png" alt="logo pic" />
+          </a>
 
-          <span class="bg-warning" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
+          <span class="" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
             <!-- Collapse --> 
             <i class="fa fa-bars"></i>
           </span>
@@ -48,11 +51,15 @@
             </li>
 
             <li class="nav-item" >
-              <a href="./contactus.php" class="nav-link" >Contact Us</a>
+              <a href="./profile.php" class="nav-link active_link" >Profile</a>
             </li>
 
             <li class="nav-item" >
-              <a href="./aboutus.php" class="nav-link" >About Us</a>
+              <a href="./contactus.php" class="nav-link" >Contact us</a>
+            </li>
+
+            <li class="nav-item" >
+              <a href="./aboutus.php" class="nav-link" >About us</a>
             </li>
           </ul>
         </div>        
@@ -67,11 +74,11 @@
           </a>
         </div>
 
-        <!-- <div >
-          <a href="" class="nav-link" >
-          <i class="fa fa-upload" ></i> Upload Project
+        <div >
+          <a href="./profile.php" class="nav-link active_link_m" >
+          <i class="fa fa-user" ></i> Profile
           </a>
-        </div> -->
+        </div>
 
         <div >
           <a href="./contactus.php" class="nav-link" >
@@ -92,6 +99,7 @@
 
     
     <div id="stu_up_prof" class="container" >
+      <h3 >Edit student account</h3>
       <form action="./edit_stud_acc.php" method="post">
         <label for="fname" >Firstname</label>
         <div  class="input-group">

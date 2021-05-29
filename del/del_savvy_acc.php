@@ -61,10 +61,10 @@
               <a href="../app/savvy_profile.php" class="nav-link" >Profile</a>
             </li>
             <li class="nav-item" >
-              <a href="./contactus.php" target="blank" class="nav-link" >Contact</a>
+              <a href="../app/contactus.php" target="blank" class="nav-link" >Contact</a>
             </li>
             <li class="nav-item" >
-              <a href="./aboutus.php" target="blank" class="nav-link" >About</a>
+              <a href="../app/aboutus.php" target="blank" class="nav-link" >About</a>
             </li>
           </ul>
         </div>        
@@ -86,13 +86,13 @@
         </div>
 
         <div >
-          <a href="./contactus.php" class="nav-link" >
+          <a href="../app/contactus.php" class="nav-link" >
           <i class="fa fa-phone" ></i> Contact
           </a>
         </div>
 
         <div >
-          <a href="./aboutus.php" class="nav-link nav_link_rad_end" >
+          <a href="../app/aboutus.php" class="nav-link nav_link_rad_end" >
             <i class="fa fa-info" ></i> &nbsp; About
           </a>
         </div>

@@ -33,8 +33,11 @@
     <header >
       <div class="container-fluid row" id="header" >
         <!-- logo -->
-        <div class="col-md-3 col-sm-3 col-xs-3 bar" id="logo">
-          <a href="./main_savvy.php" class="nav-link" >Logo</a>
+        <div class="col-md-3 col-sm-3 col-xs-3 bar" >
+          <a href="./main_savvy.php" class="nav-link" >
+            <!-- Logo -->
+            <img src="../logo.png" id="logo" alt="logo picture" />
+          </a>
 
           <span class="" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
             <!-- Collapse --> 
@@ -49,17 +52,17 @@
             </li>
 
             <li class="nav-item" >
-              <a href="./profile.php" class="nav-link" >
+              <a href="./profile.php" class="nav-link active_link" >
                 Profile
               </a>
             </li>
 
             <li class="nav-item" >
-              <a href="./contactus.php" class="nav-link" >Contact Us</a>
+              <a href="./contactus.php" class="nav-link" >Contact us</a>
             </li>
 
             <li class="nav-item" >
-              <a href="./aboutus.php" class="nav-link" >About Us</a>
+              <a href="./aboutus.php" class="nav-link" >About us</a>
             </li>
           </ul>
         </div>        
@@ -75,20 +78,20 @@
         </div>
 
         <div >
-          <a href="./profile.php" class="nav-link" >
+          <a href="./profile.php" class="nav-link active_link_m" >
           <i class="fa fa-user" ></i> Profile
           </a>
         </div>
 
         <div >
           <a href="./contactus.php" class="nav-link" >
-          <i class="fa fa-phone" ></i> Contact Us
+          <i class="fa fa-phone" ></i> Contact us
           </a>
         </div>
 
         <div >
           <a href="./aboutus.php" class="nav-link nav_link_rad_end" >
-            <i class="fa fa-info" ></i> &nbsp About Us
+            <i class="fa fa-info" ></i> &nbsp About us
           </a>
         </div>
       </div>

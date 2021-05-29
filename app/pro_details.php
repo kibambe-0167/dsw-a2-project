@@ -124,7 +124,19 @@
             </a>
           </div>
 
-          <div class="pro_link"> <?php echo $project["pro_ext_link"]; ?> </div>
+          <div class="pro_link">
+            <p > 
+              <?php echo $project["pro_ext_link"]; ?> 
+              <a href="mailto:<?php echo $project['project_email']; ?>" >
+                <i class="fa fa-paper-plane" ></i> Contact via email
+              </a>
+
+              <p>
+                <a href="<?php echo $project["project_file"] ?>" download >
+                Download pdf
+              </a> </p>
+            </p>            
+          </div>
 
           <div class="pro_team"> Team </div>
 

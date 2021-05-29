@@ -1,5 +1,3 @@
-
-
 <?php session_start(); // start a session.  ?>
 
 <!doctype html>
@@ -13,9 +11,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="icon" href="../icon.ico" />
-
     <!-- Bootstrap CSS -->
     <!-- Bootstrap CSS -->
     <script src="https://kit.fontawesome.com/b369a29969.js" crossorigin="anonymous"></script>
@@ -26,7 +22,6 @@
    
   </head>
   <body>
-
 
     <!-- header section of this page. -->
     <header >
@@ -114,13 +109,11 @@
 
         <div class="input-group" >
           <input class="form-control" type="submit" name="submit" id="submit" value="Update">
-
           <input class="form-control" type="reset" name="reset" id="reset" value="Discard">
         </div>
 
       </form>
     </div>
-
 
     <div class="container" >
 
@@ -191,14 +184,10 @@
     ?>
     </div>
 
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript" src="../js/jQuery.js" ></script>
     <script type="text/javascript" src="../js/bootstrap.min.js" ></script>
     <script type="text/javascript" src="../js/script.js" ></script>
-      
   </body>
 </html>
-

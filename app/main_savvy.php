@@ -51,7 +51,7 @@
         <div id="nav_large" class="col-md-9 col-sm-9 col-xs-9" >
           <ul class="nav" id="nav-link-bs"  >
             <li class="nav-item" >
-              <a href="../app/main_savvy.php" class="nav-link" >Home</a>
+              <a href="../app/main_savvy.php" class="nav-link active_link" >Home</a>
             </li>
 
             <li class="nav-item" >
@@ -61,11 +61,11 @@
             </li>
 
             <li class="nav-item" >
-              <a href="../app/contactus.php" class="nav-link" >Contact Us</a>
+              <a href="../app/contactus.php" class="nav-link" >Contact us</a>
             </li>
 
             <li class="nav-item" >
-              <a href="../app/aboutus.php" class="nav-link" >About Us</a>
+              <a href="../app/aboutus.php" class="nav-link" >About us</a>
             </li>
           </ul>
         </div>        
@@ -75,7 +75,7 @@
       <!-- the menu for the mobile version of the code. -->
       <div class="collapse" id="nav_mobile">
         <div >
-          <a href="../app/main_savvy.php" class="nav-link nav_link_rad_start" >
+          <a href="../app/main_savvy.php" class="nav-link nav_link_rad_start active_link_m" >
           <i class="fa fa-home" ></i> Home
           </a>
         </div>
@@ -88,13 +88,13 @@
 
         <div >
           <a href="../app/contactus.php" class="nav-link" >
-          <i class="fa fa-phone" ></i> Contact Us
+          <i class="fa fa-phone" ></i> Contact us
           </a>
         </div>
 
         <div >
           <a href="../app/aboutus.php" class="nav-link nav_link_rad_end" >
-            <i class="fa fa-info" ></i> &nbsp About Us
+            <i class="fa fa-info" ></i> &nbsp About us
           </a>
         </div>
       </div>

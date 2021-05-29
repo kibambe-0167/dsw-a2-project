@@ -54,7 +54,7 @@
         <div id="nav_large" class="col-md-9 col-sm-9 col-xs-9" >
           <ul class="nav" id="nav-link-bs"  >
             <li class="nav-item" >
-              <a href="./main.php" class="nav-link" >Home</a>
+              <a href="./main.php" class="nav-link active_link" >Home</a>
             </li>
 
             <li class="nav-item" >
@@ -76,7 +76,7 @@
       <!-- the menu for the mobile version of the code. -->
       <div class="collapse" id="nav_mobile">
         <div >
-          <a href="./main.php" class="nav-link nav_link_rad_start" >
+          <a href="./main.php" class="nav-link nav_link_rad_start active_link_m" >
           <i class="fa fa-home" ></i> Home
           </a>
         </div>
@@ -197,28 +197,3 @@
     <script type="text/javascript" src="../js/script.js" ></script>
   </body>
 </html>
-
-
-<!-- 
-  <div class= "container">
-    <span class="type" >
-      type
-    </span>
-
-    <div class="info">
-      <div id="main_img">
-        <img src="picture.jpg">
-      </div>
-
-      <div id="main_details">
-        <div id="main_contact"> Contact </div>
-        <div id="main_desc" >Description </div>
-      </div>
-        
-      <div class= "comment input-group" >
-        <input class="input-group-text" type="text" name="comment"  placeholder="Type a comment..." id="usr_com">
-        <input class="form-control" type="submit" value="Comment" name="com_btn" id="com_btn">
-      </div>
-    </div>
-  </div>
- -->

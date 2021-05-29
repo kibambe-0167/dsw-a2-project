@@ -53,7 +53,7 @@
         <div id="nav_large" class="col-md-9 col-sm-9 col-xs-9" >
           <ul class="nav" id="nav-link-bs"  >
             <li class="nav-item" >
-              <a href="./main.php" class="nav-link" >Home</a>
+              <a href="./main.php" class="nav-link active_link" >Home</a>
             </li>
 
             <li class="nav-item" >
@@ -63,11 +63,11 @@
             </li>
 
             <li class="nav-item" >
-              <a href="./contactus.php" class="nav-link" >Contact Us</a>
+              <a href="./contactus.php" class="nav-link" >Contact us</a>
             </li>
 
             <li class="nav-item" >
-              <a href="./aboutus.php" class="nav-link" >About Us</a>
+              <a href="./aboutus.php" class="nav-link" >About us</a>
             </li>
           </ul>
         </div>        
@@ -77,7 +77,7 @@
       <!-- the menu for the mobile version of the code. -->
       <div class="collapse" id="nav_mobile">
         <div >
-          <a href="./main.php" class="nav-link nav_link_rad_start" >
+          <a href="./main.php" class="nav-link nav_link_rad_start active_link_m" >
           <i class="fa fa-home" ></i> Home
           </a>
         </div>
@@ -90,13 +90,13 @@
 
         <div >
           <a href="./contactus.php" class="nav-link" >
-          <i class="fa fa-phone" ></i> Contact Us
+          <i class="fa fa-phone" ></i> Contact us
           </a>
         </div>
 
         <div >
           <a href="./aboutus.php" class="nav-link nav_link_rad_end" >
-            <i class="fa fa-info" ></i> &nbsp About Us
+            <i class="fa fa-info" ></i> &nbsp About us
           </a>
         </div>
       </div>
@@ -121,9 +121,18 @@
         <div class="" id="main_details">
           <div class="main_name"> <?php echo  ucwords( $project["pro_name"] );  ?> </div>
 
-          <div class="box3">Contact</div>
+          <div class="pro_link"> 
+            <?php echo $project["pro_ext_link"]; ?> 
 
-          <div class="pro_link"> <?php echo $project["pro_ext_link"]; ?> </div>
+            <p >
+              <a href="mailto:<?php echo $project["project_email"]; ?>">
+              <i class="fa fa-paper-plane"></i> Send 
+            </a> </p>
+
+            <a href="<?php echo $project["project_file"]; ?>">
+              <i class="fa fa-download"></i> Download presentation file
+            </a>
+          </div>
 
           <div class="pro_team"> Team </div>
 
