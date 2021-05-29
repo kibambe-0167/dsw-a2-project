@@ -1,14 +1,5 @@
 <?php
   session_start(); // start a php session to send data and information.
-  // include this file here.
-  // include("../app/show_pro.php");
-  // include("../app/get_pro.php"); // to make sure that the code runs.
-
-  // include_once("./get_pro.php");
-  // $_SESSION["show_projects"] = get_project_func();
-
-  // file that receive search word and change session projects.
-  // include("./search_pro.php");
 
   include("../code_snippets/help_code.php");
   
@@ -26,6 +17,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="../icon.ico" />
 
     <!-- Bootstrap CSS -->
     <script src="https://kit.fontawesome.com/b369a29969.js" crossorigin="anonymous"></script>
