@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 30, 2021 at 04:31 PM
+-- Generation Time: May 30, 2021 at 08:55 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -63,7 +63,9 @@ INSERT INTO `Comments` (`comment_id`, `pro_id`, `comment`, `owner_id`, `owner_fn
 (19, 18, 'let talk some', 15, 'bakali', 'phiri', '2021-05-29'),
 (20, 19, 'amazing ..!', 15, 'bakali', 'phiri', '2021-05-29'),
 (21, 19, 'let talk some about this idea?', 5, 'esther', 'chima', '2021-05-29'),
-(22, 20, 'well, im curious about this..!', 5, 'esther', 'chima', '2021-05-29');
+(22, 20, 'well, im curious about this..!', 5, 'esther', 'chima', '2021-05-29'),
+(23, 19, 'ljfgbjdfgbkdjfgbkdjfgblksdjfgbksdfjgbkdjfgbkdjfb', 15, 'bakali', 'phiri', '2021-05-30'),
+(24, 21, 'mmmmmmm..1', 9, 'zuma', 'zane', '2021-05-30');
 
 -- --------------------------------------------------------
 
@@ -144,7 +146,8 @@ INSERT INTO `Savvy` (`id`, `firstname`, `lastname`, `email`, `reg_date`) VALUES
 (7, 'isaac', 'chinyax', 'isaa@gmail.com', '2021-05-27'),
 (8, 'tito', 'surname', 'tito@gmail.com', '2021-05-27'),
 (9, 'zuma', 'zane', 'zane@gmail.com', '2021-05-27'),
-(10, 'kena', 'kiba', 'kenakiba@gmail.com', '2021-05-29');
+(10, 'kena', 'kiba', 'kenakiba@gmail.com', '2021-05-29'),
+(11, 'ndivhuwo', 'netshilindi', 'netshilindin4@gmail.com', '2021-05-30');
 
 -- --------------------------------------------------------
 
@@ -168,7 +171,10 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`student_id`, `firstname`, `lastname`, `school_email`, `current_year`, `department`, `password`, `reg_date`) VALUES
-(15, 'bakali', 'phiri', 'phiri@student.uj.ac.za', 2, 'AIS', 'Bakali', '2021-05-27');
+(15, 'bakali', 'phiri', 'phiri@student.uj.ac.za', 2, 'AIS', 'Bakali', '2021-05-27'),
+(17, 'b', 'a', 'b@gmail.com', 1, 'ais', '123456', '2021-05-30'),
+(18, 'm', 'n', 'm@gmail.com', 1, 'ifs', '123456789', '2021-05-30'),
+(19, 'aa', 'bb', 'aa@gmail.com', 2, 'bay', '123', '2021-05-30');
 
 -- --------------------------------------------------------
 
@@ -240,7 +246,7 @@ ALTER TABLE `Team_member`
 -- AUTO_INCREMENT for table `Comments`
 --
 ALTER TABLE `Comments`
-  MODIFY `comment_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `comment_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `Project`
@@ -252,13 +258,13 @@ ALTER TABLE `Project`
 -- AUTO_INCREMENT for table `Savvy`
 --
 ALTER TABLE `Savvy`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `student_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `student_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `Team_member`

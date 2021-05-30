@@ -26,10 +26,12 @@
     if( isset( $_POST["signup"]) ) {
       // echo "Successfully Connected";
       // check for empty fields.
-      if( !empty($_POST["firstname"]) && !empty($_POST["lastname"]) 
-        && !empty($_POST["email"]) && !empty($_POST["department"]) 
-        && !empty($_POST["current_year"]) && !empty($_POST["passwd"]) 
-        && !empty($_POST["passwd_con"]) ) {
+      if( preg_match("/^[a-z]/i", $_POST["firstname"]) && 
+          preg_match("/^[a-z]/i", $_POST["lastname"]) && 
+          !empty( $_POST["email"]) && 
+          preg_match("/^[a-z]/i", $_POST["department"]) &&
+          !empty( $_POST["current_year"]) && !empty($_POST["passwd"]) 
+          && !empty($_POST["passwd_con"]) ) {
       
         // echo "not empty and successfully submitted.";
         $fname = strtolower($_POST["firstname"]);
@@ -85,8 +87,10 @@
           else { // passwd and confirm passwd are not the same
             echo "NOT THE SAME PASSWORD....";
             // make a session variable to send back passwd message.
-            // $_SESSION["pw_msg"] = "Please enter matching password";
+            $_SESSION["reg_msg"] = "<span class='error'>Please enter matching password</span>";
+            header("location:../index.php");
           }
+
         }
 
       }
@@ -94,6 +98,8 @@
       else {
         // use sessions to send back errors messages.
         // about empty fields.
+        $_SESSION["reg_msg"] = "<span class='error'>Please fill in all fields</span>";
+        header("location:../index.php");
       }
     }
   }

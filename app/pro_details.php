@@ -55,7 +55,7 @@
         <div id="nav_large" class="col-md-9 col-sm-9 col-xs-9" >
           <ul class="nav" id="nav-link-bs"  >
             <li class="nav-item" >
-              <a href="./main_savvy.php" class="nav-link" >Home</a>
+              <a href="./main_savvy.php" class="nav-link active_link" >Home</a>
             </li>
             <li class="nav-item" >
               <a href="./savvy_profile.php" class="nav-link" >Profile</a>
@@ -74,7 +74,7 @@
       <!-- the menu for the mobile version of the code. -->
       <div class="collapse" id="nav_mobile">
         <div >
-          <a href="./main_savvy.php" class="nav-link nav_link_rad_start" >
+          <a href="./main_savvy.php" class="nav-link nav_link_rad_start active_link_m" >
           <i class="fa fa-home" ></i> Home
           </a>
         </div>
@@ -118,27 +118,66 @@
         <div class="" id="main_details">
           <div class="main_name"> <?php echo  ucwords( $project["pro_name"] );  ?> </div>
 
-          <div class="box3">
-            <a href="mailto:<?php echo $_SESSION ?>" >
-              <?php ?>
+          <!-- <div class="box3">
+            <a href="mailto:< ?php echo $_SESSION ?>" >
+              < ?php ?>
             </a>
-          </div>
+          </div> -->
 
           <div class="pro_link">
             <p > 
               <?php echo $project["pro_ext_link"]; ?> 
               <a href="mailto:<?php echo $project['project_email']; ?>" >
-                <i class="fa fa-paper-plane" ></i> Contact via email
-              </a>
+                <i class="fa fa-paper-plane" ></i> Contact via email 
+              </a> [ <?php echo $project["project_email"]; ?> ]
 
               <!-- <p>
-                <a href="<?php echo $project["project_file"] ?>" download >
+                <a href="< ?php echo $project["project_file"] ?>" download >
                 Download pdf
               </a> </p> -->
+
+
+              
+
+              
+              <div class="pro_team">
+                <?php
+                  include("../config/connection.php");
+
+                  if( $connObj ) {// echo $project["id"];
+                    $id = $project["id"];
+
+                    // get all member id from member_project table, where is curremt project id.
+                    // after that get all details from Team_member table, where the id is in the
+                    // result from member_project table.
+                    $query = "select * from Team_member where member_id in
+                    ( select member_id from member_project WHERE project_id = $id )";
+                    $result = mysqli_query( $connObj, $query );
+
+                    if( mysqli_num_rows( $result ) > 0 ) { ?>
+                      <h5 >Team</h5>
+                      <?php
+                      while( $team = mysqli_fetch_assoc( $result ) ) { ?>
+                        
+                        <div >
+                          <?php echo $team["firstname"] ." " . $team["lastname"] . " | " . $team["email"]; ?>
+                      </div>
+
+                      <?php }
+                    }
+                  }
+                ?>
+              </div>
+
+
+
+
+
+              
             </p>            
           </div>
 
-          <div class="pro_team"> Team </div>
+          <div class="pro_team"> </div>
 
           <div class="main_desc" > 
             <?php echo strtolower( $project["pro_desc"] ); ?>

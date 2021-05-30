@@ -58,7 +58,7 @@
               <a href="./main_savvy.php" class="nav-link" >Home</a>
             </li>
             <li class="nav-item" >
-              <a href="../app/savvy_profile.php" class="nav-link" >Profile</a>
+              <a href="../app/savvy_profile.php" class="nav-link active_link" >Profile</a>
             </li>
             <li class="nav-item" >
               <a href="../app/contactus.php" target="blank" class="nav-link" >Contact</a>
@@ -80,7 +80,7 @@
         </div>
 
         <div >
-          <a href="../app/savvy_profile.php" class="nav-link" >
+          <a href="../app/savvy_profile.php" class="nav-link active_link_m" >
           <i class="fa fa-user" ></i> Profile
           </a>
         </div>
