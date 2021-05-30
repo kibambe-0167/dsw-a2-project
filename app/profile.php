@@ -103,18 +103,6 @@
       <?php echo $_SESSION["up_usr_msg"]; unset( $_SESSION["up_usr_msg"] ); ?>
     </div>
 
-    <!-- user details -->
-    <div >
-      <?php
-        echo $_SESSION["student_id"] . " | ";
-        echo $_SESSION["firstname"] . " | ";
-        echo $_SESSION["lastname"] . " | ";
-        echo $_SESSION["school_email"] . " | ";
-        echo $_SESSION["current_year"] . " | ";
-        echo $_SESSION["department"] . " | ";
-      ?>
-    </div>
-
     <!-- contains the details of current logged in user. -->
     <div class="container" id="student_profile" >
       <div >

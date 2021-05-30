@@ -105,21 +105,6 @@
     <div class="wrap" style="display: none;"></div>
 
 
-
-    <!-- show user details -->
-    <div class="sep">
-      <?php
-        echo $_SESSION["student_id"] . " | ";
-        echo $_SESSION["firstname"] . " | ";
-        echo $_SESSION["lastname"] . " | ";
-        echo $_SESSION["school_email"] . " | ";
-        echo $_SESSION["current_year"] . " | ";
-        echo $_SESSION["department"] . " | ";
-      ?>
-    </div>
-
-
-
     <!-- the search input group fields -->
     <div id="mainp_search_gr" class="container">
       <form action="./search_pro.php" method="post">

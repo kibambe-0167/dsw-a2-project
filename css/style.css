@@ -38,7 +38,8 @@ h2 {
 /* this applies to the logo picture */
 
 #logo {
-    width: 2em;
+    width: 3em;
+    height: auto;
 }
 
 
@@ -488,7 +489,7 @@ input[type="submit"]:active,
 /* this rules applies to main page search function. */
 
 #mainp_search_gr {
-    margin: 0em auto;
+    margin: 2em auto;
     text-align: center;
 }
 

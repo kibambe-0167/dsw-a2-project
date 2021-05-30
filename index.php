@@ -180,22 +180,22 @@
           <form action="./toDb/reg_savvy.php" method="post" >
             <label>First Name </label> <i class="error" >*</i>
             <div class="input-group" >
-              <input class="input-group-text" type="text" name="fname" placeholder="Enter firstname" value="micheal" autofocus required >
+              <input class="input-group-text" type="text" name="fname" placeholder="Enter firstname" value="" autofocus required >
             </div>
 
             <label>Last Name </label>  <i class="error" >*</i>
             <div class="input-group" >
-              <input class="input-group-text" type="text" name="lname" placeholder="Enter lastname" value="Banda" required >
+              <input class="input-group-text" type="text" name="lname" placeholder="Enter lastname" value="" required >
             </div>
 
             <label> Email</label> <i class="error" >*</i>
             <div class="input-group" >  
-              <input class="input-group-text" type="email" name="email" placeholder="Enter email..." value="micheal@gmail.com" required >
+              <input class="input-group-text" type="email" name="email" placeholder="Enter email..." value="" required >
             </div>
 
             <label> Confirm Email</label> <i class="error" >*</i>
             <div class="input-group" >
-              <input class="input-group-text" type="email" name="con_email" placeholder="Re-enter email..." value="micheal@gmail.com" required >
+              <input class="input-group-text" type="email" name="con_email" placeholder="Re-enter email..." value="" required >
             </div>
 
             <div class="input-group" >
@@ -221,7 +221,7 @@
           
           <label for="pwd">Password</label>
           <div class="input-group" >
-            <input class="input-group-text" value="Bakali" type="password" name="passwd" id="pw" placeholder="Enter password" >
+            <input class="input-group-text" value="" type="password" name="passwd" id="pw" placeholder="Enter password" >
           </div>
 
           <div class="input-group" >

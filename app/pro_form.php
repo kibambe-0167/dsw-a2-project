@@ -118,7 +118,7 @@
       <form action="../toDb/upload_pro.php" method="post" class="inline" >
         <label for="name" >Enter project's name <i class="error" >*</i></label>
         <div class="form-group-inline" > 
-          <input class="form-control" type="text" value="Smart Alert" name="name" placeholder="Enter project name" required autofocus >
+          <input class="form-control" type="text" value="" name="name" placeholder="Enter project name" required autofocus >
         </div>
 
         <div class="form-group-inline"> 
@@ -138,7 +138,7 @@
 
         <label for="desc" >Enter project's description <i class="error" >*</i> </label>
         <div class="input-group" > 
-          <textarea class="form-control" name="desc" placeholder="Enter project description" style="padding: 10px;" rows="4" cols="30" required >This is an app that helps blah blah blah and blah, its was made with blah, html, js, blah, backend with mysql, php and blah. Its helps users do this and that and this is the problem we are solving....
+          <textarea class="form-control" name="desc" placeholder="Enter project description" style="padding: 10px;" rows="4" cols="30" required >
           </textarea>
         </div>
 

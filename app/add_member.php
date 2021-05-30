@@ -106,16 +106,20 @@
       <h2 >Add Team Member To Project</h2>
       <!-- this is uploading a team members details to db. -->
       <form action="./add_member.php?project_id=<?php echo $_GET["project_id"]; ?>" method="post">
+
+        <label for="fname" >Enter team member's firstname</label> <i class="error" >*</i>
         <div class="input-group" >
-          <input class="form-control" type="text" name="fname" placeholder="Enter a team members name" value="Surprise" >
+          <input class="form-control" type="text" name="fname" placeholder="Enter a team members name" value="" required >
         </div>
 
+        <label for="lname" >Enter team member's lastname</label> <i class="error" >*</i>
         <div class="input-group" >
-          <input class="form-control"  type="text" name="lname" placeholder="Enter a team members last name" value="Mumba"  >
+          <input class="form-control"  type="text" name="lname" placeholder="Enter a team members last name" value="" required >
         </div>
 
+        <label for="email" >Enter team member's email </label> <i class="error" >*</i>
         <div class="input-group" >
-          <input class="form-control" type="email" name="email" placeholder="Enter a team members email" value="mumba@gmail.com"  >
+          <input class="form-control" type="email" name="email" placeholder="name@example.com" value="" required >
         </div>
 
         <div class="input-group" >

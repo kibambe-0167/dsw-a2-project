@@ -126,7 +126,7 @@
 
             <p >
               <a href="mailto:<?php echo $project["project_email"]; ?>">
-              <i class="fa fa-paper-plane"></i> Send 
+              <i class="fa fa-paper-plane"></i> Contact via email
             </a> </p>
 
             <a href="<?php echo $project["project_file"]; ?>">
@@ -134,7 +134,34 @@
             </a>
           </div>
 
-          <div class="pro_team"> Team </div>
+          <div class="pro_team">
+            <?php
+              include("../config/connection.php");
+
+              if( $connObj ) {// echo $project["id"];
+                $id = $project["id"];
+
+                // get all member id from member_project table, where is curremt project id.
+                // after that get all details from Team_member table, where the id is in the
+                // result from member_project table.
+                $query = "select * from Team_member where member_id in
+                ( select member_id from member_project WHERE project_id = $id )";
+                $result = mysqli_query( $connObj, $query );
+
+                if( mysqli_num_rows( $result ) > 0 ) { ?>
+                  <h5 >Team</h5>
+                  <?php
+                  while( $team = mysqli_fetch_assoc( $result ) ) { ?>
+                    
+                    <div >
+                      <?php echo $team["firstname"] ." " . $team["lastname"] . " | " . $team["email"]; ?>
+                  </div>
+
+                  <?php }
+                }
+              }
+            ?>
+          </div>
 
           <div class="main_desc" > 
             <?php echo $project["pro_desc"]; ?>
