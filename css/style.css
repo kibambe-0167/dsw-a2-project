@@ -23,6 +23,11 @@ body {
     z-index: -1;
 }
 
+#index_title {
+    text-align: center;
+    margin: 1em auto;
+}
+
 h2 {
     margin: 1em 0em;
 }

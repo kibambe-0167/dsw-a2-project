@@ -98,6 +98,11 @@
     <div class="wrap" style="display: none;"></div>
 
 
+    <!-- Application name -->
+    <div class="container" id="index_title" >
+      <h1 >U-Innovate</h1>
+    </div>
+
     <!-- applies to students. -->
     <!-- after account is successfully deleted from db -->
     <div class="messages" >
@@ -297,6 +302,14 @@
           <a href="https://touch.facebook.com/U-Innovate-104260611862082/?ref=bookmarks" target="_blank">
             <i class="fa fa-facebook" >
             </i>
+          </a>
+        </span>
+
+
+        <span >
+          <a href="https://github.com/kibambe-0167/dsw-a2-project.git" target="_blank">
+            <i class="fa fa-github"></i>
+          </i>
           </a>
         </span>
   

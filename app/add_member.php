@@ -193,6 +193,14 @@
             </i>
           </a>
         </span>
+
+
+        <span >
+          <a href="https://github.com/kibambe-0167/dsw-a2-project.git" target="_blank">
+            <i class="fa fa-github"></i>
+          </i>
+          </a>
+        </span>
   
         <span >
           <a href="https://www.linkedin.com/company/u-innovate" target="_blank">

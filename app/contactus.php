@@ -123,6 +123,14 @@
           </a>
           
         </p>
+
+
+        <p >
+          <a href="https://github.com/kibambe-0167/dsw-a2-project.git" target="_blank">
+            <i class="fa fa-github"></i> github
+          </i>
+          </a>
+        </p>
           
 
         <p >
@@ -149,6 +157,14 @@
           <a href="https://touch.facebook.com/U-Innovate-104260611862082/?ref=bookmarks" target="_blank">
             <i class="fa fa-facebook" >
             </i>
+          </a>
+        </span>
+
+
+        <span >
+          <a href="https://github.com/kibambe-0167/dsw-a2-project.git" target="_blank">
+            <i class="fa fa-github"></i>
+          </i>
           </a>
         </span>
   

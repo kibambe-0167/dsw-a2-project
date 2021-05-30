@@ -38,7 +38,7 @@
       <div class="container-fluid row" id="header" >
         <!-- logo -->
         <div class="col-md-3 col-sm-3 col-xs-3 bar" >
-          <a href="./main_savvy.php" class="nav-link" >
+          <a href="./main.php" class="nav-link" >
             <!-- Logo -->
             <img id="logo" src="../logo.png" alt="logo picture" />
           </a>
@@ -142,6 +142,14 @@
             </i>
           </a>
         </span>
+
+
+        <span >
+          <a href="https://github.com/kibambe-0167/dsw-a2-project.git" target="_blank">
+            <i class="fa fa-github"></i>
+          </i>
+          </a>
+        </span>
   
         <span >
           <a href="https://www.linkedin.com/company/u-innovate" target="_blank">
@@ -178,6 +186,9 @@
 
     </footer>
       
+
+
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript" src="../js/jQuery.js" ></script>
