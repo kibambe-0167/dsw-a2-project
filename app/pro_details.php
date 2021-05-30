@@ -131,10 +131,10 @@
                 <i class="fa fa-paper-plane" ></i> Contact via email
               </a>
 
-              <p>
+              <!-- <p>
                 <a href="<?php echo $project["project_file"] ?>" download >
                 Download pdf
-              </a> </p>
+              </a> </p> -->
             </p>            
           </div>
 

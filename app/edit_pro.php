@@ -30,6 +30,74 @@
   <body>
 
 
+    <!-- header or the navigation bar. -->
+    <header >
+      <div class="container-fluid row" id="header" >
+        <!-- logo -->
+        <div class="col-md-3 col-sm-3 col-xs-3 bar" >
+          <a href="./main.php" class="nav-link" >
+            <!-- Logo -->
+            <img id="logo" src="../logo.png" alt="logo picture" />
+          </a>
+
+          <span class="" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
+            <!-- Collapse --> 
+            <i class="fa fa-bars"></i>
+          </span>
+        </div>
+        <!-- navbar links,  -->
+        <div id="nav_large" class="col-md-9 col-sm-9 col-xs-9" >
+          <ul class="nav" id="nav-link-bs"  >
+            <li class="nav-item" >
+              <a href="./main.php" class="nav-link" >Home</a>
+            </li>
+            <li class="nav-item" >
+              <a href="./profile.php" class="nav-link" >Profile</a>
+            </li>
+            <li class="nav-item" >
+              <a href="./contactus.php" class="nav-link" >Contact us</a>
+            </li>
+            <li class="nav-item" >
+              <a href="./aboutus.php" class="nav-link" >About us</a>
+            </li>
+          </ul>
+        </div>        
+        
+      </div>
+       
+      <!-- the menu for the mobile version of the code. -->
+      <div class="collapse" id="nav_mobile">
+        <div >
+          <a href="./main.php" class="nav-link nav_link_rad_start" >
+          <i class="fa fa-home" ></i> Home
+          </a>
+        </div>
+
+        <div >
+          <a href="./profile.php" class="nav-link" >
+          <i class="fa fa-user" ></i> Profile
+          </a>
+        </div>
+
+        <div >
+          <a href="./contactus.php" class="nav-link" >
+          <i class="fa fa-phone" ></i> Contact us
+          </a>
+        </div>
+
+        <div >
+          <a href="./aboutus.php" class="nav-link nav_link_rad_end" >
+            <i class="fa fa-info" ></i> &nbsp; About us
+          </a>
+        </div>
+      </div>
+
+      <!-- <div class="wrap" style="display: none;"></div> -->
+    </header>
+    <div class="wrap" style="display: none;"></div>
+
+
+
     <div class="container" id="edit_project" >
       <h2 >Edit project's details</h2>
 
@@ -42,7 +110,7 @@
           <input class="form-control" type="text" value="<?php echo $project["pro_name"]; ?>" name="name" placeholder="Enter project name" required autofocus >
         </div>
 
-        <label for="type" >select to change project's name<i class="error" >*</i></label>
+        <label for="type" >Select to change project's type<i class="error" >*</i></label>
         <div class="form-group-inline"> 
           <select value="<?php echo $project["type"]; ?>" name="type" class="form-control" id="project_type" required>
             <option value="mobile app" >Mobile App</option>
@@ -138,6 +206,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src=""></script>
+    <script type="text/javascript" src="../js/jQuery.js" ></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="../js/script.js" ></script>
   </body>
 </html>
