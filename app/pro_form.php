@@ -150,11 +150,11 @@
           <input class="form-control" type="email" name="pro_email" placeholder="project email | name@example.com" required>
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="">
             pdf presentation file <i class="error" >*</i> </label>
           <input name="pro_file" type="file" class="form-control-file" id="pro_file">
-        </div>
+        </div> -->
 
 
         <div class="input-group" >
@@ -168,7 +168,7 @@
 
 
     <!-- this is the footer -->
-    <footer class="row">
+    <!-- <footer class="row">
       <div class="container-fluid col-md-6" id="social_med">
         <span >
           <a href="https://touch.facebook.com/U-Innovate-104260611862082/?ref=bookmarks" target="_blank">
@@ -210,7 +210,7 @@
         </span>
       </div>
 
-    </footer>
+    </footer> -->
       
 
     <!-- Optional JavaScript -->

@@ -179,7 +179,7 @@ $(function() { // console.log("J Query loaded");
     }
 
 
-    // when the submit btn for student login is 
+    // when the submit btn for student login is clicked. check if password and confirm password are the same
 
 
 });

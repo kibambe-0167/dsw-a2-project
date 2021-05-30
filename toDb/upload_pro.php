@@ -25,12 +25,12 @@
       if( !empty($_POST["name"]) && !empty($_POST["type"]) && !empty($_POST["desc"]) ) {
         // echo "required fields not empty....";
         $name = strtolower($_POST["name"]); $type = strtolower( $_POST["type"]); 
-        $desc = strtolower($_POST["desc"]); $link = $_POST["ext_link"]; $email = $_POST["pro_email"];
-        $student_id = $_SESSION["student_id"]; $pro_file = $_POST["pro_file"];
+        $desc = strtolower($_POST["desc"]); $link = $_POST["ext_link"]; $email = $_POST["pro_email"]; $student_id = $_SESSION["student_id"];
 
-        echo $name . "<br/>" . $type . "<br/>" . $desc . "<br/>" . $link . "<br/>" . $email . "<br/>" . $pro_file . "<br/>" . $student_id;
+        // $pro_file = $_POST["pro_file"];
+        // echo $name . "<br/>" . $type . "<br/>" . $desc . "<br/>" . $link . "<br/>" . $email . "<br/>" . $pro_file . "<br/>" . $student_id;
 
-        $query = "insert into Project( student_id, pro_name, type, pro_desc, project_file, project_email, pro_ext_link) values( '$student_id', '$name', '$type', '$desc', '$pro_file', '$email', '$link' )";
+        $query = "insert into Project( student_id, pro_name, type, pro_desc, project_email, pro_ext_link) values( '$student_id', '$name', '$type', '$desc', '$email', '$link' )";
 
         // run the query to register the project with the db.
         // also set uploading message via sessions.

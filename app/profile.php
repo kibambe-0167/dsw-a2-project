@@ -101,6 +101,7 @@
 
     <div id="usr_prof_msg" class="messages" >
       <?php echo $_SESSION["up_usr_msg"]; unset( $_SESSION["up_usr_msg"] ); ?>
+      <?php echo $_SESSION["update_project"]; unset( $_SESSION["update_project"]); ?>
     </div>
 
     <!-- contains the details of current logged in user. -->
@@ -144,7 +145,7 @@
     </div>
 
     <!-- this is the footer -->
-    <footer class="row">
+    <!-- <footer class="row">
       <div class="container-fluid col-md-6" id="social_med">
         <span >
           <a href="https://touch.facebook.com/U-Innovate-104260611862082/?ref=bookmarks" target="_blank">
@@ -186,7 +187,7 @@
         </span>
       </div>
 
-    </footer>
+    </footer> -->
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

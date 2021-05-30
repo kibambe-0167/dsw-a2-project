@@ -12,4 +12,14 @@
   // this function receives an id and returns the emails of the user from db.
   // it checks in student table who has tht email and if user, is not available.
   // if think i should ask for a primany email when updating a project.
+
+
+
+  // // receives a file and saves it to a folder.
+  // function upload_file( $file , $name) {
+  //   // echo $file . "<br/>";
+  //   $dest = "/opt/lampp/htdocs/dsw-a2-project/media/files/" . $name;
+  //   if( move_uploaded_file($file, $dest )) { return 1; }
+  //   else { return 0; }
+  // }
 ?>

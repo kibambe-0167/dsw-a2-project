@@ -27,6 +27,76 @@
  
   <body>
 
+
+    <!-- header of the page. -->
+    <header >
+      <div class="container-fluid row" id="header" >
+        <!-- logo -->
+        <div class="col-md-3 col-sm-3 col-xs-3 bar" >
+          <a href="./main_savvy.php" class="nav-link" >
+            <!-- Logo -->
+            <img id="logo" src="../logo.png" alt="logo pic" />
+          </a>
+
+          <span class="" id="menu_btn" type="button" data-toggle="collapse" data-target="#nav_mobile" >
+            <!-- Collapse --> 
+            <i class="fa fa-bars"></i>
+          </span>
+        </div>
+        <!-- navbar links,  -->
+        <div id="nav_large" class="col-md-9 col-sm-9 col-xs-9" >
+          <ul class="nav" id="nav-link-bs"  >
+            <li class="nav-item" >
+              <a href="../app/main.php" class="nav-link" >Home</a>
+            </li>
+
+            <li class="nav-item" >
+              <a href="../app/profile.php" class="nav-link active_link" >Profile</a>
+            </li>
+
+            <li class="nav-item" >
+              <a href="../app/contactus.php" class="nav-link" >Contact us</a>
+            </li>
+
+            <li class="nav-item" >
+              <a href="../app/aboutus.php" class="nav-link" >About us</a>
+            </li>
+          </ul>
+        </div>        
+        
+      </div>
+       
+      <!-- the menu for the mobile version of the code. -->
+      <div class="collapse" id="nav_mobile">
+        <div >
+          <a href="../app/main.php" class="nav-link nav_link_rad_start" >
+          <i class="fa fa-home" ></i> Home
+          </a>
+        </div>
+
+        <div >
+          <a href="../app/profile.php" class="nav-link active_link_m" >
+          <i class="fa fa-user" ></i> Profile
+          </a>
+        </div>
+
+        <div >
+          <a href="../app/contactus.php" class="nav-link" >
+          <i class="fa fa-phone" ></i> Contact Us
+          </a>
+        </div>
+
+        <div >
+          <a href="../app/aboutus.php" class="nav-link nav_link_rad_end" >
+            <i class="fa fa-info" ></i> &nbsp About Us
+          </a>
+        </div>
+      </div>
+
+      <!-- <div class="wrap" style="display: none;"></div> -->
+    </header>
+    <div class="wrap" style="display: none;"></div>
+
     
     <div class="container" id="validate_usr" >
       <h2 >Enter Password To Delete Project</h2>
@@ -47,7 +117,9 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src=""></script>
+    <script type="text/javascript" src="../js/jQuery.js" ></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="../js/script.js" ></script>
   </body>
 </html>
 

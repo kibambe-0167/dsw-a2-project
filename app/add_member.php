@@ -104,6 +104,9 @@
     <!-- this is where you add the team member of the projects. -->
     <div id="team_form" class="container" >
       <h2 >Add Team Member To Project</h2>
+      <p class="error" >
+        <i style="font-weight: bolder;" >*</i> are required fields
+      </p>
       <!-- this is uploading a team members details to db. -->
       <form action="./add_member.php?project_id=<?php echo $_GET["project_id"]; ?>" method="post">
 

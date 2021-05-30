@@ -28,8 +28,8 @@
   <body>
 
     
-     <!-- header of the page. -->
-     <header >
+    <!-- header of the page. -->
+    <header >
       <div class="container-fluid row" id="header" >
         <!-- logo -->
         <div class="col-md-3 col-sm-3 col-xs-3 bar" >
@@ -99,29 +99,32 @@
 
     
     <div id="stu_up_prof" class="container" >
-      <h3 >Edit student account</h3>
+      <h3 >Edit student account details</h3>
+      <p class="error" >
+        <i style="font-weight: bolder;" >*</i> are required
+      </p>
       <form action="./edit_stud_acc.php" method="post">
-        <label for="fname" >Firstname</label>
+        <label for="fname" >Firstname <i class="error" >*</i>  </label>
         <div  class="input-group">
           <input placeholder="Enter firstname" class="form-control" type="text" name="fname" id="fname" value="<?php echo $_SESSION["firstname"]; ?>" required>
         </div>
 
-        <label for="lname" >Lastname</label>
+        <label for="lname" >Lastname <i class="error" >*</i>  </label>
         <div  class="input-group">
           <input placeholder="Enter lastname" class="form-control" type="text" name="lname" id="lname" value="<?php echo $_SESSION["lastname"]; ?>" required>
         </div>
 
-        <label for="s_email" >Email</label>
+        <label for="s_email" >Email <i class="error" >*</i> </label>
         <div  class="input-group">
           <input placeholder="Enter school email" class="form-control" type="email" name="s_email" id="s_email" value="<?php echo $_SESSION["school_email"]; ?>" required>
         </div>
 
-        <label for="year" >Current Year</label>
+        <label for="year" >Current Year <i class="error" >*</i>  </label>
         <div  class="input-group">
           <input placeholder="Enter current year" class="form-control" type="number" name="year" id="year" value="<?php echo $_SESSION["current_year"]; ?>" min="1" max="4" oninput="validity.valid||(value='');" required>
         </div>
 
-        <label for="department" >Department</label>
+        <label for="department" >Department <i class="error" >*</i>  </label>
         <div  class="input-group">
           <input placeholder="Enter department" class="form-control" type="text" name="department" id="department" value="<?php  echo $_SESSION["department"]?>" required>
         </div>
@@ -213,7 +216,7 @@
 
 
     <!-- this is the footer -->
-    <footer class="row">
+    <!-- <footer class="row">
       <div class="container-fluid col-md-6" id="social_med">
         <span >
           <a href="https://touch.facebook.com/U-Innovate-104260611862082/?ref=bookmarks" target="_blank">
@@ -255,7 +258,7 @@
         </span>
       </div>
 
-    </footer>
+    </footer> -->
 
       
     <!-- Optional JavaScript -->

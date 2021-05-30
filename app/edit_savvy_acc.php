@@ -95,14 +95,20 @@
       </h2>
 
       <form action="./edit_savvy_acc.php" method="post">
+        <p class="error" >
+          <i style="font-weight: bolder;" >*</i> are required fields
+        </p>
+        <label for="fname" >Enter firstname to change</label> <i class="error" >*</i>
         <div class="input-group" >
           <input placeholder="Enter first name" class="form-control" type="text" name="fname" id="" value="<?php echo $_SESSION["savvy_fname"]; ?>" required >
         </div>
 
+        <label for="lname" >Enter lastname to change</label> <i class="error" >*</i>
         <div class="input-group" >
           <input placeholder="Enter last name" class="form-control" type="text" name="lname" id="" value="<?php echo $_SESSION["savvy_lname"]; ?>" required>
         </div>
 
+        <label for="email" >Enter email to change</label> <i class="error" >*</i>
         <div class="input-group" >
           <input placeholder="Enter email" class="form-control" type="email" name="email" id="" value="<?php echo $_SESSION["savvy_email"]; ?>" required >
         </div>

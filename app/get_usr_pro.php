@@ -55,14 +55,20 @@
 
               <i > | </i>
 
-              <a href="../del/delete_pro.php?project_id=<?php echo$project["id"]; ?>" > 
-                Delete Project
+              <a href="../app/add_member.php?project_id=<?php echo $project["id"]; ?>">
+                Add Team Member
               </a>
 
               <i > | </i>
 
-              <a href="../app/add_member.php?project_id=<?php echo $project["id"]; ?>">
-                Add Team Member
+              <a href="../app/edit_pro.php?project_id=<?php echo $project["id"]; ?>">
+                Edit Project
+              </a>
+
+              <i > | </i>
+
+              <a href="../del/delete_pro.php?project_id=<?php echo$project["id"]; ?>" > 
+                Delete Project
               </a>
             </div>
           <?php

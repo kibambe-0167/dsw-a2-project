@@ -477,6 +477,14 @@ input[type="submit"]:active,
 }
 
 
+/* this applies to edit project page. */
+
+#edit_project {
+    border: .1em .1em 1em rgb( 27, 4, 43);
+    margin: 1em auto;
+}
+
+
 /* applies to description about our site */
 
 #aboutus_details {
