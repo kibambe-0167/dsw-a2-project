@@ -132,10 +132,6 @@
           </select>
         </div>
 
-        <!-- <div class="input-group" >
-          <input class="form-control" type="text" value="mobile App" name="type" placeholder="Enter project type">
-        </div> -->
-
         <label for="desc" >Enter project's description <i class="error" >*</i> </label>
         <div class="input-group" > 
           <textarea class="form-control" name="desc" placeholder="Enter project description" style="padding: 10px;" rows="4" cols="30" required ></textarea>
@@ -172,7 +168,7 @@
 
 
     <!-- this is the footer -->
-    <!-- <footer class="row">
+    <footer class="row">
       <div class="container-fluid col-md-6" id="social_med">
         <span >
           <a href="https://touch.facebook.com/U-Innovate-104260611862082/?ref=bookmarks" target="_blank">
@@ -215,7 +211,7 @@
       </div>
 
     </footer>
-       -->
+      
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -104,16 +104,6 @@
     <div class="wrap" style="display: none;"></div>
 
 
-
-    <!-- show user details -->
-    <div class="sep">
-      <?php
-        echo $_SESSION["savvy_id"] . " | " . $_SESSION["savvy_fname"] . " | " . $_SESSION["savvy_lname"] . " | " . $_SESSION["savvy_email"];
-      ?>
-    </div>
-
-
-
     <!-- the search input group fields -->
     <div id="mainp_search_gr" class="container">
       <form action="./search_pro.php" method="post">

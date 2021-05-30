@@ -19,18 +19,25 @@ $(function() { // console.log("J Query loaded");
             // console.log( $(window).width() <= 480 );
             // make the div element go on or off
             $("#nav_large").toggle();
-
-            // when the screen get to 30em, which is mobile, toggle off the div with student forms for sign in and signup
-            $("#student_block").toggle();
         }
 
         if ($(window).width() > 480) {
             $("#nav_large").toggle();
+        }
 
+    });
+    // 
+    // 
+    // when the browsers width is resized
+    $(window).resize(function() {
+        if ($(window).width() <= 480) {
             // when the screen get to 30em, which is mobile, toggle off the div with student forms for sign in and signup
             $("#student_block").toggle();
         }
-
+        if ($(window).width() > 480) {
+            // when the screen get to 30em, which is mobile, toggle off the div with student forms for sign in and signup
+            $("#student_block").toggle();
+        }
     });
 
 

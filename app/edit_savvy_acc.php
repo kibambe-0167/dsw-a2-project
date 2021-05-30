@@ -45,7 +45,7 @@
               <a href="./main_savvy.php" class="nav-link" >Home</a>
             </li>
             <li class="nav-item" >
-              <a href="./savvy_profile.php" class="nav-link" >Profile</a>
+              <a href="./savvy_profile.php" class="nav-link active_link" >Profile</a>
             </li>
             <li class="nav-item" >
               <a href="./contactus.php" target="blank" class="nav-link" >Contact</a>
@@ -67,7 +67,7 @@
         </div>
 
         <div >
-          <a href="./savvy_profile.php" class="nav-link" >
+          <a href="./savvy_profile.php" class="nav-link active_link_m" >
           <i class="fa fa-user" ></i> Profile
           </a>
         </div>
