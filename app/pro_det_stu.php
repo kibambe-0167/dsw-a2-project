@@ -123,10 +123,11 @@
 
           <div class="pro_link"> 
             <p >
-              <a href="<?php echo $project["pro_ext_link"] == ""? "" : $project["pro_ext_link"];?>" target="_blank" >
+            <!-- < ?php echo $project["pro_ext_link"]; ?> -->
+              <!-- <a href="< ?php echo $project["pro_ext_link"] == ""? "" : $project["pro_ext_link"];?>" target="_blank" > -->
 
                 <?php echo $project["pro_ext_link"] == ""? "" : $project["pro_ext_link"]; ?>
-              </a>
+              <!-- </a> -->
             </p>
              
 
