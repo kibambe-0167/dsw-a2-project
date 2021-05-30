@@ -172,6 +172,9 @@ $(function() { // console.log("J Query loaded");
     }
 
 
+    // when the submit btn for student login is 
+
+
 });
 
 

@@ -138,8 +138,7 @@
 
         <label for="desc" >Enter project's description <i class="error" >*</i> </label>
         <div class="input-group" > 
-          <textarea class="form-control" name="desc" placeholder="Enter project description" style="padding: 10px;" rows="4" cols="30" required >
-          </textarea>
+          <textarea class="form-control" name="desc" placeholder="Enter project description" style="padding: 10px;" rows="4" cols="30" required ></textarea>
         </div>
 
        

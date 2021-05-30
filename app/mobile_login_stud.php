@@ -151,7 +151,7 @@
           
           <label for="pwd">Password</label>
           <div class="input-group" >
-            <input class="input-group-text" value="Bakali" type="password" name="passwd" id="pw" placeholder="Enter your password" >
+            <input class="input-group-text" value="" type="password" name="passwd" id="pw" placeholder="Enter your password" >
           </div>
 
           <div class="input-group" >
@@ -172,41 +172,41 @@
 
             <label for="fName">First Name</label> <i class="error" >*</i>
             <div class="input-group" >
-              <input class="input-group-text" type="text" name="firstname" placeholder="Enter first name" value="Bakali" required autofocus>
+              <input class="input-group-text" type="text" name="firstname" placeholder="Enter first name" value="" required autofocus>
             </div>
             
             <label>Last Name</label> <i class="error" >*</i>
             <div class="input-group" >
-              <input class="input-group-text" type="text" name="lastname" placeholder="Enter last name" value="Phiri" required >
+              <input class="input-group-text" type="text" name="lastname" placeholder="Enter last name" value="" required >
             </div>
 
             
             <label for="email">School Email</label> <i class="error" >*</i>
             <div class="input-group" >
-              <input class="input-group-text" type="email" name="email" placeholder="xxxxxxx@student.uj.ac.za" value="9999999@student.uj.ac.za" required >
+              <input class="input-group-text" type="email" name="email" placeholder="xxxxxxx@student.uj.ac.za" value="" required >
             </div>
 
             
             <label>Current year</label> <i class="error" >*</i>
             <div class="input-group" >
-              <input class="input-group-text" type="number" name="current_year" placeholder="Enter current year" value="3" required >
+              <input class="input-group-text" type="number" name="current_year" placeholder="Enter current year" value="" required min="1" max="4" oninput="validity.valid||(value='');" >
             </div>
 
             
             <label>Department</label> <i class="error" >*</i>
             <div class="input-group" >
-              <input class="input-group-text" type="text" name="department" placeholder="Enter department" value="AIS" required >
+              <input class="input-group-text" type="text" name="department" placeholder="Enter department" value="" required >
             </div>
 
             
             <label for="passwd">Password</label> <i class="error" >*</i>
             <div class="input-group" >
-              <input class="input-group-text" type="password" name="passwd" placeholder="Enter password" required value="Bakali" >
+              <input class="input-group-text" type="password" name="passwd" placeholder="Enter password" required value="" >
             </div>
 
             <label for="passwd_con">Confirm Password</label> <i class="error" >*</i>
             <div class="input-group" >
-              <input class="input-group-text" type="password" name="passwd_con" placeholder="Confirm password"  required value="Bakali" >
+              <input class="input-group-text" type="password" name="passwd_con" placeholder="Confirm password"  required value="" >
             </div>
 
             

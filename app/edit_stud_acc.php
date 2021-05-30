@@ -103,27 +103,27 @@
       <form action="./edit_stud_acc.php" method="post">
         <label for="fname" >Firstname</label>
         <div  class="input-group">
-          <input placeholder="Enter firstname" class="form-control" type="text" name="fname" id="fname" value="<?php echo $_SESSION["firstname"]; ?>">
+          <input placeholder="Enter firstname" class="form-control" type="text" name="fname" id="fname" value="<?php echo $_SESSION["firstname"]; ?>" required>
         </div>
 
         <label for="lname" >Lastname</label>
         <div  class="input-group">
-          <input placeholder="Enter lastname" class="form-control" type="text" name="lname" id="lname" value="<?php echo $_SESSION["lastname"]; ?>">
+          <input placeholder="Enter lastname" class="form-control" type="text" name="lname" id="lname" value="<?php echo $_SESSION["lastname"]; ?>" required>
         </div>
 
         <label for="s_email" >Email</label>
         <div  class="input-group">
-          <input placeholder="Enter school email" class="form-control" type="email" name="s_email" id="s_email" value="<?php echo $_SESSION["school_email"]; ?>">
+          <input placeholder="Enter school email" class="form-control" type="email" name="s_email" id="s_email" value="<?php echo $_SESSION["school_email"]; ?>" required>
         </div>
 
         <label for="year" >Current Year</label>
         <div  class="input-group">
-          <input placeholder="Enter current year" class="form-control" type="number" name="year" id="year" value="<?php echo $_SESSION["current_year"]; ?>">
+          <input placeholder="Enter current year" class="form-control" type="number" name="year" id="year" value="<?php echo $_SESSION["current_year"]; ?>" min="1" max="4" oninput="validity.valid||(value='');" required>
         </div>
 
         <label for="department" >Department</label>
         <div  class="input-group">
-          <input placeholder="Enter department" class="form-control" type="text" name="department" id="department" value="<?php  echo $_SESSION["department"]?>">
+          <input placeholder="Enter department" class="form-control" type="text" name="department" id="department" value="<?php  echo $_SESSION["department"]?>" required>
         </div>
 
         <div  class="input-group">
