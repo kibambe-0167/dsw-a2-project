@@ -226,7 +226,6 @@
 
           <div class="input-group" >
             <input class="btn" value="Signin" type="submit" name="submit" id="submit">
-
             <input id="stud_in_btn" class="btn"  onclick="add()" type="reset" class="" value="Sign up"/>
           </div>
         </form>
