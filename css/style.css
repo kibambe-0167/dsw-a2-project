@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+.background_img {
+    background-image: url("../logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb( 255, 133, 4);
+}
+
 
 /* this applies to the every pages body. */
 

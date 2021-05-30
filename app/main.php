@@ -4,6 +4,9 @@
   // start a php session to send data and information.
   session_start();
   include("../code_snippets/help_code.php");
+
+  include("./get_pro.php");
+
 ?>
 
 <!doctype html>

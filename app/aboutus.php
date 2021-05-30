@@ -106,6 +106,55 @@
         </div>
     </div>
 
+
+
+
+    <!-- this is the footer -->
+    <footer class="row">
+      <div class="container-fluid col-md-6" id="social_med">
+        <span >
+          <a href="https://touch.facebook.com/U-Innovate-104260611862082/?ref=bookmarks" target="_blank">
+            <i class="fa fa-facebook" >
+            </i>
+          </a>
+        </span>
+  
+        <span >
+          <a href="https://www.linkedin.com/company/u-innovate" target="_blank">
+            <i class="fa fa-linkedin"></i>
+          </i>
+          </a>
+        </span>
+  
+        <span >
+          <a href="https://twitter.com/NovateUin" target="_blank">
+            <i class="fa fa-twitter-square"></i></i>
+          </a>
+        </span>
+
+        <span >
+          <a href="https://www.instagram.com/uin.novate/" target="_blank">
+            <i class="fa fa-instagram"></i></i>
+          </a>
+        </span>
+      </div>
+
+      <div id="footer_details" class="container col-md-6" >
+        <span >
+          <a href="#"> About us</a>
+        </span>
+        |
+        <span >
+          <a href="#">
+            Contact us
+            <i class="fa fa-phone" ></i>
+          </a>
+        </span>
+      </div>
+
+    </footer>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript" src="../js/jQuery.js" ></script>

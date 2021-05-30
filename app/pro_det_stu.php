@@ -122,16 +122,22 @@
           <div class="main_name"> <?php echo  ucwords( $project["pro_name"] );  ?> </div>
 
           <div class="pro_link"> 
-            <?php echo $project["pro_ext_link"]; ?> 
+            <p >
+              <a href="<?php echo $project["pro_ext_link"] == ""? "" : $project["pro_ext_link"];?>" target="_blank" >
+
+                <?php echo $project["pro_ext_link"] == ""? "" : $project["pro_ext_link"]; ?>
+              </a>
+            </p>
+             
 
             <p >
               <a href="mailto:<?php echo $project["project_email"]; ?>">
-              <i class="fa fa-paper-plane"></i> Contact via email
-            </a> </p>
+              <i class="fa fa-paper-plane"></i> Contact via email 
+            </a> [ <?php echo $project["project_email"]; ?> ] </p>
 
-            <a href="<?php echo $project["project_file"]; ?>">
+            <!-- <a href="< ?php echo $project["project_file"]; ?>">
               <i class="fa fa-download"></i> Download presentation file
-            </a>
+            </a> -->
           </div>
 
           <div class="pro_team">

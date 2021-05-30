@@ -52,7 +52,7 @@
               <a href="./main.php" class="nav-link" >Home</a>
             </li>
             <li class="nav-item" >
-              <a href="./profile.php" class="nav-link" >Profile</a>
+              <a href="./profile.php" class="nav-link active_link" >Profile</a>
             </li>
             <li class="nav-item" >
               <a href="./contactus.php" class="nav-link" >Contact us</a>
@@ -74,7 +74,7 @@
         </div>
 
         <div >
-          <a href="./profile.php" class="nav-link" >
+          <a href="./profile.php" class="nav-link active_link_m" >
           <i class="fa fa-user" ></i> Profile
           </a>
         </div>
@@ -169,7 +169,7 @@
 
           $name = $_POST["name"]; $type = $_POST["type"];
           $desc = $_POST["desc"]; $id = $_GET["project_id"];
-          $link = $_POST["ext_link"]; $email = $_POST["email"];
+          $link = $_POST["ext_link"]; $email = $_POST["pro_email"];
 
           // $file = $_FILES["pro_file"]['tmp_name'];
           // $filename = $_FILES["pro_file"]['name'];
@@ -181,7 +181,7 @@
           // get_project_file_details( $_FILES["pro_file"] );
 
           // make query to update this values.
-          $query = "update Project set pro_name='$name', type='$type', pro_desc='$desc', pro_ext_link='$link', project_email='$email' where id = '$id'"; // echo $query;
+          $query = "update Project set pro_name='$name', type='$type', pro_desc='$desc', project_email='$email', pro_ext_link='$link' where id = '$id'"; // echo $query;
 
           // $result = mysqli_query( $connObj, $query );
 

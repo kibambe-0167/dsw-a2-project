@@ -9,7 +9,9 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>
+      <?php echo ucwords( $_SESSION["firstname"] ); ?> | Edit Profile 
+    </title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -101,7 +103,7 @@
     <div id="stu_up_prof" class="container" >
       <h3 >Edit student account details</h3>
       <p class="error" >
-        <i style="font-weight: bolder;" >*</i> are required
+        <i style="font-weight: bolder;" >*</i> are required fields
       </p>
       <form action="./edit_stud_acc.php" method="post">
         <label for="fname" >Firstname <i class="error" >*</i>  </label>
