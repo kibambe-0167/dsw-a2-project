@@ -2,14 +2,14 @@ $(function() { // console.log("J Query loaded");
 
     // when the width of the browser is less than
     // 30em = 480px. this code runs when the pages reloads.
-    if ($(window).width() <= 480) {
-        // console.log( $(window).width() <= 480 );
-        // make the div element go on or off
-        $("#nav_large").toggle();
+    // if ($(window).width() <= 480) {
+    //     // console.log( $(window).width() <= 480 );
+    //     // make the div element go on or off
+    //     $("#nav_large").toggle();
 
-        // when the screen get to 30em, which is mobile, toggle off the div with student forms for sign in and signup
-        $("#student_block").toggle();
-    }
+    //     // when the screen get to 30em, which is mobile, toggle off the div with student forms for sign in and signup
+    //     $("#student_block").toggle();
+    // }
     // 
     // 
     // when the browsers width is resized

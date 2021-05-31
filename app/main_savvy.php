@@ -2,6 +2,8 @@
   session_start(); // start a php session to send data and information.
 
   include("../code_snippets/help_code.php");
+
+  // include("./get_pro.php");
   
 ?>
 
@@ -146,7 +148,7 @@
             </div>
         </div>
         
-        <form action="./post_comment.php?pro_id=<?php echo $project["id"];?>" method="post">
+        <form action="./post_comment.php?project_id=<?php echo $project["id"];?>" method="post">
           <div class= "comment input-group" >
             <input class="form-control" type="text" name="comment"  placeholder="Type a comment..." id="usr_com" value="">
             <input class="btn" type="submit" value="Comment" name="com_btn" id="com_btn" />
